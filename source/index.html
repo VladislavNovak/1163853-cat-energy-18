@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Кэт энерджи</title>
+    <title>Cat Energy - лучший корм</title>
   </head>
   <body>
 
@@ -15,20 +15,22 @@
         <button class="header__burger" type="button"><span class="visually-hidden">Открыть навигацию</span></button>
         <ul class="navigation">
           <li>
-            <a class="navigation__to-main" href="#">Главная</a>
+            <!-- Что имеется ввиду? Возможно, ссылку нужно будет убрать:-->
+            <a class="navigation__to-main" href="#" aria-label="Главная страница">Главная</a>
           </li>
           <li>
-            <a class="navigation__to-catalog" href="#">Каталог продукции</a>
+            <a class="navigation__to-catalog" href="catalog.html" aria-label="Можно перейти к каталогу продукции">Каталог продукции</a>
           </li>
           <li>
-            <a class="navigation__to-make-program" href="#">Подбор программы</a>
+            <a class="navigation__to-make-program" href="#" aria-label="Можно перейти к подбору программы">Подбор программы</a>
           </li>
         </ul>
       </header>
 
-      <main class="main">
-        <h1 class="visually-hidden">Кэт Энерджи - лучший корм!</h1>
+      <main class="index">
+
         <section class="intro">
+          <h1 class="visually-hidden">Cat Energy - лучший корм!</h1>
           <div class="intro__presentation">
             <!-- Декоративное изображение фона -->
             <h2 class="intro__title">Функциональное питание для котов</h2>
@@ -36,7 +38,7 @@
           </div>
           <img class="intro__foodcan" src="https://via.placeholder.com/280x270" width="280" height="270" alt="Баночка с вкусной курицей">
           <!-- Ведёт на страницу подбора программы -->
-          <a class="to-program" href="#">Подобрать программу</a>
+          <a class="to-program" href="#" aria-label="Можно перейти к подбору программы">Подобрать программу</a>
         </section>
 
         <section class="mass-change">
