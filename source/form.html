@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Cat Energy - подбор программы</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <header class="header">
+        <!-- Переход понадобится на других страницах. Не на этой -->
+        <a class="header__to-index" title="Находимся на главной странице">
+          <img class="header__icon-logo" src="https://via.placeholder.com/255x39" width="255" height="39" alt="Логотип компании Cat Energy">
+        </a>
+        <button class="header__burger" type="button"><span class="visually-hidden">Открыть навигацию</span></button>
+        <ul class="navigation">
+          <li>
+            <a class="navigation__to-main" href="index.html" aria-label="Можно перейти на главную страницу">Главная</a>
+          </li>
+          <li>
+            <a class="navigation__to-catalog" href="catalog.html" aria-label="Можно перейти к каталогу продукции">Каталог продукции</a>
+          </li>
+          <li>
+            <a class="navigation__to-make-program" aria-label="Находимся на текущей странице">Подбор программы</a>
+          </li>
+        </ul>
+      </header>
+
+      <main class="program-selection">
+
+        <div class="program-selection__intro">
+          <h1 class="program-selection__title">Подбор программы</h1>
+          <p class="program-selection__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        </div>
+
+        <form class="data" action="https://echo.htmlacademy.ru" method="get">
+
+          <div class="data__pet">
+            <label>
+              Имя:*
+              <input class="data__pet-name" type="text" id="pet-name" name="pet-name" value="Барсик" aria-label="Укажите имя домашнего питомца">
+            </label>
+            <label>
+              Вес (кг):*
+              <input class="data__pet-weight" type="text" id="pet-weight" name="pet-weight" value="7" aria-label="Укажите вес домашнего питомца">
+            </label>
+            <label>
+              Возраст (лет):*
+              <input class="data__pet-age" type="text" id="pet-age" name="pet-age" value="7" aria-label="Укажите возраст домашнего питомца">
+            </label>
+          </div>
+
+
+
+        </form>
+
+      </main>
+
+      <footer class="footer">
+
+        <section class="contacts">
+          <h2 class="visually-hidden">Свяжитесь с нами:</h2>
+          <div class="contacts__info">
+            <p class="contacts__advertising">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
+          <div class="contacts__map-wrapper">
+            <h3 class="visually-hidden">Найти на карте нас очень легко:</h3>
+            <!-- Будет итерактивная карта -->
+            <img class="about__map" src="https://via.placeholder.com/1345x645" width="1345" height="645" alt="Карта: доходный дом Мельцера" >
+          </div>
+        </section>
+
+        <section class="links">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <img class="links__presentation" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Логотип компании Cat Energy">
+
+          <ul class="links__websites">
+            <li>
+              <a class="links__network" href="https://vk.com/" aria-label="Посетите VKontakte.com" title="Посетите VKontakte.com">
+                Посетите VKontakte
+                <svg class="vk-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="12"></svg>
+              </a>
+            </li>
+            <li>
+              <a class="links__network" href="https://instagram.com/" aria-label="Посетите instagram.com" title="Посетите instagram.com">
+                Посетите Instagram
+                <svg class="ig-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"></svg>
+              </a>
+            </li>
+            <li>
+              <a class="links__network" href="https://facebook.com/" aria-label="Посетите facebook.com" title="Посетите facebook.com">
+                Посетите Facebook
+                <svg class="fb-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="19"></svg>
+              </a>
+            </li>
+          </ul>
+
+          <div class="footer__for-academy">
+            <a class="footer__to-academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Посетите htmlacademy.ru" title="Посетите htmlacademy.ru">
+              HTMLAcademy
+              <svg class="academy-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34"></svg>
+            </a>
+          </div>
+        </section>
+
+      </footer>
+
+    </div>
+
+  </body>
+</html>
