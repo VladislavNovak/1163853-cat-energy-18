@@ -33,24 +33,136 @@
           <p class="program-selection__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
         </div>
 
-        <form class="data" action="https://echo.htmlacademy.ru" method="get">
+        <form class="form" action="https://echo.htmlacademy.ru" method="get">
 
-          <div class="data__pet">
-            <label>
+          <div class="pet">
+            <h2 class="visually-hidden">Сначала введите данные питомца</h2>
+            <label class="pet__label">
               Имя:*
-              <input class="data__pet-name" type="text" id="pet-name" name="pet-name" value="Барсик" aria-label="Укажите имя домашнего питомца">
+              <input class="pet__input" type="text" name="pet-name" value="Барсик" aria-label="Укажите имя домашнего питомца">
             </label>
-            <label>
+            <label class="pet__label">
               Вес (кг):*
-              <input class="data__pet-weight" type="text" id="pet-weight" name="pet-weight" value="7" aria-label="Укажите вес домашнего питомца">
+              <input class="pet__input" type="text" name="pet-weight" value="7" aria-label="Укажите вес домашнего питомца">
             </label>
-            <label>
+            <label class="pet__label">
               Возраст (лет):*
-              <input class="data__pet-age" type="text" id="pet-age" name="pet-age" value="7" aria-label="Укажите возраст домашнего питомца">
+              <input class="pet__input" type="text" name="pet-age" value="7" aria-label="Укажите возраст домашнего питомца">
             </label>
           </div>
 
+          <div class="radiobuttons">
+            <h2 class="visually-hidden">Выберите стратегию действий</h2>
 
+            <ul class="radiobuttons-list">
+              <li class="radiobuttons-item">
+                <label class="radiobuttons-title">
+                  <input class="radiobuttons-usual" type="radio" name="radiobuttons__usual" value="slenderize" checked>
+                  Похудение
+                  <svg class="radiobuttons-custom-box" xmlns="http://www.w3.org/2000/svg" width="29" height="29">
+                    <!-- вставить два path  -->
+                  </svg>
+                </label>
+              </li>
+              <li class="radiobuttons__item">
+                <label class="radiobuttons__label">
+                  <input class="radiobuttons-usual" type="radio" name="radiobuttons__usual" value="fatten">
+                  Набор массы
+                  <svg class="radiobuttons-custom-box" xmlns="http://www.w3.org/2000/svg" width="29" height="29">
+                  <!-- вставить два path  -->
+                  </svg>
+                </label>
+              </li>
+              <li class="checkboxes__item">
+                <label class="radiobuttons__label">
+                  <input class="radiobuttons-usual" type="radio" name="radiobuttons__usual" value="need-advice">
+                  Не знаю (нужен Ваш совет)
+                  <svg class="radiobuttons-custom-box" xmlns="http://www.w3.org/2000/svg" width="29" height="29">
+                  <!-- вставить два path  -->
+                  </svg>
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="owner">
+            <h2 class="owner__title form-title">Контактные данные (владельца кота)</h2>
+            <div class="owner__organizer">
+              <label class="owner__label">
+                e-mail:*
+                <input class="owner__input" type="text">
+                <a class="owner__link" href="#">
+                  <svg class="owner-icon" xmlns="http://www.w3.org/2000/svg" width="17" height="13">
+                    <!-- Вставить path -->
+                  </svg>
+                </a>
+              </label>
+            </div>
+            <div class="owner__organizer">
+              <label class="owner__label">
+                Телефон:*
+                <input class="owner__input" type="text">
+                <a class="owner__link" href="#" >
+                  <svg class="owner-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                    <!-- Вставить path -->
+                  </svg>
+                </a>
+              </label>
+            </div>
+          </div>
+
+          <div class="comments">
+            <!-- Подумать, возможно это нечто другое, не textarea:   -->
+            <h2 class="comments__title form-title">Комментарий</h2>
+            <!--  Возможно, input  -->
+            <p>Расскажите обо всех повадках кота</p>
+            <textarea class="comments__text" name="comments__text" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота">
+            </textarea>
+          </div>
+
+          <div class="additionaly">
+            <h2 class="additionaly__title form-title">Дополнительно</h2>
+            <ul class="additionaly__list">
+              <li class="additionaly__item">
+                <label class="additionaly__label">
+                  Сахарозаменитель
+                  <input class="additionaly-usual" type="checkbox" name="sweetener" checked>
+                  <svg class="additionaly-custom-box" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                  <!-- вставить path  -->
+                  </svg>
+                </label>
+              </li>
+              <li class="additionaly__item">
+                <label class="additionaly__label">
+                  Питьевая вода
+                  <input class="additionaly-usual" type="checkbox" name="water">
+                  <svg class="additionaly-custom-box" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                  <!-- вставить path  -->
+                  </svg>
+                </label>
+              </li>
+              <li class="additionaly__item">
+                <label class="additionaly__label">
+                  Молоко
+                  <input class="additionaly-usual" type="checkbox" name="milk">
+                  <svg class="additionaly-custom-box" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                  <!-- вставить path  -->
+                  </svg>
+                </label>
+              </li>
+              <li class="additionaly__item">
+                <label class="additionaly__label">
+                  Витамины
+                  <input class="additionaly-usual" type="checkbox" name="vitamins">
+                  <svg class="additionaly-custom-box" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                  <!-- вставить path  -->
+                  </svg>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <button class="form__submit btn">Отправить заявку</button>
+          <p class="form__hint">*-Обязательные поля</p>
 
         </form>
 
