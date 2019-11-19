@@ -1,0 +1,21 @@
+.socials {
+  background-color: #f2f2f2;
+}
+
+.socials__list {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.socials__link {
+  display: inline-block;
+
+  vertical-align: center;
+  font-size: 0;
+  text-decoration: none;
+}

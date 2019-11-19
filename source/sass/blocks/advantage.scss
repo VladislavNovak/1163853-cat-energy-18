@@ -1,0 +1,38 @@
+.advantage {
+
+  outline: 0.5px dashed green;
+}
+
+.advantage__title {
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+
+.advantage__list {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.advantage__item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantage__icon-wrap {
+  width: 60px;
+  height: 60px;
+  background-color: #68b738;
+}
+
+.advantage__text {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+}
