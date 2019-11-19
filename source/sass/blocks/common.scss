@@ -15,7 +15,7 @@ body {
 }
 
 .index {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   width: 100%;
@@ -31,14 +31,6 @@ body {
 
   outline: 1px dashed blue;
 }
-
-
-
-
-
-
-
-// visually-hidden
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
