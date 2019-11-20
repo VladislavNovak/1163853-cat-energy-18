@@ -1,17 +1,10 @@
-html {
-  box-sizing: border-box;
-}
 
-body {
-  width: auto;
-  margin: 0;
-}
 
 .container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 320px;
+  width: 100%;
 }
 
 .index {
@@ -44,34 +37,6 @@ body {
   border: 0;
   white-space: nowrap;
 
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
 }
-
-
-
-
-
-
-
-
-// Tasker:
-// как и где расположить блоки html и body
-// уточнить, где расположить box-sizing;
-//
-//
-//
-// подключим font
-
-
-
-
-
-
-// .container {
-
-//   @media (max-width: 720px) {
-//     background-color: green;
-//   }
-// }

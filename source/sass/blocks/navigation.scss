@@ -1,0 +1,29 @@
+.navigation {
+  width: 100%;
+}
+
+.navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  padding: 0;
+
+  text-align: center;
+  list-style-type: none;
+}
+
+.navigation__item {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.navigation__link {
+  display: inline-block;
+
+  vertical-align: center;
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}

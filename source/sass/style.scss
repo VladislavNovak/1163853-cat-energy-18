@@ -1,8 +1,11 @@
 
-@import "variables.scss";
-@import "mixins.scss";
+// @import "./fonts/fonts.scss";
+// @import "./setup/variables.scss";
+// @import "./setup/mixins.scss";
+@import "./setup/setup.scss";
 @import "./blocks/common.scss";
 @import "./blocks/header.scss";
+@import "./blocks/navigation.scss";
 @import "./blocks/intro.scss";
 @import "./blocks/strategy.scss";
 @import "./blocks/advantage.scss";
