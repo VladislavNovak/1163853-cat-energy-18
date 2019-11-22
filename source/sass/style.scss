@@ -1,7 +1,7 @@
 
-// @import "./fonts/fonts.scss";
+@import "./setup/font.scss";
 // @import "./setup/variables.scss";
-// @import "./setup/mixins.scss";
+@import "./setup/mixins.scss";
 @import "./setup/setup.scss";
 @import "./blocks/common.scss";
 @import "./blocks/header.scss";
@@ -12,3 +12,6 @@
 @import "./blocks/example.scss";
 @import "./blocks/contacts.scss";
 @import "./blocks/socials.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/goods.scss";
+@import "./blocks/show-more.scss";

@@ -1,0 +1,21 @@
+.show-more {
+  &__title {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+  }
+
+  &__btn {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+}

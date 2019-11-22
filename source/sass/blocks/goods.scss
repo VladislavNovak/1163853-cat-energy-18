@@ -1,0 +1,42 @@
+.goods {
+  outline: 1px dashed green;
+
+  &__list {
+    @include flexible();
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+  }
+
+  &__item {
+    @include flexible();
+    border-bottom: 2px solid #ededed;
+    text-align: center;
+  }
+
+  &__description {
+    order: 2;
+    outline: 1px dashed green;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__table {
+    outline: 0.5px dashed blue;
+  }
+
+  &__btn {
+    order: 3;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    text-transform: uppercase;
+    outline: 0.5px dashed red;
+  }
+}

@@ -1,0 +1,16 @@
+.catalog {
+  @include flexible();
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  outline: 0.5px solid blue;
+
+  &__title {
+    // font-size: 36px;
+    // font-weight: normal;
+    // line-height: 60px;
+    // @include normal-oswald(15px, none);
+    // @include standart-arial;
+    @include textomizer(normal, 15px, uppercase);
+  }
+}

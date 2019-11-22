@@ -1,36 +1,30 @@
 .intro {
   text-align: center;
-
   outline: 0.5px dashed green;
-}
 
-.intro__presentation {
-  text-align: center;
-}
+  &__presentation {
+    text-align: center;
+  }
 
-.intro__title {
-  font-size: 36px;
-  font-weight: normal;
-  line-height: 36px;
-  // text-transform: uppercase; - не нужно
-}
+  &__title {
+    @include textomizer(regular, 36px);
+    line-height: 36px;
+  }
 
-.intro__text {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 14px;
-  text-transform: uppercase;
-}
+  &__text {
+    @include textomizer(regular);
+    line-height: 14px;
+    text-transform: uppercase;
+  }
 
-.intro__btn {
-  display: inline-block;
-
-  vertical-align: center;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 18px;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  outline: 0.5px dashed green;
+  &__btn {
+    display: inline-block;
+    vertical-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: 0.5px dashed green;
+  }
 }
