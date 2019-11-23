@@ -1,5 +1,8 @@
 .intro {
+  min-height: 480px;
   text-align: center;
+  background: url("../../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
   outline: 0.5px dashed green;
 
   &__presentation {
@@ -8,10 +11,12 @@
 
   &__title {
     @include textomizer(regular, 36px);
+    color: #ffffff;
   }
 
   &__text {
     @include textomizer(regular, 14px, 14px, uppercase);
+    color: #ffffff;
   }
 
   &__btn {

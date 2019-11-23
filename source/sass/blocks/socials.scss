@@ -1,8 +1,9 @@
 .socials {
+  min-height: 236px;
   background-color: #f2f2f2;
 
   &__logo-wrapper {
-    border-bottom: 2px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
   }
 
   &__list {
@@ -10,7 +11,7 @@
     flex-direction: row;
     padding: 0;
     list-style-type: none;
-    border-bottom: 2px solid #d9d9d9;
+    border-bottom: 0.5px solid #d9d9d9;
   }
 
   &__link {

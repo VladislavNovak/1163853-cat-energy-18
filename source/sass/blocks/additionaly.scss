@@ -1,21 +1,27 @@
 .additionaly {
+
   outline: 1px solid yellow;
 
   &__title {
     @include textomizer(regular, 24px);
+    margin-top: 28px;
+    margin-bottom: 34px;
   }
 
   &__list {
     @include flexible();
     flex-direction: column;
+    min-height: 516px;
     padding: 0;
+    margin: 0;
     list-style-type: none;
+    border-top: 1px solid #cdcdcd;
+    outline: 1px dashed red;
   }
 
   &__item {
     @include flexible();
-
-    border-bottom: 2px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
   }
 
   &__item-title {
@@ -34,5 +40,18 @@
     @include textomizer(regular, 16px, 20px, uppercase);
     color: #ffffff;
     background-color: #68b738;
+  }
+
+  &__present {
+    min-height: 363px;
+    background: url("../../img/gift-photo-mobile@1x.jpg");
+    background-repeat: no-repeat;
+  }
+
+  &__present-text {
+    margin-top: 0;
+
+    @include textomizer(regular, 16px, 20px);
+    color: #ffffff;
   }
 }

@@ -1,21 +1,17 @@
 .show-more {
+  min-height: 209px;
+
   &__title {
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 20px;
-    text-transform: uppercase;
+    @include textomizer(regular, 16px, 20px, uppercase);
   }
 
   &__text {
-    font-size: 12px;
-    font-weight: normal;
-    line-height: 20px;
+    @include textomizer(arial, 12px, 16px);
   }
 
   &__btn {
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 20px;
-    text-transform: uppercase;
+    @include textomizer(regular, 16px, 20px, uppercase);
+    border: none;
+    background-color: #f2f2f2;
   }
 }

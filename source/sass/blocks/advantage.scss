@@ -1,9 +1,9 @@
 .advantage {
-
-  outline: 0.5px dashed green;
+  min-height: 447px;
+  // outline: 0.5px dashed green;
 
   &__title {
-    @include textomizer(regular, 36px, 60px, uppercase);
+    @include textomizer(regular, 36px, 60px);
   }
 
   &__list {

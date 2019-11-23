@@ -1,12 +1,16 @@
 .goods {
-  outline: 1px dashed green;
+  outline: 1px dashed red;
 
   &__list {
     @include flexible();
     flex-direction: column;
+    min-height: 1464px;
     padding: 0;
+    margin: 0;
     text-align: center;
     list-style-type: none;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
   }
 
   &__item {

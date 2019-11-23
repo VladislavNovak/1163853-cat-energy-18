@@ -3,9 +3,11 @@
   flex-direction: column;
   width: 100%;
   text-align: center;
-  outline: 0.5px solid blue;
 
   &__title {
+    margin-top: 15px;
+    margin-bottom: 28px;
+
     @include textomizer(regular, 36px, 60px);
   }
 }
