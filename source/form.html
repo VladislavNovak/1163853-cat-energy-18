@@ -6,79 +6,85 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
+
     <div class="container">
 
       <header class="header">
-        <!-- Переход понадобится на других страницах. Не на этой -->
         <a class="header__to-index" title="Находимся на главной странице">
-          <img class="header__icon-logo" src="https://via.placeholder.com/255x39" width="255" height="39" alt="Логотип компании Cat Energy">
+          <img class="header__icon-logo" src="./img/logo-mobile.svg" width="190" height="38" alt="Логотип компании Cat Energy">
         </a>
         <button class="header__burger" type="button"><span class="visually-hidden">Открыть навигацию</span></button>
-        <ul class="navigation">
-          <li>
-            <a class="navigation__to-main" href="index.html" aria-label="Можно перейти на главную страницу">Главная</a>
-          </li>
-          <li>
-            <a class="navigation__to-catalog" href="catalog.html" aria-label="Можно перейти к каталогу продукции">Каталог продукции</a>
-          </li>
-          <li>
-            <a class="navigation__to-make-program" aria-label="Находимся на текущей странице">Подбор программы</a>
-          </li>
-        </ul>
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="./index.html" aria-label="Можно перейти на главную страницу">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./catalog.html" aria-label="Можно перейти к каталогу продукции">Каталог продукции</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" aria-label="Находимся на текущей странице">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
       </header>
 
       <main class="program-selection">
 
-        <div class="program-selection__intro">
-          <h1 class="program-selection__title">Подбор программы</h1>
-          <p class="program-selection__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        </div>
+        <h1 class="program-selection__title">Подбор программы</h1>
+        <p class="program-selection__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
 
         <form class="form" action="https://echo.htmlacademy.ru" method="get">
 
           <div class="pet">
             <h2 class="visually-hidden">Сначала введите данные питомца</h2>
-            <label class="pet__label">
-              Имя:*
-              <input class="pet__input" type="text" name="pet-name" value="Барсик" aria-label="Укажите имя домашнего питомца">
-            </label>
-            <label class="pet__label">
-              Вес (кг):*
-              <input class="pet__input" type="text" name="pet-weight" value="7" aria-label="Укажите вес домашнего питомца">
-            </label>
-            <label class="pet__label">
-              Возраст (лет):*
-              <input class="pet__input" type="text" name="pet-age" value="7" aria-label="Укажите возраст домашнего питомца">
-            </label>
+            <div class="pet__organizer">
+              <label class="pet__label">
+                Имя:*
+                <input class="pet__input" type="text" name="pet-name" value="Барсик" aria-label="Укажите имя домашнего питомца" autocomplete="off">
+              </label>
+            </div>
+            <div class="pet__organizer">
+              <label class="pet__label">
+                Вес (кг):*
+                <input class="pet__input" type="text" name="pet-weight" value="7" aria-label="Укажите вес домашнего питомца" autocomplete="off">
+              </label>
+            </div>
+            <div class="pet__organizer">
+              <label class="pet__label">
+                Возраст (лет):*
+                <input class="pet__input" type="text" name="pet-age" value="7" aria-label="Укажите возраст домашнего питомца" autocomplete="off">
+              </label>
+            </div>
           </div>
 
-          <div class="radiobuttons">
-            <h2 class="visually-hidden">Выберите стратегию действий</h2>
+          <div class="plan">
+            <h2 class="visually-hidden">Выберите план действий</h2>
 
-            <ul class="radiobuttons-list">
-              <li class="radiobuttons-item">
-                <label class="radiobuttons-title">
-                  <input class="radiobuttons-usual" type="radio" name="radiobuttons__usual" value="slenderize" checked>
+            <ul class="plan__list">
+              <li class="plan__item">
+                <label class="plan__label">
+                  <input class="plan-usual-box" type="radio" name="plan__usual" value="slenderize" checked>
                   Похудение
-                  <svg class="radiobuttons-custom-box" xmlns="http://www.w3.org/2000/svg" width="29" height="29">
+                  <svg class="plan-custom-box" xmlns="http://www.w3.org/2000/svg" width="29" height="29">
                     <!-- вставить два path  -->
                   </svg>
                 </label>
               </li>
-              <li class="radiobuttons__item">
-                <label class="radiobuttons__label">
-                  <input class="radiobuttons-usual" type="radio" name="radiobuttons__usual" value="fatten">
+              <li class="plan__item">
+                <label class="plan__label">
+                  <input class="plan-usual-box" type="radio" name="plan__usual" value="fatten">
                   Набор массы
-                  <svg class="radiobuttons-custom-box" xmlns="http://www.w3.org/2000/svg" width="29" height="29">
+                  <svg class="plan-custom-box" xmlns="http://www.w3.org/2000/svg" width="29" height="29">
                   <!-- вставить два path  -->
                   </svg>
                 </label>
               </li>
               <li class="checkboxes__item">
-                <label class="radiobuttons__label">
-                  <input class="radiobuttons-usual" type="radio" name="radiobuttons__usual" value="need-advice">
+                <label class="plan__label">
+                  <input class="plan-usual-box" type="radio" name="plan__usual" value="need-advice">
                   Не знаю (нужен Ваш совет)
-                  <svg class="radiobuttons-custom-box" xmlns="http://www.w3.org/2000/svg" width="29" height="29">
+                  <svg class="plan-custom-box" xmlns="http://www.w3.org/2000/svg" width="29" height="29">
                   <!-- вставить два path  -->
                   </svg>
                 </label>
@@ -91,10 +97,10 @@
             <div class="owner__organizer">
               <label class="owner__label">
                 e-mail:*
-                <input class="owner__input" type="text">
+                <input class="owner__input" type="text" name="owner-input" value="kuklachev@gmail.com" aria-label="Введите электронный адрес" autocomplete="off">
                 <a class="owner__link" href="#">
-                  <svg class="owner-icon" xmlns="http://www.w3.org/2000/svg" width="17" height="13">
-                    <!-- Вставить path -->
+                  <svg class="owner-icon" width="17" height="13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 17 13">
+                    <path d="M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z"/>
                   </svg>
                 </a>
               </label>
@@ -102,10 +108,15 @@
             <div class="owner__organizer">
               <label class="owner__label">
                 Телефон:*
-                <input class="owner__input" type="text">
-                <a class="owner__link" href="#" >
-                  <svg class="owner-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                    <!-- Вставить path -->
+                <input class="owner__input" type="text" name="owner-input" value="8 (960) 900-60-90" aria-label="Введите номер телефона" autocomplete="off">
+                <a class="owner__link" href="#">
+                  <svg class="owner-icon" width="20" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20">
+                    <path d="M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z"/>
+                    <path
+                      d="M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7
+                    c0-0.1,0-0.1,0-0.2V3.1c0-1,0.8-1.8,1.7-1.8c0.1,0,0.1,0,0.2,0h3.7v5H4.4c-0.7,0-1.2,0.6-1.2,1.2h4.4c0.3,0,0.6-0.3,0.6-0.6V0.6
+                    C8.1,0.3,7.8,0,7.5,0H3.1C1.5-0.1,0.1,1.2,0,2.9C0,3,0,3.1,0,3.1v13.7c-0.1,1.7,1.2,3.1,2.9,3.1c0.1,0,0.2,0,0.2,0h4.4
+                    C7.8,20,8.1,19.7,8.1,19.4z"/>
                   </svg>
                 </a>
               </label>
@@ -113,49 +124,46 @@
           </div>
 
           <div class="comments">
-            <!-- Подумать, возможно это нечто другое, не textarea:   -->
             <h2 class="comments__title form-title">Комментарий</h2>
-            <!--  Возможно, input  -->
-            <p>Расскажите обо всех повадках кота</p>
-            <textarea class="comments__text" name="comments__text" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота">
-            </textarea>
+            <!-- Подумать, возможно это нечто другое, не textarea:   -->
+            <textarea class="comments__textarea" name="comments__text" cols="40" rows="10">Расскажите обо всех повадках кота</textarea>
           </div>
 
-          <div class="additionaly">
-            <h2 class="additionaly__title form-title">Дополнительно</h2>
-            <ul class="additionaly__list">
-              <li class="additionaly__item">
-                <label class="additionaly__label">
+          <div class="more">
+            <h2 class="more__title form-title">Дополнительно</h2>
+            <ul class="more__list">
+              <li class="more__item">
+                <label class="more__label">
+                  <input class="more__usual-box" type="checkbox" name="sweetener" checked>
                   Сахарозаменитель
-                  <input class="additionaly-usual" type="checkbox" name="sweetener" checked>
-                  <svg class="additionaly-custom-box" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                  <svg class="more__custom-box" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
                   <!-- вставить path  -->
                   </svg>
                 </label>
               </li>
-              <li class="additionaly__item">
-                <label class="additionaly__label">
+              <li class="more__item">
+                <label class="more__label">
+                  <input class="more__usual-box" type="checkbox" name="water">
                   Питьевая вода
-                  <input class="additionaly-usual" type="checkbox" name="water">
-                  <svg class="additionaly-custom-box" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                  <svg class="more__custom-box" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
                   <!-- вставить path  -->
                   </svg>
                 </label>
               </li>
-              <li class="additionaly__item">
-                <label class="additionaly__label">
+              <li class="more__item">
+                <label class="more__label">
+                  <input class="more__usual-box" type="checkbox" name="milk">
                   Молоко
-                  <input class="additionaly-usual" type="checkbox" name="milk">
-                  <svg class="additionaly-custom-box" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                  <svg class="more__custom-box" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
                   <!-- вставить path  -->
                   </svg>
                 </label>
               </li>
-              <li class="additionaly__item">
-                <label class="additionaly__label">
+              <li class="more__item">
+                <label class="more__label">
+                  <input class="more__usual-box" type="checkbox" name="vitamins">
                   Витамины
-                  <input class="additionaly-usual" type="checkbox" name="vitamins">
-                  <svg class="additionaly-custom-box" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
+                  <svg class="more__custom-box" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
                   <!-- вставить path  -->
                   </svg>
                 </label>
@@ -164,7 +172,6 @@
           </div>
           <button class="form__submit btn">Отправить заявку</button>
           <p class="form__hint">*-Обязательные поля</p>
-
         </form>
 
       </main>
@@ -180,39 +187,70 @@
           <div class="contacts__map-wrapper">
             <h3 class="visually-hidden">Найти на карте нас очень легко:</h3>
             <!-- Будет итерактивная карта -->
-            <img class="about__map" src="https://via.placeholder.com/1345x645" width="1345" height="645" alt="Карта: доходный дом Мельцера" >
+            <img class="contacts__map" src="./img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта: доходный дом Мельцера">
+            <!-- <img class="contacts__pin" src="./img/map-pin.png" width="124" height="106" alt="Карта: доходный дом Мельцера"> -->
           </div>
         </section>
 
-        <section class="links">
+        <section class="socials">
           <h2 class="visually-hidden">Социальные сети</h2>
-          <img class="links__presentation" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Логотип компании Cat Energy">
+          <div class="socials__logo-wrapper">
+            <img class="socials__logo" src="./img/logo-footer.svg" width="128" height="23" alt="Логотип компании Cat Energy">
+          </div>
 
-          <ul class="links__websites">
-            <li>
-              <a class="links__network" href="https://vk.com/" aria-label="Посетите VKontakte.com" title="Посетите VKontakte.com">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link" href="https://vk.com/" aria-label="Посетите VKontakte.com" title="Посетите VKontakte.com">
                 Посетите VKontakte
-                <svg class="vk-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="12"></svg>
+                <svg class="icon-vk" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="12" viewBox="0 0 22 12" aria-label="Перейти на официальный сайт VK">
+                  <path d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
+                  c0,0.1,0,0.6-0.3,0.9c-0.3,0.3-0.8,0.4-0.9,0.4h-1.4c-0.7,0-3.2-0.2-5.4-2.3C2.5,7.1,0.2,2.2,0.1,2C0,1.6-0.1,1.2,0.2,0.9
+                  s0.8-0.4,1-0.4h3.1c0.1,0,0.4,0.1,0.7,0.3C5.3,1,5.4,1.3,5.5,1.4c0.7,1.5,1.5,2.8,2.6,4C8.2,5,8.3,4,8.2,3.1c0-0.4-0.1-0.8-0.2-1
+                  C7.9,2,7.7,1.9,7.5,1.9L6.9,1.4c0-0.5,0.5-0.9,0.9-1.1C8.3,0.1,9.1,0,10.1,0h0.5c0.9,0,1.2,0.1,1.6,0.1c1.2,0.3,1.2,1.3,1.1,2.5v1.6
+                  c0,0.3,0,0.8,0.1,1c0.2-0.1,0.6-0.5,1.5-1.9c0.6-0.9,1-1.9,1.1-2.1c0.1-0.3,0.4-0.7,1.2-0.7h3.4c0.7,0,1.2,0.2,1.3,0.7
+                  c0.2,0.5,0.1,1.3-1.7,3.5c-0.3,0.3-0.5,0.6-0.7,0.9c-0.5,0.4-0.9,1-0.9,1.1s0.5,0.5,0.9,0.9c1.1,0.9,1.9,1.7,2.2,2.3
+                  c0.4,0.6,0.3,1,0.2,1.3c-0.3,0.7-1.2,0.7-1.4,0.8h-2.8C17.7,12,17.6,12,17.6,12z M13.7,8.3c0.7,0,1.2,0.6,1.8,1.2
+                  c0.4,0.4,0.7,0.8,1.1,1c0.5,0.3,1,0.3,1,0.3h2.9c0.1,0,0.3-0.1,0.4-0.1c0,0,0-0.1-0.1-0.1c-0.3-0.5-1-1.3-2-2.1
+                  c-0.9-0.7-1.3-1.1-1.4-1.7c0-0.6,0.4-1.1,1.2-2.1c0.2-0.2,0.4-0.5,0.7-0.8c1.1-1.4,1.4-2,1.5-2.3h-3.9c0,0.4-0.5,1.5-1.1,2.4
+                  c-1.4,2.1-2,2.4-2.5,2.4c-0.1,0-0.3,0-0.4-0.1c-0.7-0.4-0.7-1.4-0.7-2.1V3.9V2.6c0.1-1.3,0-1.3-0.3-1.4c-0.3-0.1-0.5-0.1-1.4-0.1H10
+                  c-0.5,0-1,0-1.4,0.1l0.2,0.2c0.4,0.5,0.4,1.5,0.4,1.7c0.1,1.3,0,2.9-0.7,3.3c-0.1,0-0.2,0.1-0.4,0.1C7.5,6.5,6.8,5.8,5.6,4
+                  C5,2.9,4.5,1.8,4.5,1.8s0-0.1-0.1-0.1S4.2,1.6,4.2,1.6H1.3H1.2c0.4,0.9,2.5,5,4.8,7.2c2,1.9,4.3,2,4.7,2h1.4c0,0,0.2,0,0.2-0.1v-0.1
+                  c0-0.2,0-2,1.2-2.3C13.5,8.3,13.7,8.3,13.7,8.3z"/>
+                </svg>
               </a>
             </li>
-            <li>
-              <a class="links__network" href="https://instagram.com/" aria-label="Посетите instagram.com" title="Посетите instagram.com">
+            <li class="socials__item">
+              <a class="socials__link" href="https://instagram.com/" aria-label="Посетите instagram.com" title="Посетите instagram.com">
                 Посетите Instagram
-                <svg class="ig-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"></svg>
+                <svg class="icon-insta" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16.1 16" aria-label="Перейти на официальный сайт Instagram">
+                <!-- <style type="text/css">.st0{fill:#231F20;}</style> -->
+                  <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8
+                  M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0z"/>
+                  <path class="st0" d="M8,4.9c1.7,0,3.1,1.4,3.1,3.1S9.7,11.1,8,11.1S4.9,9.7,4.9,8S6.3,4.9,8,4.9 M8,3.9C5.7,3.9,3.9,5.7,3.9,8
+                  s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S10.3,3.9,8,3.9z"/>
+                  <circle class="st0" cx="12.3" cy="3.7" r="0.9"/>
+                </svg>
               </a>
             </li>
-            <li>
-              <a class="links__network" href="https://facebook.com/" aria-label="Посетите facebook.com" title="Посетите facebook.com">
+            <li class="socials__item">
+              <a class="socials__link" href="https://facebook.com/" aria-label="Посетите facebook.com" title="Посетите facebook.com">
                 Посетите Facebook
-                <svg class="fb-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="19"></svg>
+                <svg class="icon-fb" xmlns="http://www.w3.org/2000/svg" width="10" height="19"></svg>
+                <svg class="icon-fb" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="19" viewBox="0 0 10 19" aria-label="Перейти на официальный сайт Facebook">
+                  <path d="M7.1,19H2v-8.8H0V5.8h1.9C1.8,3.8,2.1,2.4,3,1.4C3.8,0.5,5,0.1,6.5,0H10v4.2H7.2C7.1,4.4,7,5,7,5.8h3v4.4H7.1V19z M3.1,18
+                  h2.8V9.1h2.9V6.8H5.9V6.3c0-1.4,0-2.6,0.7-3.1l0.1-0.1h2.1V1H6.5c-1.2,0.1-2,0.4-2.6,1c-0.8,0.8-1,2.3-0.8,4.2l0.1,0.6H1.1v2.3h2V18
+                  z"/>
+                </svg>
               </a>
             </li>
           </ul>
 
-          <div class="footer__for-academy">
-            <a class="footer__to-academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Посетите htmlacademy.ru" title="Посетите htmlacademy.ru">
+          <div class="footer__academy">
+            <a class="footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Посетите htmlacademy.ru" title="Посетите htmlacademy.ru">
               HTMLAcademy
-              <svg class="academy-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34"></svg>
+              <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+                <path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
+              </svg>
             </a>
           </div>
         </section>

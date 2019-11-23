@@ -1,36 +1,30 @@
 .intro {
+  min-height: 480px;
   text-align: center;
-
+  background: url("../../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
   outline: 0.5px dashed green;
-}
 
-.intro__presentation {
-  text-align: center;
-}
+  &__presentation {
+    text-align: center;
+  }
 
-.intro__title {
-  font-size: 36px;
-  font-weight: normal;
-  line-height: 36px;
-  // text-transform: uppercase; - не нужно
-}
+  &__title {
+    @include textomizer(regular, 36px);
+    color: #ffffff;
+  }
 
-.intro__text {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 14px;
-  text-transform: uppercase;
-}
+  &__text {
+    @include textomizer(regular, 14px, 14px, uppercase);
+    color: #ffffff;
+  }
 
-.intro__btn {
-  display: inline-block;
+  &__btn {
+    display: inline-block;
+    vertical-align: center;
 
-  vertical-align: center;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 18px;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  outline: 0.5px dashed green;
+    @include textomizer(regular, 14px, 18px, uppercase);
+    color: #ffffff;
+    background-color: #68b738;
+  }
 }

@@ -1,21 +1,23 @@
 .socials {
+  min-height: 236px;
   background-color: #f2f2f2;
-}
 
-.socials__list {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  &__logo-wrapper {
+    border-bottom: 1px solid #d9d9d9;
+  }
 
-  padding: 0;
+  &__list {
+    @include flexible();
+    flex-direction: row;
+    padding: 0;
+    list-style-type: none;
+    border-bottom: 0.5px solid #d9d9d9;
+  }
 
-  list-style-type: none;
-}
-
-.socials__link {
-  display: inline-block;
-
-  vertical-align: center;
-  font-size: 0;
-  text-decoration: none;
+  &__link {
+    display: inline-block;
+    vertical-align: center;
+    font-size: 0;
+    text-decoration: none;
+  }
 }

@@ -1,0 +1,13 @@
+.catalog {
+  @include flexible();
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+
+  &__title {
+    margin-top: 15px;
+    margin-bottom: 28px;
+
+    @include textomizer(regular, 36px, 60px);
+  }
+}

@@ -1,22 +1,20 @@
-.contacts__advertising {
-  display: inline-block;
-  // размер переопределить:
-  width: 120px;
+.contacts {
+  min-height: 476px;
+  // background-color: #f2f2f2;
 
-  vertical-align: center;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 20px;
-  text-transform: uppercase;
-}
+  &__advertising {
+    display: inline-block;
+    // width: 120px;
+    vertical-align: center;
 
-.contacts__adress {
-  display: inline-block;
-  // размер переопределить:
-  width: 120px;
+    @include textomizer(regular, 16px, 20px, uppercase);
+  }
 
-  vertical-align: center;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 20px;
+  .contacts__adress {
+    display: inline-block;
+    // width: 120px;
+    vertical-align: center;
+
+    @include textomizer(regular, 14px, 20px);
+  }
 }

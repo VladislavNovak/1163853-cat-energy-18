@@ -1,5 +1,26 @@
-@mixin flaxible() {
+@mixin flexible() {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+}
+
+@mixin textomizer($type:regular,$size:14px,$height:$size,$transform:none) {
+  @if $type == regular {
+    font-family: "Oswald", "Arial", sans-serif;
+    font-weight: 400;
+  }
+
+  @else if $type == medium {
+    font-family: "Oswald", "Arial", sans-serif;
+    font-weight: 500;
+  }
+
+  @else if $type == arial {
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+  }
+  font-size: $size;
+  line-height: $height;
+  text-transform: $transform;
+  color: #000000;
+  text-decoration: none;
 }

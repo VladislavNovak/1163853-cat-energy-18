@@ -8,13 +8,13 @@
   <body>
 
     <div class="container">
+
       <header class="header">
-        <!-- Переход понадобится на других страницах. Не на этой -->
         <a class="header__to-index" title="Находимся на главной странице">
           <img class="header__icon-logo" src="./img/logo-mobile.svg" width="190" height="38" alt="Логотип компании Cat Energy">
         </a>
         <button class="header__burger" type="button"><span class="visually-hidden">Открыть навигацию</span></button>
-        <nav class="header__menu navigation">
+        <nav class="navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
               <a class="navigation__link" aria-label="Находимся на текущей странице">Главная</a>
@@ -141,25 +141,25 @@
           <div class="example__results">
             <strong class="visually-hidden">Реальные результаты:</strong>
             <div class="example__item">
-              <span>5 кг</span>
-              <span>снижение веса</span>
+              <span class="example__text-index">5 кг</span>
+              <span class="example__text-result">снижение веса</span>
             </div>
             <div class="example__item">
-              <span>60 дней</span>
-              <span>затрачено времени</span>
+              <span class="example__text-index">60 дней</span>
+              <span class="example__text-result">затрачено времени</span>
             </div>
           </div>
-          <p>Затраты на питание: 15 000 руб</p>
+          <p class="example__text-expenses">Затраты на питание: 15 000 руб</p>
 
           <div class="example__photo-rotator">
             <!-- Понадобится фото Бориса до -->
-            <img class="example__cat-boris" src="https://via.placeholder.com/311x232" width="311" height="232" alt="Фото кота Бориса после">
+            <img class="example__cat-boris" src="./img/before-mobile@1x.png" width="311" height="232" alt="Фото кота Бориса после">
           </div>
 
           <div class="example__slider">
-            <span class="example__was-once"></span>
+            <span class="example__was-once">Было</span>
             <div class="example__indicator"></div>
-            <span class="example__was-once"></span>
+            <span class="example__was-once">Стало</span>
           </div>
         </section>
 
@@ -175,15 +175,17 @@
           </div>
           <div class="contacts__map-wrapper">
             <h3 class="visually-hidden">Найти на карте нас очень легко:</h3>
-            <!-- Будет итерактивная карта -->
-            <img class="contacts__map" src="./img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта: доходный дом Мельцера" >
+            <!-- Будет интерактивная карта -->
+            <img class="contacts__map" src="./img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта: доходный дом Мельцера">
             <!-- <img class="contacts__pin" src="./img/map-pin.png" width="124" height="106" alt="Карта: доходный дом Мельцера" > -->
           </div>
         </section>
 
         <section class="socials">
           <h2 class="visually-hidden">Социальные сети</h2>
-          <img class="socials__logo" src="./img/logo-footer.svg" width="128" height="23" alt="Логотип компании Cat Energy">
+          <div class="socials__logo-wrapper">
+            <img class="socials__logo" src="./img/logo-footer.svg" width="128" height="23" alt="Логотип компании Cat Energy">
+          </div>
 
           <ul class="socials__list">
             <li class="socials__item">
@@ -235,7 +237,9 @@
           <div class="footer__academy">
             <a class="footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Посетите htmlacademy.ru" title="Посетите htmlacademy.ru">
               HTMLAcademy
-              <svg class="academy-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34"></svg>
+              <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+                <path d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
+              </svg>
             </a>
           </div>
         </section>

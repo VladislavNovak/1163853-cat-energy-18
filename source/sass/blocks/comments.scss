@@ -1,0 +1,11 @@
+.comments {
+  &__title {
+    @include textomizer(regular, 24px);
+  }
+
+  &__textarea {
+    @include textomizer(regular, 16px, 18px, uppercase);
+    border: 2px solid #e6e6e6;
+    resize: none;
+  }
+}

@@ -4,7 +4,9 @@ html {
 
 body {
   width: auto;
-  margin: 0;
+  margin: 0 auto;
+
+  @include textomizer(regular);
 }
 
 *,

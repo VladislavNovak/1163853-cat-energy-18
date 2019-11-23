@@ -1,0 +1,13 @@
+.program-selection {
+  &__title {
+    @include textomizer(regular, 36px, 60px);
+    margin-top: 15px;
+    margin-bottom: 17px;
+  }
+
+  &__text {
+    @include textomizer(regular, 14px, 18px, uppercase);
+    margin-top: 25px;
+    margin-bottom: 17px;
+  }
+}

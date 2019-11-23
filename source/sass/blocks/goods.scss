@@ -1,0 +1,43 @@
+.goods {
+  outline: 1px dashed red;
+
+  &__list {
+    @include flexible();
+    flex-direction: column;
+    min-height: 1464px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style-type: none;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+  }
+
+  &__item {
+    @include flexible();
+    border-bottom: 2px solid #ededed;
+    text-align: center;
+  }
+
+  &__description {
+    order: 2;
+    outline: 1px dashed green;
+  }
+
+  &__title {
+    @include textomizer(regular, 16px, 20px, uppercase);
+  }
+
+  &__table {
+    @include textomizer(arial, 12px, 16px);
+    outline: 0.5px dashed blue;
+  }
+
+  &__btn {
+    order: 3;
+
+    @include textomizer(regular, 16px, 20px, uppercase);
+    color: #ffffff;
+    background-color: #68b738;
+  }
+}
