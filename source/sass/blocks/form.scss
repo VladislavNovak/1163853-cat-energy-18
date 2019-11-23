@@ -1,0 +1,15 @@
+.form {
+  @include flexible();
+  flex-direction: column;
+
+  &__submit {
+    @include textomizer(regular, 16px, 20px, uppercase);
+    border: none;
+    color: #ffffff;
+    background-color: #68b738;
+  }
+
+  &__hint {
+    @include textomizer(arial, 14px, 16px);
+  }
+}

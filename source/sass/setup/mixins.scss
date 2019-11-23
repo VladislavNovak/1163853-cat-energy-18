@@ -3,18 +3,20 @@
   flex-wrap: wrap;
 }
 
-@mixin textomizer($type-text:regular,$size:14px,$height:$size,$transform:none) {
-  @if $type-text == regular {
-    font-family: "Oswald Regular", "Arial", sans-serif;
+@mixin textomizer($type:regular,$size:14px,$height:$size,$transform:none) {
+  @if $type == regular {
+    font-family: "Oswald", "Arial", sans-serif;
     font-weight: 400;
   }
-  @else if $type-text == medium {
-    font-family: "Oswald Medium", "Arial", sans-serif;
+
+  @else if $type == medium {
+    font-family: "Oswald", "Arial", sans-serif;
     font-weight: 500;
   }
-  @else if $type-text == arial {
+
+  @else if $type == arial {
     font-family: "Arial", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
   }
   font-size: $size;
   line-height: $height;

@@ -1,0 +1,38 @@
+.additionaly {
+  outline: 1px solid yellow;
+
+  &__title {
+    @include textomizer(regular, 24px);
+  }
+
+  &__list {
+    @include flexible();
+    flex-direction: column;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    @include flexible();
+
+    border-bottom: 2px solid #cdcdcd;
+  }
+
+  &__item-title {
+    @include textomizer(regular, 16px, 16px, uppercase);
+  }
+
+  &__volume {
+    @include textomizer(arial, 14px);
+  }
+
+  &__cost {
+    @include textomizer(regular, 14px, 14px, uppercase);
+  }
+
+  &__btn {
+    @include textomizer(regular, 16px, 20px, uppercase);
+    color: #ffffff;
+    background-color: #68b738;
+  }
+}

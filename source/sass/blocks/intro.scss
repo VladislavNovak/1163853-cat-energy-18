@@ -8,23 +8,18 @@
 
   &__title {
     @include textomizer(regular, 36px);
-    line-height: 36px;
   }
 
   &__text {
-    @include textomizer(regular);
-    line-height: 14px;
-    text-transform: uppercase;
+    @include textomizer(regular, 14px, 14px, uppercase);
   }
 
   &__btn {
     display: inline-block;
     vertical-align: center;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 18px;
-    text-transform: uppercase;
-    text-decoration: none;
-    outline: 0.5px dashed green;
+
+    @include textomizer(regular, 14px, 18px, uppercase);
+    color: #ffffff;
+    background-color: #68b738;
   }
 }

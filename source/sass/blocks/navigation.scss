@@ -16,6 +16,7 @@
   &__link {
     display: inline-block;
     vertical-align: center;
+
     @include textomizer(medium, 20px, 20px, uppercase);
   }
 }

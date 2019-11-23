@@ -1,4 +1,24 @@
 .example {
-
+  background-color: #f2f2f2;
   outline: 0.5px dashed red;
+
+  &__title {
+    @include textomizer(regular, 36px, 60px);
+  }
+
+  &__text {
+    @include textomizer(arial, 14px, 18px);
+  }
+
+  &__text-index {
+    @include textomizer(regular, 24px, 24px, uppercase);
+  }
+
+  &__text-result {
+    @include textomizer(arial, 12px, 12px, uppercase);
+  }
+
+  &__text-expenses {
+    @include textomizer(regular, 14px, 20px, uppercase);
+  }
 }

@@ -3,10 +3,7 @@
   outline: 0.5px dashed green;
 
   &__title {
-    font-size: 36px;
-    font-weight: normal;
-    line-height: 60px;
-    text-transform: uppercase;
+    @include textomizer(regular, 36px, 60px, uppercase);
   }
 
   &__list {
@@ -27,8 +24,6 @@
   }
 
   &__text {
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 18px;
+    @include textomizer(arial, 14px, 18px);
   }
 }

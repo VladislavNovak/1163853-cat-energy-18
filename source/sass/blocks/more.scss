@@ -1,0 +1,16 @@
+.more {
+  &__title {
+    @include textomizer(regular, 24px);
+  }
+
+  &__list {
+    @include flexible();
+    flex-direction: column;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__label {
+    @include textomizer(regular, 16px, 18px, uppercase);
+  }
+}

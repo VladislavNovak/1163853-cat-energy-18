@@ -8,13 +8,6 @@
     list-style-type: none;
   }
 
-  &__title {
-    font-size: 24px;
-    font-weight: normal;
-    line-height: 37px;
-    text-transform: uppercase;
-  }
-
   &__item {
     display: flex;
     flex-wrap: wrap;
@@ -22,10 +15,12 @@
     background-color: #f2f2f2;
   }
 
+  &__title {
+    @include textomizer(regular, 24px, 37.02px, uppercase);
+  }
+
   &__text {
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 18px;
+    @include textomizer(arial, 14px, 18px);
 
     border-bottom: 1px solid #e6e6e6;
   }
@@ -39,12 +34,8 @@
 
   &__link {
     display: inline-block;
-
     vertical-align: center;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 16px;
-    text-transform: uppercase;
-    text-decoration: none;
+
+    @include textomizer(regular, 16px, 16px, uppercase);
   }
 }

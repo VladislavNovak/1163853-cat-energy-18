@@ -1,0 +1,5 @@
+.program-selection {
+  &__text {
+    @include textomizer(regular, 36px, 60px);
+  }
+}

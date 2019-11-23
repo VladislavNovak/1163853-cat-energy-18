@@ -11,60 +11,6 @@
   outline: 0.5px solid blue;
 }
 
-/*-----------------*/
-
-.additionary {
-  outline: 1px solid yellow;
-}
-
-.additionary__title {
-  font-size: 24px;
-  font-weight: normal;
-  line-height: 24px;
-  text-transform: uppercase;
-}
-
-.additionary__list {
-  @include flexible();
-  flex-direction: column;
-  padding: 0;
-  list-style-type: none;
-}
-
-.additionary__item {
-  @include flexible();
-  border-bottom: 2px solid #cdcdcd;
-}
-
-.additionary__item-title {
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 16px;
-  text-transform: uppercase;
-}
-
-.additionary__volume {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 14px;
-}
-
-.additionary__cost {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 14px;
-  text-transform: uppercase;
-}
-
-/*************************/
-
-.footer {
-  @include flexible();
-  flex-direction: column;
-  width: 100%;
-  outline: 1px dashed blue;
-}
-
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
 

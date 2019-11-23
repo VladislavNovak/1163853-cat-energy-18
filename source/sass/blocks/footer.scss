@@ -1,0 +1,14 @@
+.footer {
+  @include flexible();
+  flex-direction: column;
+  width: 100%;
+  outline: 1px dashed blue;
+
+  &__academy-link {
+    @include textomizer(arial, 16px, 16px);
+  }
+
+  &__icon {
+    fill: #666666;
+  }
+}

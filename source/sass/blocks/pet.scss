@@ -1,0 +1,13 @@
+.pet {
+  @include flexible();
+  flex-direction: column;
+  border-bottom: 2px solid #ededed;
+
+  &__label {
+    @include textomizer(regular, 16px, 18px, uppercase);
+  }
+
+  &__input {
+    @include textomizer(regular, 16px, 18px, uppercase);
+  }
+}

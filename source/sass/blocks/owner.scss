@@ -1,0 +1,17 @@
+.owner {
+  @include flexible();
+  flex-direction: column;
+  outline: 1px dashed red;
+
+  &__title {
+    @include textomizer(regular, 24px, 24px);
+  }
+
+  &__label {
+    @include textomizer(regular, 16px, 18px, uppercase);
+  }
+
+  &__input {
+    @include textomizer(regular, 16px, 18px, uppercase);
+  }
+}
