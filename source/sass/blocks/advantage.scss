@@ -1,8 +1,13 @@
 .advantage {
-  min-height: 447px;
-  // outline: 0.5px dashed green;
+  padding-top: 7px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-left: 20px;
 
   &__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+
     @include textomizer(regular, 36px, 60px);
   }
 
@@ -10,20 +15,51 @@
     @include flexible();
     flex-direction: column;
     padding: 0;
+    margin: 0 auto;
     list-style-type: none;
   }
 
   &__item {
     @include flexible();
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
   }
 
-  &__icon-wrap {
+  &__icon-wrapper {
     width: 60px;
     height: 60px;
+    margin-top: -3px;
     background-color: #68b738;
   }
 
+  &__icon-leaf {
+    margin-top: 5px;
+    margin-left: 4.5px;
+  }
+
+  &__icon-powder {
+    margin-top: 4px;
+    margin-left: 4.5px;
+  }
+
+  &__icon-dining {
+    margin-top: 4.5px;
+    margin-left: 4px;
+  }
+
+  &__icon-clock {
+    margin-top: 4.5px;
+    margin-left: 5px;
+  }
+
   &__text {
+    width: 220px;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    padding-right: 5px;
+    padding-left: 20px;
+
     @include textomizer(arial, 14px, 18px);
   }
 }

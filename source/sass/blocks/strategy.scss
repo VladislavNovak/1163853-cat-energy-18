@@ -1,42 +1,84 @@
 .strategy {
-  min-height: 574px;
-  outline: 0.5px dashed red;
+  padding-top: 12px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   &__list {
     @include flexible();
     flex-direction: column;
+    margin: 0;
     padding: 0;
     list-style-type: none;
   }
 
   &__item {
-    display: flex;
-    flex-wrap: wrap;
-
+    @include flexible();
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-right: 21px;
+    padding-bottom: 9.5px;
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-color: #f2f2f2;
-  }
-
-  &__title {
-    @include textomizer(regular, 24px, 37.02px, uppercase);
-  }
-
-  &__text {
-    @include textomizer(arial, 14px, 18px);
-
-    border-bottom: 1px solid #e6e6e6;
   }
 
   &__icon-wrapper {
     width: 50px;
     height: 50px;
+    margin-top: 1px;
+    margin-left: 2px;
     background-color: #68b738;
     border-radius: 50%;
   }
 
+  &__icon-cat-slim {
+    margin-top: -2.5px;
+    margin-left: 8px;
+  }
+
+  &__icon-cat-pro {
+    margin-top: 10.5px;
+    margin-left: -9px;
+  }
+
+  &__title {
+    width: 150px;
+    margin-top: 6px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 23px;
+    margin-bottom: 15.5px;
+
+    @include textomizer(regular, 24px, 37.02px, uppercase);
+  }
+
+  &__text {
+    margin-bottom: 5px;
+    padding-bottom: 22.5px;
+
+    @include textomizer(arial, 14px, 18px);
+    border-bottom: 1px solid #d9d9d9;
+  }
+
   &__link {
-    display: inline-block;
+    display: block;
+    position: relative;
+    margin-top: 13px;
+    margin-bottom: 13px;
     vertical-align: center;
 
     @include textomizer(regular, 16px, 16px, uppercase);
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 11px;
+      top: 3.5px;
+      left: 96px;
+      background-image: url("../../img/icon-right-arrow-long.svg");
+      background-repeat: no-repeat;
+    }
   }
 }

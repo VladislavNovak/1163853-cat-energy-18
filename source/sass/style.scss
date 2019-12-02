@@ -1,8 +1,8 @@
-
 @import "./setup/font.scss";
 // @import "./setup/variables.scss";
 @import "./setup/mixins.scss";
 @import "./setup/setup.scss";
+@import "./blocks/index.scss";
 @import "./blocks/form.scss";
 @import "./blocks/additionaly.scss";
 @import "./blocks/advantage.scss";
@@ -14,9 +14,9 @@
 @import "./blocks/goods.scss";
 @import "./blocks/header.scss";
 @import "./blocks/intro.scss";
+@import "./blocks/logotype.scss";
 @import "./blocks/more.scss";
 @import "./blocks/owner.scss";
-@import "./blocks/footer.scss";
 @import "./blocks/navigation.scss";
 @import "./blocks/pet.scss";
 @import "./blocks/plan.scss";

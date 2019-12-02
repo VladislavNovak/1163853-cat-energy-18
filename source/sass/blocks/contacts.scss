@@ -1,20 +1,29 @@
 .contacts {
   min-height: 476px;
-  // background-color: #f2f2f2;
+
+  &__text-wrapper {
+    @include flexible();
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: 14.5px;
+    padding-left: 19px;
+    padding-right: 18px;
+    padding-bottom: 12px;
+  }
 
   &__advertising {
-    display: inline-block;
-    // width: 120px;
-    vertical-align: center;
+    width: 50%;
+    margin-top: 14px;
+    margin-bottom: 15px;
 
     @include textomizer(regular, 16px, 20px, uppercase);
   }
 
   .contacts__adress {
-    display: inline-block;
-    // width: 120px;
-    vertical-align: center;
+    width: 50%;
+    margin-top: 15px;
+    margin-bottom: 14px;
 
-    @include textomizer(regular, 14px, 20px);
+    @include textomizer(arial, 14px, 20px);
   }
 }

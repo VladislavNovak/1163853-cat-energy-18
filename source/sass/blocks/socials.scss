@@ -1,23 +1,73 @@
 .socials {
-  min-height: 236px;
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
   background-color: #f2f2f2;
 
   &__logo-wrapper {
+    padding-top: 37.5px;
+    padding-bottom: 30px;
+    text-align: center;
     border-bottom: 1px solid #d9d9d9;
   }
 
   &__list {
     @include flexible();
     flex-direction: row;
-    padding: 0;
+    justify-content: center;
+    align-items: flex-end;
+    padding-left: 0;
+    padding-top: 7px;
+    padding-bottom: 19px;
     list-style-type: none;
     border-bottom: 0.5px solid #d9d9d9;
   }
 
   &__link {
-    display: inline-block;
-    vertical-align: center;
+    display: block;
+    width: 22px;
+    height: 22px;
     font-size: 0;
+    margin-left: 17px;
+    margin-right: 17px;
     text-decoration: none;
+  }
+
+  &__icon-vk {
+    margin-top: 5px;
+  }
+
+  &__icon-insta {
+    margin-top: 3px;
+    margin-left: 3px;
+  }
+
+  &__icon-fb {
+    margin-top: 1px;
+    margin-left: 3px;
+  }
+
+  &__academy {
+    padding-top: 16px;
+    padding-bottom: 30px;
+    letter-spacing: 0.3px;
+  }
+
+  &__academy-link {
+    position: relative;
+
+    @include textomizer(arial, 16px, 16px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 41px;
+      height: 44px;
+      top: -10px;
+      left: 246px;
+      background-image: url("../../img/htmlacademy.svg");
+      background-repeat: no-repeat;
+      fill: #666666;
+    }
   }
 }

@@ -1,27 +1,43 @@
 .intro {
-  min-height: 480px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
   text-align: center;
   background: url("../../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-  outline: 0.5px dashed green;
-
-  &__presentation {
-    text-align: center;
-  }
 
   &__title {
+    margin-top: 12px;
+    margin-bottom: 25px;
+
     @include textomizer(regular, 36px);
     color: #ffffff;
   }
 
   &__text {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 1px;
+    padding-left: 30px;
+    padding-right: 30px;
+
     @include textomizer(regular, 14px, 14px, uppercase);
     color: #ffffff;
+  }
+
+  &__img {
+    margin-top: 8px;
+    margin-bottom: 2px;
   }
 
   &__btn {
     display: inline-block;
     vertical-align: center;
+    width: calc(100% - 10px);
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 30px;
+    padding-right: 30px;
 
     @include textomizer(regular, 14px, 18px, uppercase);
     color: #ffffff;
