@@ -1,4 +1,11 @@
 .header {
-  width: 100%;
-  // min-height: 264px;
+  @include tablet {
+    padding-left: $side-indent-tablet;
+    padding-right: $side-indent-tablet;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }

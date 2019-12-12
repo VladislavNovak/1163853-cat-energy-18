@@ -1,29 +1,52 @@
 .contacts {
-  min-height: 476px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 13px;
+  padding-bottom: 11px;
 
-  &__text-wrapper {
-    @include flexible();
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding-top: 14.5px;
-    padding-left: 19px;
-    padding-right: 18px;
-    padding-bottom: 12px;
+  @include tablet {
+    padding-top: 45px;
+    padding-bottom: 43px;
+  }
+}
+
+.contacts__invite {
+  min-width: 50%;
+  margin-right: auto;
+  padding-right: 10px;
+
+  @include textomizer(regular, 16px, 20px, uppercase);
+  outline: 1px dashed red;
+
+  @include tablet {
+    max-width: calc(50% - 50px);
+    padding-left: 41px;
+
+    @include textomizer(regular, 20px, 25px, uppercase);
+  }
+}
+
+.contacts__adress {
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  @include textomizer(arial, 14px, 20px);
+  outline: 1px dashed red;
+
+  @include tablet {
+    text-align: right;
+    margin-top: 18px;
+    padding-right: 42px;
+    padding-left: 0;
+
+    @include textomizer(arial, 16px, 20px);
   }
 
-  &__advertising {
-    width: 50%;
-    margin-top: 14px;
-    margin-bottom: 15px;
-
-    @include textomizer(regular, 16px, 20px, uppercase);
-  }
-
-  .contacts__adress {
-    width: 50%;
-    margin-top: 15px;
-    margin-bottom: 14px;
-
-    @include textomizer(arial, 14px, 20px);
+  .contacts__adress-nested {
+    @include tablet {
+      display: block;
+      margin-top: 20px;
+    }
   }
 }

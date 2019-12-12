@@ -1,65 +1,154 @@
 .advantage {
-  padding-top: 7px;
-  padding-right: 20px;
-  padding-bottom: 30px;
-  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 42px;
 
-  &__title {
-    margin-top: 0;
-    margin-bottom: 20px;
-
-    @include textomizer(regular, 36px, 60px);
+  @include tablet {
+    padding-bottom: 58px;
+    border-bottom: 1px solid $color-gray-half-light;
   }
+}
 
-  &__list {
-    @include flexible();
-    flex-direction: column;
-    padding: 0;
-    margin: 0 auto;
-    list-style-type: none;
+.advantage__title {
+  margin-top: 8px;
+  margin-bottom: 27px;
+
+  @include textomizer(regular, 36px, 60px);
+
+  @include tablet {
+    margin-top: 33px;
+    margin-bottom: 72px;
+
+    @include textomizer(regular, 60px, 60px);
   }
+}
 
-  &__item {
-    @include flexible();
+.advantage__list {
+  @include list-reset-to-null();
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
+    counter-reset: list; // задаёт имя счётчика
+  }
+}
+
+.advantage__item {
+  display: flex;
+  justify-content: space-between;
+  min-height: 60px;
+  outline: 1px dashed red;
+
+  @include tablet {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 354px;
+    min-height: 228px;
+    counter-increment: list; // увеличивает значение заданного счётчика
+    position: relative;
+
+    &::before {
+      content: counter(list); //выводим значение счётчика
+      position: absolute;
+      left: 118px;
+      top: -40px;
+      height: 230px;
+      width: 114px;
+      z-index: -1;
+
+      @include textomizer(regular, 281.07px, 281.07px, none, $color-gray-bright);
+    }
+
+    &:nth-child(even) {
+      padding-left: 30px;
+    }
+
+    &:nth-child(odd) {
+      @media (min-width: 1122px) {
+        margin-right: 200px;
+      }
+    }
   }
 
-  &__icon-wrapper {
-    width: 60px;
-    height: 60px;
-    margin-top: -3px;
-    background-color: #68b738;
+  & + & {
+    margin-top: 20px;
+
+    @include tablet {
+      margin-top: 0;
+
+      &:nth-child(3n),
+      &:nth-child(4n) {
+        margin-top: 90px;
+      }
+    }
   }
+}
 
-  &__icon-leaf {
-    margin-top: 5px;
-    margin-left: 4.5px;
+.advantage__icon-wrapper {
+  background-color: $color-green-bright;
+  width: 60px;
+  height: 60px;
+
+  @include tablet {
+    width: 80px;
+    height: 80px;
   }
+}
 
-  &__icon-powder {
-    margin-top: 4px;
-    margin-left: 4.5px;
+.advantage__icon-leaf {
+  margin-top: 5px;
+  margin-left: 4.5px;
+
+  @include tablet {
+    margin-top: 14px;
+    margin-left: 15.5px;
   }
+}
 
-  &__icon-dining {
-    margin-top: 4.5px;
-    margin-left: 4px;
+.advantage__icon-powder {
+  margin-top: 4px;
+  margin-left: 4.5px;
+
+  @include tablet {
+    margin-top: 15.5px;
+    margin-left: 15.5px;
   }
+}
 
-  &__icon-clock {
-    margin-top: 4.5px;
-    margin-left: 5px;
+.advantage__icon-dining {
+  margin-top: 4.5px;
+  margin-left: 4px;
+
+  @include tablet {
+    margin-top: 15.5px;
+    margin-left: 15.5px;
   }
+}
 
-  &__text {
-    width: 220px;
-    margin-top: 10px;
-    margin-bottom: 16px;
-    padding-right: 5px;
-    padding-left: 20px;
+.advantage__icon-clock {
+  margin-top: 4.5px;
+  margin-left: 5px;
 
-    @include textomizer(arial, 14px, 18px);
+  @include tablet {
+    margin-top: 15.5px;
+    margin-left: 15.5px;
+  }
+}
+
+.advantage__text {
+  min-width: 220px;
+  margin: 0;
+  padding-right: 5px;
+  padding-left: 25px;
+  padding-top: 2px;
+
+  @include textomizer(arial, 14px, 18px);
+
+  @include tablet {
+    margin-top: 30px;
+    padding-left: 0;
+    min-width: 244px;
+
+    @include textomizer(arial, 16px, 24px);
   }
 }

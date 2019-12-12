@@ -1,26 +1,39 @@
 .logotype {
-  @include flexible();
-  justify-content: space-between;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: $side-indent-mobile;
+  padding-right: $side-indent-mobile;
   padding-top: 13px;
-  padding-right: 10px;
-  padding-bottom: 14.5px;
-  padding-left: 21px;
-  border-bottom: 0.5px solid #e6e6e6;
+  padding-bottom: 13px;
+  border-bottom: 1px solid $color-gray-light;
 
-  &__icon-logo {
-    display: block;
+  @include tablet {
+    padding: 0;
+    border-bottom: none;
   }
+}
 
-  &__button {
-    width: 21px;
-    height: 21px;
-    margin-top: 9px;
-    margin-right: 11px;
-    border: none;
+.logotype__img {
+  outline: 1px dashed red;
 
-    background: url("../../img/icon-close.svg");
-    background-repeat: no-repeat;
-    cursor: pointer;
+  @include tablet {
+    width: 174px;
+    height: 59px;
+  }
+}
+
+.logotype__button {
+  width: 19px;
+  height: 19px;
+  margin-left: auto;
+  margin-right: 2px;
+  border: none;
+  background: url("../../img/icon-close.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  outline: 1px dashed red;
+
+  @include tablet {
+    display: none;
   }
 }

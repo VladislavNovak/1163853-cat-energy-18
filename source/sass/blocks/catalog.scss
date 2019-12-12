@@ -1,6 +1,9 @@
 .catalog {
-  @include flexible();
-  flex-direction: column;
-  width: 100%;
   text-align: center;
+  border-top: 1px solid $color-gray-half-light;
+
+  @include tablet {
+    border-top: none;
+    padding-top: 17px;
+  }
 }

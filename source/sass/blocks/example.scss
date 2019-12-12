@@ -1,35 +1,168 @@
 .example {
   min-height: 704px;
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-left: 20px;
-  background-color: #f2f2f2;
+  padding-top: 17px;
+  background-color: $color-gray-bright;
 
-  &__title {
-    margin-top: 7px;
-    margin-bottom: 23px;
+  @include tablet {
+    min-height: 1080px;
+    padding-top: 43px;
+    background-color: $color-white;
+    border-bottom: 0.5px solid black;
+  }
+}
 
-    @include textomizer(regular, 36px, 60px);
+.example__title {
+  margin-top: 0;
+  margin-bottom: 23px;
+  padding-right: 30px;
+
+  @include textomizer(regular, 36px, 60px);
+
+  @include tablet {
+    margin-bottom: 63px;
+
+    @include textomizer(regular, 60px, 60px);
+  }
+}
+
+.example__text {
+  margin-top: 17px;
+  margin-bottom: 25px;
+  padding-right: 10px;
+  padding-left: 0.5px;
+
+  @include textomizer(arial, 14px, 18px);
+
+  @include tablet {
+    margin-bottom: 53px;
+
+    @include textomizer(arial, 16px, 24px);
+  }
+}
+
+.example__list {
+  @include list-reset-to-null();
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  outline: 1px dashed red;
+
+  @include tablet {
+    display: inline-flex;
+    width: 51.7%;
+  }
+}
+
+.example__item {
+  text-align: center;
+  width: 124px;
+  border: 1px solid $color-gray-light;
+  border-radius: 4px;
+  position: relative;
+
+  @include tablet {
+    width: 162px;
   }
 
-  &__text {
-    margin-top: 17px;
-    margin-bottom: 23px;
-    padding-right: 10px;
-    padding-left: 0.5px;
+  &::after {
+    display: block;
+    position: absolute;
+    width: 87px;
+    left: 17px;
+    bottom: -16px;
+    padding-left: 14px;
+    padding-right: 15px;
+    background-color: $color-gray-bright;
 
-    @include textomizer(arial, 14px, 18px);
+    @include textomizer(arial, 12px, 12px, lowercase);
+
+    @include tablet {
+      background-color: $color-white;
+
+      @include textomizer(arial, 14px, 14px, lowercase);
+    }
   }
 
-  &__text-index {
-    @include textomizer(regular, 24px, 24px, uppercase);
+  &:first-of-type {
+    &::after {
+      content: "Снижение веса";
+
+      @include tablet {
+        width: 114px;
+        left: 22px;
+        bottom: -5px;
+        padding-left: 5px;
+        padding-right: 4px;
+      }
+    }
   }
 
-  &__text-result {
-    @include textomizer(arial, 12px, 12px, uppercase);
-  }
+  &:last-of-type {
+    &::after {
+      content: "Затрачено времени";
 
-  &__text-expenses {
-    @include textomizer(regular, 14px, 20px, uppercase);
+      @include tablet {
+        width: 142px;
+        left: 9px;
+        bottom: -5px;
+        padding-left: 5px;
+        padding-right: 4px;
+      }
+    }
+  }
+}
+
+.example__item-text {
+  margin-top: 14px;
+  margin-bottom: 16px;
+
+  @include textomizer(regular, 24px, 24px, uppercase);
+
+  @include tablet {
+    margin-bottom: 20px;
+
+    @include textomizer(regular, 30px, 37.02px, uppercase);
+  }
+}
+
+.example__text-expenses {
+  text-align: center;
+  margin-bottom: 34px;
+
+  @include textomizer(regular, 14px, 20px, uppercase);
+
+  @include tablet {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    float: right;
+
+    @include textomizer(regular, 20px, 20px, uppercase);
+  }
+}
+
+.example__picture {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  outline: 1px dashed red;
+
+  @include tablet {
+    padding-left: 2%;
+  }
+}
+
+.example__cat-boris {
+  display: block;
+  margin: 0 auto;
+
+  @include tablet {
+    width: 690px;
+    height: 517px;
+  }
+}
+
+.example__top {
+  @include tablet {
+    margin-bottom: 66px;
   }
 }
