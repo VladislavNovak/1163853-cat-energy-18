@@ -1,0 +1,14 @@
+.map {
+  @include tablet {
+    height: 400px;
+  }
+}
+
+.map__iframe {
+  display: block;
+  width: 100%;
+
+  @include tablet {
+    height: 400px;
+  }
+}

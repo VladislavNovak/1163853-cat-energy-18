@@ -1,30 +1,96 @@
 .intro {
-  min-height: 480px;
   text-align: center;
-  background: url("../../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  outline: 0.5px dashed green;
+  padding-top: 0.5px;
 
-  &__presentation {
+  @include tablet {
+    position: relative;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    min-height: 305px;
+    z-index: -1;
+    background-image: url("../../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
+
+.intro__title {
+  margin-top: 26.5px;
+  margin-bottom: 25px;
+  outline: 1px dashed red;
+
+  @include textomizer(regular, 36px, 36px, none, $color-white);
+
+  @include tablet {
+    text-align: left;
+    margin-top: 32.5px;
+    margin-bottom: 41px;
+    margin-left: 87.5px;
+    margin-right: 120px;
+
+    @include textomizer(regular, 60px, 60px, none, $color-black);
+  }
+}
+
+.intro__text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 1px;
+  outline: 1px dashed red;
+
+  @include textomizer(regular, 14px, 14px, uppercase, $color-white);
+
+  @include tablet {
+    text-align: left;
+    margin-bottom: 12px;
+    margin-left: 87.5px;
+    margin-right: 120px;
+
+    @include textomizer(regular, 20px, 20px, uppercase, $color-black);
+  }
+}
+
+.intro__img {
+  margin-top: 8px;
+  outline: 1px dashed red;
+
+  @include tablet {
+    width: 709px;
+    height: 609px;
+  }
+}
+
+.intro__btn {
+  display: block;
+  min-height: 40px;
+  margin-top: 2px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  @include textomizer(regular, 14px, 18px, uppercase, $color-white);
+  background-color: $color-green-bright;
+
+  @include tablet {
+    width: 245px;
+    position: absolute;
+    top: 259px;
+    left: 119px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 2px;
     text-align: center;
-  }
 
-  &__title {
-    @include textomizer(regular, 36px);
-    color: #ffffff;
-  }
-
-  &__text {
-    @include textomizer(regular, 14px, 14px, uppercase);
-    color: #ffffff;
-  }
-
-  &__btn {
-    display: inline-block;
-    vertical-align: center;
-
-    @include textomizer(regular, 14px, 18px, uppercase);
-    color: #ffffff;
-    background-color: #68b738;
+    @include textomizer(regular, 20px, 20px, uppercase, $color-white);
   }
 }

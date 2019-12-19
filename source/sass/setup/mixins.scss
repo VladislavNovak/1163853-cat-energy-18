@@ -1,9 +1,37 @@
+// @mixin mobile {
+//   // width: 320px. Вспомогательная. После - убрать;
+//   @media (width: $breakpoint-mobile) {
+//     @content;
+//   }
+// }
+
+
+@mixin tablet {
+  // min-width: 480
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desctop {
+  // min-width: 768
+  @media (min-width: $breakpoint-desctop) {
+    @content;
+  }
+}
+
 @mixin flexible() {
   display: flex;
   flex-wrap: wrap;
 }
 
-@mixin textomizer($type:regular,$size:14px,$height:$size,$transform:none) {
+@mixin list-reset-to-null {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin textomizer($type:regular,$set-size:14px,$set-height:$set-size,$set-transform:none,$set-color:$color-black) {
   @if $type == regular {
     font-family: "Oswald", "Arial", sans-serif;
     font-weight: 400;
@@ -18,9 +46,9 @@
     font-family: "Arial", sans-serif;
     font-weight: 400;
   }
-  font-size: $size;
-  line-height: $height;
-  text-transform: $transform;
-  color: #000000;
+  font-size: $set-size;
+  line-height: $set-height;
+  text-transform: $set-transform;
+  color: $set-color;
   text-decoration: none;
 }

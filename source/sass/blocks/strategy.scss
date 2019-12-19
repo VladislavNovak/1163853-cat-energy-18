@@ -1,42 +1,161 @@
 .strategy {
-  min-height: 574px;
-  outline: 0.5px dashed red;
+  padding-top: 22px;
+  // min-height: 266px;
 
-  &__list {
-    @include flexible();
-    flex-direction: column;
-    padding: 0;
-    list-style-type: none;
+  @include tablet {
+    padding-top: 0;
+  }
+}
+
+.strategy__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.strategy__item {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  padding-right: 21px;
+  padding-bottom: 9.5px;
+  padding-left: 20px;
+  outline: 1px dashed red;
+  background-color: $color-gray-bright;
+
+  & + & {
+    margin-top: 20px;
   }
 
-  &__item {
-    display: flex;
-    flex-wrap: wrap;
+  @include tablet {
+    display: block;
+    min-height: 372px;
+    padding-top: 70px;
+    padding-right: 21px;
+    padding-bottom: 9.5px;
+    padding-left: 52px;
+    margin: 0;
 
-    background-color: #f2f2f2;
+    & + & {
+      // устанавливает расстояние между соседними блоками
+      margin-top: 30px;
+    }
+  }
+}
+
+.strategy__icon {
+  width: 50px;
+  height: 50px;
+  margin-top: 1px;
+  margin-left: 2px;
+  margin-right: 20px;
+  background-color: $color-green-bright;
+  border-radius: 50%;
+  outline: 1px dashed red;
+
+  @include tablet {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    margin-right: 40.5px;
+    margin-left: 15px;
+    float: right;
   }
 
-  &__title {
-    @include textomizer(regular, 24px, 37.02px, uppercase);
+  &--modified {
+    @include tablet {
+      margin-left: 50px;
+    }
   }
 
-  &__text {
-    @include textomizer(arial, 14px, 18px);
+  &-cat-slim {
+    // вложенный svg
+    margin-top: -2.5px;
+    margin-left: 8px;
 
-    border-bottom: 1px solid #e6e6e6;
+    @include tablet {
+      width: 141px;
+      height: 194px;
+      margin-top: -10.5px;
+      margin-left: 29px;
+    }
   }
 
-  &__icon-wrapper {
-    width: 50px;
-    height: 50px;
-    background-color: #68b738;
-    border-radius: 50%;
+  &-cat-pro {
+    // вложенный svg
+    margin-top: 10.5px;
+    margin-left: -9px;
+
+    @include tablet {
+      width: 268px;
+      height: 113px;
+      margin-top: 42.5px;
+      margin-left: -35px;
+    }
+  }
+}
+
+.strategy__title {
+  width: 150px;
+  margin-top: 6px;
+  margin-bottom: 15.5px;
+
+  @include textomizer(regular, 24px, 37.02px, uppercase);
+
+  @include tablet {
+    min-width: 250px;
+    margin-bottom: 24px;
+    margin-left: 1.5px;
+
+    @include textomizer(regular, 36px, 37.02px, uppercase);
+  }
+}
+
+.strategy__text {
+  margin-bottom: 5px;
+  padding-bottom: 22.5px;
+
+  @include textomizer(arial, 14px, 18px);
+  border-bottom: 1px solid $color-gray-darker;
+
+  @include tablet {
+    margin-bottom: 33px;
+    margin-left: 1px;
+
+    @include textomizer(arial, 16px, 24px);
+    border-bottom: none;
+  }
+}
+
+.strategy__link {
+  display: block;
+  margin-top: 13px;
+  margin-bottom: 13px;
+
+  @include textomizer(regular, 16px, 16px, uppercase);
+
+  @include tablet {
+    margin-left: 1px;
+
+    @include textomizer(regular, 20px, 20px, uppercase);
   }
 
-  &__link {
+  &::after {
+    // устанавливает рисунок в виде стрелки
+    content: "";
     display: inline-block;
-    vertical-align: center;
+    width: 24px;
+    height: 11px;
+    margin-left: 12px;
+    margin-bottom: 1px;
 
-    @include textomizer(regular, 16px, 16px, uppercase);
+    background-image: url("../../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    outline: 1px dashed red;
+
+    @include tablet {
+      margin-left: 23px;
+      margin-bottom: 3px;
+    }
   }
 }

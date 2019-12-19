@@ -1,0 +1,39 @@
+.logotype {
+  display: flex;
+  align-items: center;
+  padding-left: $side-indent-mobile;
+  padding-right: $side-indent-mobile;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid $color-gray-light;
+
+  @include tablet {
+    padding: 0;
+    border-bottom: none;
+  }
+}
+
+.logotype__img {
+  outline: 1px dashed red;
+
+  @include tablet {
+    width: 174px;
+    height: 59px;
+  }
+}
+
+.logotype__button {
+  width: 19px;
+  height: 19px;
+  margin-left: auto;
+  margin-right: 2px;
+  border: none;
+  background: url("../../img/icon-close.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  outline: 1px dashed red;
+
+  @include tablet {
+    display: none;
+  }
+}

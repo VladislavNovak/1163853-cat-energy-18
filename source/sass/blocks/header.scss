@@ -1,20 +1,11 @@
 .header {
-  @include flexible();
-  width: 100%;
-  min-height: 264px;
-  padding-top: 13px;
-  outline: 0.5px solid red;
-
-  &__icon-logo {
-    display: block;
-    outline: 0.5px dashed blue;
-  }
-
-  &__burger {
-    width: 21px;
-    height: 21px;
-    border: none;
-    background: url("../../img/icon-close.svg");
-    background-repeat: no-repeat;
+  @include tablet {
+    padding-left: $side-indent-tablet;
+    padding-right: $side-indent-tablet;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }

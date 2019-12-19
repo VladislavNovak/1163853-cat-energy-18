@@ -1,0 +1,14 @@
+.container {
+  // width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include tablet {
+    padding: 0 30px;
+  }
+
+  // @include desctop {
+  //   padding: 0;
+  //   max-width: 1220px;
+  // }
+}
