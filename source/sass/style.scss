@@ -3,7 +3,9 @@
 @import "./setup/font.scss";
 @import "./setup/setup.scss";
 // blocks
+@import "./blocks/stylized.scss";
 @import "./blocks/container.scss";
+@import "./blocks/cooperation.scss";
 @import "./blocks/form.scss";
 @import "./blocks/additionaly.scss";
 @import "./blocks/advantage.scss";
@@ -17,7 +19,6 @@
 @import "./blocks/intro.scss";
 @import "./blocks/logotype.scss";
 @import "./blocks/map.scss";
-@import "./blocks/more.scss";
 @import "./blocks/owner.scss";
 @import "./blocks/navigation.scss";
 @import "./blocks/pet.scss";

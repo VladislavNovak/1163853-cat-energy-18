@@ -3,6 +3,10 @@
     display: flex;
     align-items: center;
   }
+
+  @include desktop {
+    max-width: 52%;
+  }
 }
 
 .navigation__list {
@@ -11,12 +15,11 @@
   text-align: center;
 
   @include tablet {
+    justify-content: flex-end;
+    align-items: flex-start;
     margin-right: 0;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    outline: 1px dashed green;
   }
 }
 
@@ -24,7 +27,7 @@
   padding-left: $side-indent-mobile;
   padding-right: $side-indent-mobile;
   padding-top: 22.5px;
-  padding-bottom: 22.5px;
+  padding-bottom: 22px;
   border-bottom: 1px solid $color-gray-light;
 
   &:last-child {
@@ -33,8 +36,12 @@
 
   @include tablet {
     padding: 0;
-    margin-left: 36px;
+    margin-left: 35.5px;
     border-bottom: none;
+  }
+
+  @include desktop {
+    margin-left: 34.5px;
   }
 }
 
@@ -45,20 +52,40 @@
   @include textomizer(medium, 20px, 20px, uppercase);
 
   @include tablet {
-    @include textomizer(regular, 18px, 24.86px, uppercase);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24.86px;
+  }
+
+  @include desktop {
+    font-size: 20px;
   }
 }
 
-.navigation__link-active {
-  position: relative;
+.navigation__link--active {
+  @include tablet {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      bottom: -10px;
+      background-color: $color-green-bright;
+    }
+  }
+}
+
+.navigation__link--font-white {
+  @include desktop {
+    color: $color-white;
+  }
 
   &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    bottom: -10px;
-    background-color: $color-green-bright;
+    @include desktop {
+      background-color: $color-white;
+    }
   }
 }

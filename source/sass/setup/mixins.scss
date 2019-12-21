@@ -1,21 +1,13 @@
-// @mixin mobile {
-//   // width: 320px. Вспомогательная. После - убрать;
-//   @media (width: $breakpoint-mobile) {
-//     @content;
-//   }
-// }
-
-
 @mixin tablet {
-  // min-width: 480
+  // min-width: 768
   @media (min-width: $breakpoint-tablet) {
     @content;
   }
 }
 
-@mixin desctop {
-  // min-width: 768
-  @media (min-width: $breakpoint-desctop) {
+@mixin desktop {
+  // min-width: 1220
+  @media (min-width: $breakpoint-desktop) {
     @content;
   }
 }

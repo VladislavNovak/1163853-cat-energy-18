@@ -1,7 +1,6 @@
 .contacts {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   padding-top: 13px;
   padding-bottom: 11px;
 
@@ -9,44 +8,65 @@
     padding-top: 45px;
     padding-bottom: 43px;
   }
+
+  @include desktop {
+    position: absolute;
+    width: 570px;
+    height: 201px;
+    top: 95px;
+    left: 110px;
+    padding-left: 35px;
+    padding-right: 24px;
+    background-color: $color-white;
+  }
 }
 
 .contacts__invite {
-  min-width: 50%;
-  margin-right: auto;
+  width: 140px;
   padding-right: 10px;
 
   @include textomizer(regular, 16px, 20px, uppercase);
-  outline: 1px dashed red;
 
   @include tablet {
-    max-width: calc(50% - 50px);
+    width: 220px;
     padding-left: 41px;
-
-    @include textomizer(regular, 20px, 25px, uppercase);
+    font-size: 20px;
+    line-height: 25px;
   }
 }
 
 .contacts__adress {
-  margin-top: 16px;
+  width: 140px;
+  margin-top: 17px;
   margin-bottom: 16px;
 
   @include textomizer(arial, 14px, 20px);
-  outline: 1px dashed red;
 
   @include tablet {
+    width: 220px;
     text-align: right;
     margin-top: 18px;
     padding-right: 42px;
     padding-left: 0;
-
-    @include textomizer(arial, 16px, 20px);
+    font-size: 16px;
+    line-height: 20px;
   }
 
-  .contacts__adress-nested {
-    @include tablet {
-      display: block;
-      margin-top: 20px;
-    }
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.contacts__span-break {
+  &::before {
+    content: "";
+    display: block;
+  }
+}
+
+.contacts__span-block {
+  @include tablet {
+    display: block;
+    margin-top: 20px;
   }
 }

@@ -1,6 +1,5 @@
 .strategy {
-  padding-top: 22px;
-  // min-height: 266px;
+  padding-top: 16px;
 
   @include tablet {
     padding-top: 0;
@@ -11,35 +10,49 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @include desktop {
+    display: flex;
+
+    justify-content: space-between;
+  }
 }
 
 .strategy__item {
   display: flex;
   flex-wrap: wrap;
   padding-top: 24px;
-  padding-right: 21px;
   padding-bottom: 9.5px;
+  padding-right: 21px;
   padding-left: 20px;
-  outline: 1px dashed red;
   background-color: $color-gray-bright;
-
-  & + & {
-    margin-top: 20px;
-  }
 
   @include tablet {
     display: block;
     min-height: 372px;
-    padding-top: 70px;
-    padding-right: 21px;
-    padding-bottom: 9.5px;
+    padding-top: 71px;
     padding-left: 52px;
     margin: 0;
+  }
 
-    & + & {
-      // устанавливает расстояние между соседними блоками
-      margin-top: 30px;
-    }
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    width: 46.65%;
+    padding-top: 46px;
+    padding-bottom: 39px;
+  }
+}
+
+.strategy__item + .strategy__item {
+  margin-top: 20px;
+
+  @include tablet {
+    margin-top: 30px;
+  }
+
+  @include desktop {
+    margin-top: 0;
   }
 }
 
@@ -51,7 +64,6 @@
   margin-right: 20px;
   background-color: $color-green-bright;
   border-radius: 50%;
-  outline: 1px dashed red;
 
   @include tablet {
     width: 200px;
@@ -62,14 +74,15 @@
     float: right;
   }
 
-  &--modified {
-    @include tablet {
-      margin-left: 50px;
-    }
+  @include desktop {
+    width: 100px;
+    height: 100px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 59px;
   }
 
   &-cat-slim {
-    // вложенный svg
     margin-top: -2.5px;
     margin-left: 8px;
 
@@ -79,10 +92,16 @@
       margin-top: -10.5px;
       margin-left: 29px;
     }
+
+    @include desktop {
+      width: 71px;
+      height: 97px;
+      margin-top: -6px;
+      margin-left: 14.5px;
+    }
   }
 
   &-cat-pro {
-    // вложенный svg
     margin-top: 10.5px;
     margin-left: -9px;
 
@@ -92,11 +111,28 @@
       margin-top: 42.5px;
       margin-left: -35px;
     }
+
+    @include desktop {
+      width: 134px;
+      height: 57px;
+      margin-top: 20px;
+      margin-left: -19px;
+    }
+  }
+}
+
+.strategy__icon--modified {
+  @include tablet {
+    margin-left: 52px;
+  }
+
+  @include desktop {
+    margin-left: 0;
   }
 }
 
 .strategy__title {
-  width: 150px;
+  flex: 1;
   margin-top: 6px;
   margin-bottom: 15.5px;
 
@@ -106,8 +142,12 @@
     min-width: 250px;
     margin-bottom: 24px;
     margin-left: 1.5px;
+    font-size: 36px;
+  }
 
-    @include textomizer(regular, 36px, 37.02px, uppercase);
+  @include desktop {
+    margin-top: 29px;
+    margin-bottom: 47.5px;
   }
 }
 
@@ -121,9 +161,14 @@
   @include tablet {
     margin-bottom: 33px;
     margin-left: 1px;
-
-    @include textomizer(arial, 16px, 24px);
+    font-size: 16px;
+    line-height: 24px;
     border-bottom: none;
+  }
+
+  @include desktop {
+    padding-bottom: 0;
+    margin-bottom: 7px;
   }
 }
 
@@ -136,12 +181,11 @@
 
   @include tablet {
     margin-left: 1px;
-
-    @include textomizer(regular, 20px, 20px, uppercase);
+    font-size: 20px;
+    line-height: 20px;
   }
 
   &::after {
-    // устанавливает рисунок в виде стрелки
     content: "";
     display: inline-block;
     width: 24px;
@@ -151,7 +195,6 @@
 
     background-image: url("../../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
-    outline: 1px dashed red;
 
     @include tablet {
       margin-left: 23px;
