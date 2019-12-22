@@ -1,10 +1,16 @@
 .advantage {
   padding-top: 10px;
-  padding-bottom: 42px;
+  padding-bottom: 22px;
 
   @include tablet {
-    padding-bottom: 58px;
+    padding-top: 12px;
+    padding-bottom: 30px;
     border-bottom: 1px solid $color-gray-half-light;
+  }
+
+  @include desktop {
+    padding-top: 40px;
+    border-bottom: none;
   }
 }
 
@@ -12,13 +18,9 @@
   margin-top: 8px;
   margin-bottom: 27px;
 
-  @include textomizer(regular, 36px, 60px);
-
   @include tablet {
     margin-top: 33px;
-    margin-bottom: 72px;
-
-    @include textomizer(regular, 60px, 60px);
+    margin-bottom: 12px;
   }
 }
 
@@ -35,22 +37,23 @@
 
 .advantage__item {
   display: flex;
-  justify-content: space-between;
   min-height: 60px;
-  outline: 1px dashed red;
+  margin-bottom: 20px;
 
   @include tablet {
     flex-direction: column;
-    justify-content: flex-start;
-    width: 354px;
+    width: 50%;
     min-height: 228px;
+    margin-top: 60px;
+    margin-bottom: 29px;
+    padding-right: 17%;
     counter-increment: list; // увеличивает значение заданного счётчика
     position: relative;
 
     &::before {
       content: counter(list); //выводим значение счётчика
       position: absolute;
-      left: 118px;
+      left: 115px;
       top: -40px;
       height: 230px;
       width: 114px;
@@ -58,28 +61,30 @@
 
       @include textomizer(regular, 281.07px, 281.07px, none, $color-gray-bright);
     }
+  }
 
-    &:nth-child(even) {
-      padding-left: 30px;
-    }
+  @include desktop {
+    width: 20%;
+    padding-right: 0;
+  }
+}
 
-    &:nth-child(odd) {
-      @media (min-width: 1122px) {
-        margin-right: 200px;
-      }
+.advantage__item--even {
+  @include tablet {
+    padding-left: 30px;
+    padding-right: 10%;
+
+    &::before {
+      left: 140px;
     }
   }
 
-  & + & {
-    margin-top: 20px;
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
 
-    @include tablet {
-      margin-top: 0;
-
-      &:nth-child(3n),
-      &:nth-child(4n) {
-        margin-top: 90px;
-      }
+    &::before {
+      left: 110px;
     }
   }
 }
@@ -147,8 +152,24 @@
   @include tablet {
     margin-top: 30px;
     padding-left: 0;
-    min-width: 244px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+  }
 
-    @include textomizer(arial, 16px, 24px);
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 29px;
+  }
+}
+
+.advantage__span-wrap {
+  // Переносит часть текста на другую строку в соответствии с pperfect
+  @media (width: 768px) {
+    &::before {
+      content: "";
+      display: block;
+    }
   }
 }

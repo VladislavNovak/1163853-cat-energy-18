@@ -1,57 +1,224 @@
 .additionaly {
+  padding-top: 28px;
+  padding-bottom: 34px;
+  padding-left: $side-indent-mobile;
+  padding-right: $side-indent-mobile;
 
-  outline: 1px solid yellow;
-
-  &__title {
-    @include textomizer(regular, 24px);
-    margin-top: 28px;
-    margin-bottom: 34px;
+  @include tablet {
+    padding-top: 5px;
+    padding-left: $side-indent-tablet;
+    padding-right: $side-indent-tablet;
+    padding-bottom: 76px;
   }
 
-  &__list {
-    @include flexible();
-    flex-direction: column;
-    min-height: 516px;
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    border-top: 1px solid #cdcdcd;
-    outline: 1px dashed red;
+  @include desktop {
+    padding-top: 15px;
+    padding-bottom: 86px;
+    padding-left: $side-indent-desktop;
+    padding-right: $side-indent-desktop;
+  }
+}
+
+.additionaly__title {
+  margin-top: 0;
+  margin-bottom: 34px;
+  text-align: left;
+
+  @include textomizer(regular, 24px, 24px);
+
+  @include tablet {
+    margin-bottom: 80px;
+    padding-left: 37px;
+    font-size: 36px;
+    line-height: 36px;
   }
 
-  &__item {
-    @include flexible();
-    border-bottom: 1px solid #cdcdcd;
+  @include desktop {
+    padding-left: 0;
+  }
+}
+
+.additionaly__main {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.additionaly__list {
+  @include list-reset-to-null();
+  margin-bottom: 39px;
+  border-bottom: 1px solid $color-gray-light;
+
+  @include tablet {
+    margin-bottom: 70px;
+    border-bottom: none;
+    border-top: 1px solid $color-gray-darker;
   }
 
-  &__item-title {
-    @include textomizer(regular, 16px, 16px, uppercase);
+  @include desktop {
+    width: 73.4%;
+    margin-bottom: 0;
+    border-top: 1px solid $color-gray-light;
+    border-bottom: none;
+  }
+}
+
+.additionaly__item {
+  padding-bottom: 18px;
+  text-align: left;
+  border-top: 1px solid $color-gray-light;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 26px;
+    padding-left: 36.5px;
+    padding-right: 36px;
+    padding-bottom: 26px;
+    border-top: none;
+    border-left: 1px solid $color-gray-darker;
+    border-right: 1px solid $color-gray-darker;
+    border-bottom: 1px solid $color-gray-darker;
   }
 
-  &__volume {
-    @include textomizer(arial, 14px);
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 14px;
+    padding-bottom: 10px;
+    border-left: none;
+    border-right: none;
   }
+}
 
-  &__cost {
-    @include textomizer(regular, 14px, 14px, uppercase);
-  }
+.additionaly__item-title {
+  margin-left: 1px;
+  margin-top: 12px;
+  margin-bottom: 10.5px;
 
-  &__btn {
-    @include textomizer(regular, 16px, 20px, uppercase);
-    color: #ffffff;
-    background-color: #68b738;
-  }
+  @include textomizer(regular, 16px, 16px, uppercase);
 
-  &__present {
-    min-height: 363px;
-    background: url("../../img/gift-photo-mobile@1x.jpg");
-    background-repeat: no-repeat;
-  }
-
-  &__present-text {
+  @include tablet {
+    max-width: 50%;
     margin-top: 0;
-
-    @include textomizer(regular, 16px, 20px);
-    color: #ffffff;
+    margin-bottom: 23px;
+    font-size: 20px;
+    line-height: 20px;
   }
+
+  @include desktop {
+    margin-top: 11px;
+    margin-bottom: 11px;
+  }
+}
+
+.additionaly__text {
+  @include textomizer(arial, 14px, 14px);
+
+  @include tablet {
+    max-width: 48%;
+    margin-top: 3px;
+    margin-bottom: 23px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @include desktop {
+    width: 36.2%;
+    margin-top: 16px;
+    margin-right: 37px;
+    margin-bottom: 11px;
+    margin-left: auto;
+    padding-left: 37px;
+    text-align: left;
+  }
+}
+
+.additionaly__span {
+  float: right;
+
+  @include tablet {
+    text-align: right;
+    width: 95px;
+  }
+}
+
+.additionaly__btn {
+  display: block;
+  width: 100%;
+  min-height: 40px;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 3px;
+
+  @include textomizer(regular, 16px, 20px, uppercase, $color-white);
+  background-color: $color-green-bright;
+
+  @include tablet {
+    padding-left: 0;
+  }
+
+  @include desktop {
+    width: 27.5%;
+  }
+}
+
+.additionaly__present {
+  padding-top: 65px;
+  padding-bottom: 26px;
+  background-image: url("../../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 91px;
+    padding-right: 67px;
+    padding-bottom: 33px;
+  }
+
+  @include desktop {
+    width: 20%;
+    display: block;
+    padding-top: 63px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 27px;
+  }
+}
+
+.additionaly__present-icon {
+  margin-bottom: 41.5px;
+  fill: $color-white;
+
+  @include desktop {
+    margin-bottom: 52px;
+  }
+}
+
+.additionaly__present-text {
+  padding-left: 58px;
+  padding-right: 58px;
+
+  @include textomizer(arial, 16px, 20px, none, $color-white);
+
+  @include tablet {
+    text-align: left;
+    margin-top: 7px;
+  }
+
+  @include desktop {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.additionaly__present-span {
+  display: block;
 }

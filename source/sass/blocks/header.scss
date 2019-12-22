@@ -1,11 +1,31 @@
 .header {
+  padding-bottom: 1px;
+
   @include tablet {
-    padding-left: $side-indent-tablet;
-    padding-right: $side-indent-tablet;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    padding-top: 24px;
+    padding-left: $side-indent-tablet;
+    padding-right: $side-indent-tablet;
+    padding-top: 23px;
     padding-bottom: 24px;
+  }
+
+  @include desktop {
+    padding-left: $side-indent-desktop;
+    padding-right: $side-indent-desktop;
+    padding-top: 53px;
+  }
+}
+
+.header--index-desktop {
+  @include desktop {
+    padding-bottom: 80px;
+  }
+}
+
+.header--catalog-desktop {
+  @include desktop {
+    padding-bottom: 41px;
   }
 }

@@ -4,7 +4,7 @@
   padding-left: $side-indent-mobile;
   padding-right: $side-indent-mobile;
   padding-top: 13px;
-  padding-bottom: 13px;
+  padding-bottom: 9px;
   border-bottom: 1px solid $color-gray-light;
 
   @include tablet {
@@ -14,24 +14,28 @@
 }
 
 .logotype__img {
-  outline: 1px dashed red;
-
   @include tablet {
     width: 174px;
     height: 59px;
+  }
+
+  @include desktop {
+    width: 202px;
+    height: 60px;
   }
 }
 
 .logotype__button {
   width: 19px;
   height: 19px;
+  margin-bottom: 5px;
   margin-left: auto;
   margin-right: 2px;
   border: none;
-  background: url("../../img/icon-close.svg");
+  background-image: url("../../img/icon-close.svg");
   background-repeat: no-repeat;
+  background-color: transparent;
   cursor: pointer;
-  outline: 1px dashed red;
 
   @include tablet {
     display: none;

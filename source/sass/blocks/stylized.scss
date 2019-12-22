@@ -1,0 +1,7 @@
+.stylized__title {
+  @include textomizer(regular, 36px, 60px);
+
+  @include tablet {
+    font-size: 60px;
+  }
+}

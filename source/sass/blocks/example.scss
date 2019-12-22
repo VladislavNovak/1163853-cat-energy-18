@@ -1,13 +1,35 @@
 .example {
-  min-height: 704px;
   padding-top: 17px;
+  padding-bottom: 34px;
   background-color: $color-gray-bright;
 
   @include tablet {
-    min-height: 1080px;
-    padding-top: 43px;
+    padding-top: 0;
+    padding-bottom: 73px;
+    background-color: $color-gray-index-background;
+  }
+
+  @include desktop {
+    display: flex;
+    padding-bottom: 0;
     background-color: $color-white;
-    border-bottom: 0.5px solid black;
+  }
+}
+
+.example__top {
+  @include tablet {
+    padding-top: 42px;
+    padding-bottom: 234px;
+    background-color: $color-white;
+  }
+
+  @include desktop {
+    width: 40%;
+    padding-top: 23px;
+    padding-right: 28px;
+    padding-bottom: 35px;
+    margin-left: 0;
+    margin-right: auto;
   }
 }
 
@@ -16,12 +38,13 @@
   margin-bottom: 23px;
   padding-right: 30px;
 
-  @include textomizer(regular, 36px, 60px);
-
   @include tablet {
     margin-bottom: 63px;
+  }
 
-    @include textomizer(regular, 60px, 60px);
+  @include desktop {
+    margin-bottom: 145px;
+    padding-right: 0;
   }
 }
 
@@ -35,8 +58,13 @@
 
   @include tablet {
     margin-bottom: 53px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 
-    @include textomizer(arial, 16px, 24px);
+  @include desktop {
+    padding-right: 0;
+    margin-bottom: 67px;
   }
 }
 
@@ -45,11 +73,14 @@
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
-  outline: 1px dashed red;
 
   @include tablet {
     display: inline-flex;
     width: 51.7%;
+  }
+
+  @include desktop {
+    width: 365px;
   }
 }
 
@@ -78,8 +109,12 @@
 
     @include tablet {
       background-color: $color-white;
+      font-size: 14px;
+      line-height: 14px;
+    }
 
-      @include textomizer(arial, 14px, 14px, lowercase);
+    @include desktop {
+      background-color: $color-gray-bright;
     }
   }
 
@@ -120,49 +155,43 @@
 
   @include tablet {
     margin-bottom: 20px;
-
-    @include textomizer(regular, 30px, 37.02px, uppercase);
+    font-size: 30px;
+    line-height: 37.02px;
   }
 }
 
-.example__text-expenses {
+.example__text-2 {
   text-align: center;
   margin-bottom: 34px;
 
   @include textomizer(regular, 14px, 20px, uppercase);
 
   @include tablet {
-    display: inline-block;
-    vertical-align: middle;
+    width: 27%;
+    margin-top: 7px;
     text-align: right;
     float: right;
+    font-size: 20px;
+    line-height: 29.5px;
+  }
 
-    @include textomizer(regular, 20px, 20px, uppercase);
+  @include desktop {
+    width: 100%;
+    float: none;
+    margin-top: 36px;
+    text-align: left;
   }
 }
 
-.example__picture {
-  margin: 0 auto;
-  margin-bottom: 30px;
-  outline: 1px dashed red;
-
+.example__text-2-span {
   @include tablet {
-    padding-left: 2%;
+    display: block;
+    margin-right: 3px;
   }
-}
 
-.example__cat-boris {
-  display: block;
-  margin: 0 auto;
-
-  @include tablet {
-    width: 690px;
-    height: 517px;
-  }
-}
-
-.example__top {
-  @include tablet {
-    margin-bottom: 66px;
+  @include desktop {
+    display: inline-block;
+    margin-right: 0;
+    margin-left: 59px;
   }
 }

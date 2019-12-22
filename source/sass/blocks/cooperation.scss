@@ -1,0 +1,9 @@
+.cooperation {
+  @include desktop {
+    position: relative;
+  }
+}
+
+.cooperation--gray-background {
+  background-color: $color-gray-bright;
+}

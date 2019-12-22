@@ -1,9 +1,56 @@
 .slider {
+  margin: 0 auto;
+
+  @include desktop {
+    flex-grow: 2;
+  }
+}
+
+.slider__picture {
+  width: 100%;
+  margin-bottom: 30.5px;
+
+  @include tablet {
+    margin-bottom: 0;
+    position: relative;
+  }
+}
+
+.slider__img {
+  display: block;
+  margin: 0 auto;
+
+  @include tablet {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-337px);
+    width: 690px;
+    height: 517px;
+  }
+
+  @include desktop {
+    top: -33px;
+    transform: translateX(-329px);
+  }
+}
+
+.slider__device {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 4px;
-  outline: 1px dashed red;
+  outline: 1px dotted red;
+
+  @include tablet {
+    margin-left: 0;
+    margin-top: 367px;
+  }
+
+  @include desktop {
+    margin-top: 523px;
+    margin-left: 75px;
+  }
 }
 
 .slider__button {
@@ -12,13 +59,33 @@
   cursor: pointer;
 
   @include textomizer(regular, 16px, 20px, uppercase);
+
+  @include tablet {
+    font-size: 20px;
+  }
 }
 
-.slider__device {
-  width: 84px;
+.slider__toggle {
+  width: 85px;
   height: 14px;
   margin-left: 11px;
   margin-right: 11px;
+  padding-left: 4px;
+  padding-right: 4px;
   border: 1px solid $color-gray-light;
   border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  @include tablet {
+    width: 439px;
+  }
+}
+
+.slider__led {
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $color-green-bright;
 }
