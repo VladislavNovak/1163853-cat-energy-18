@@ -11,6 +11,8 @@
 
   @include desktop {
     display: flex;
+    max-width: $max-screen-width;
+    margin: 0 auto;
     padding-bottom: 0;
     background-color: $color-white;
   }
@@ -26,10 +28,10 @@
   @include desktop {
     width: 40%;
     padding-top: 23px;
-    padding-right: 28px;
     padding-bottom: 35px;
     margin-left: 0;
     margin-right: auto;
+    padding-right: 3.5%;
   }
 }
 

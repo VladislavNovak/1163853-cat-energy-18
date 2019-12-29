@@ -2,7 +2,9 @@
   margin: 0 auto;
 
   @include desktop {
-    flex-grow: 2;
+    width: 54%;
+    margin-left: 0;
+    margin-right: auto;
   }
 }
 

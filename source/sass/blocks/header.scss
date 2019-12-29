@@ -12,8 +12,10 @@
   }
 
   @include desktop {
-    padding-left: $side-indent-desktop;
-    padding-right: $side-indent-desktop;
+    max-width: $max-screen-width;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-top: 53px;
   }
 }

@@ -31,10 +31,13 @@
     @include desktop {
       display: block;
       top: 0;
-      right: 0;
-      left: auto;
+      left: 49.8%;
       width: calc(50% + 1.5px);
+      max-width: 721.5px;
       height: 696px;
+      background-image: url("../../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
       background-size: cover;
     }
   }

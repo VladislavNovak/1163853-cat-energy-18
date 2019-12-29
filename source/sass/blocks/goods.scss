@@ -1,29 +1,33 @@
 .goods {
-  padding-top: 15px;
+  padding-top: 14px;
+  border-top: 1px solid $color-gray-half-light;
 
   @include tablet {
     padding-top: 30px;
+    border-top: none;
     padding-left: $side-indent-tablet;
     padding-right: $side-indent-tablet;
   }
 
   @include desktop {
-    padding-left: $side-indent-desktop;
-    padding-right: $side-indent-desktop;
+    max-width: $max-screen-width;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
 .goods__title {
   margin-top: 0;
   padding-right: $side-indent-mobile;
-  padding-left: $side-indent-mobile;
-  text-align: left;
-  margin-bottom: 20px;
+  padding-left: 0;
+  text-align: center;
+  margin-bottom: 28px;
 
   @include textomizer(regular, 36px, 60px);
 
   @include tablet {
-    padding-left: 0;
+    margin-bottom: 20px;
     padding-right: 0;
     font-size: 60px;
   }
@@ -57,7 +61,7 @@
     margin-left: 0;
     margin-right: 0;
     margin-top: 80px;
-    margin-bottom: 60px;
+    margin-bottom: 59px;
     padding-top: 137.5px;
     padding-left: 36.5px;
     padding-right: 36.5px;
@@ -75,7 +79,8 @@
 .goods__table {
   display: table;
   order: 2;
-  width: 141px;
+  // width: 141px;
+  width: 50%;
   margin-left: auto;
   margin-bottom: 22px;
 
