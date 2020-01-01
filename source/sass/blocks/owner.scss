@@ -1,5 +1,6 @@
 .owner {
-  @include flexible();
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   outline: 1px dashed red;
 

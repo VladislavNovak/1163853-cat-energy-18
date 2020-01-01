@@ -16,10 +16,10 @@
           <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
           <img class="logotype__img" src="./img/logo-mobile.svg" width="191" height="39" alt="Логотип компании Cat Energy">
         </picture>
-        <button class="logotype__button" type="button"><span class="visually-hidden">Открыть навигацию</span></button>
+        <button class="logotype__button logotype__button--cross logotype__button--burger" type="button"><span class="visually-hidden">Открыть навигацию</span></button>
       </div>
 
-      <nav class="navigation">
+      <nav class="navigation navigation--closed navigation--opened">
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link navigation__link--font-white navigation__link--active" aria-label="Находимся на текущей странице">Главная</a>
@@ -259,5 +259,6 @@
 
     </footer>
 
+    <script src="js/external.js" defer></script>
   </body>
 </html>
