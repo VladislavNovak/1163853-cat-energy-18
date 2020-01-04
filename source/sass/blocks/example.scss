@@ -1,57 +1,79 @@
 .example {
-  padding-top: 17px;
-  padding-bottom: 34px;
+  padding-top: 10px;
+  padding-bottom: 33px;
   background-color: $color-gray-bright;
 
   @include tablet {
-    padding-top: 0;
-    padding-bottom: 73px;
-    background-color: $color-gray-index-background;
-  }
-
-  @include desktop {
-    display: flex;
-    max-width: $max-screen-width;
-    margin: 0 auto;
+    padding-top: 35px;
     padding-bottom: 0;
-    background-color: $color-white;
-  }
-}
-
-.example__top {
-  @include tablet {
-    padding-top: 42px;
-    padding-bottom: 234px;
-    background-color: $color-white;
+    background-color: transparent;
   }
 
   @include desktop {
-    width: 40%;
-    padding-top: 23px;
-    padding-bottom: 35px;
-    margin-left: 0;
-    margin-right: auto;
-    padding-right: 3.5%;
+    padding-top: 16px;
+    padding-bottom: 0;
   }
 }
 
 .example__title {
-  margin-top: 0;
-  margin-bottom: 23px;
-  padding-right: 30px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  padding-left: $side-indent-mobile;
+  padding-right: $side-indent-mobile;
+  @include textomizer(regular, 36px, 60px);
 
   @include tablet {
-    margin-bottom: 63px;
+    margin-bottom: 50px;
+    padding-left: $side-indent-tablet;
+    padding-right: $side-indent-tablet;
+    font-size: 60px;
   }
 
   @include desktop {
-    margin-bottom: 145px;
-    padding-right: 0;
+    margin-bottom: 72px;
+    max-width: $max-screen-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $side-indent-desktop;
+    padding-right: 45%;
+  }
+}
+
+.example__content {
+  margin: 0 auto;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: $color-gray-bright;
+  }
+}
+
+.example__top {
+  padding-top: 5px;
+  padding-bottom: 15.5px;
+  padding-left: $side-indent-mobile;
+  padding-right: $side-indent-mobile;
+
+  @include tablet {
+    padding-left: $side-indent-tablet;
+    padding-right: $side-indent-tablet;
+    padding-bottom: 234px;
+  }
+
+  @include desktop {
+    background: $color-gray-bright;
+    padding-top: 65px;
+    padding-bottom:46px;
+    padding-left: $side-indent-mobile;
+    padding-right: 9%;
+    max-width: 39.9%;
   }
 }
 
 .example__text {
-  margin-top: 17px;
+  margin-top: 7.5px;
   margin-bottom: 25px;
   padding-right: 10px;
   padding-left: 0.5px;
@@ -119,32 +141,32 @@
       background-color: $color-gray-bright;
     }
   }
+}
 
-  &:first-of-type {
-    &::after {
-      content: "Снижение веса";
+.example__item--first {
+  &::after {
+    content: "Снижение веса";
 
-      @include tablet {
-        width: 114px;
-        left: 22px;
-        bottom: -5px;
-        padding-left: 5px;
-        padding-right: 4px;
-      }
+    @include tablet {
+      width: 114px;
+      left: 22px;
+      bottom: -5px;
+      padding-left: 5px;
+      padding-right: 4px;
     }
   }
+}
 
-  &:last-of-type {
-    &::after {
-      content: "Затрачено времени";
+.example__item--second {
+  &::after {
+    content: "Затрачено времени";
 
-      @include tablet {
-        width: 142px;
-        left: 9px;
-        bottom: -5px;
-        padding-left: 5px;
-        padding-right: 4px;
-      }
+    @include tablet {
+      width: 142px;
+      left: 9px;
+      bottom: -5px;
+      padding-left: 5px;
+      padding-right: 4px;
     }
   }
 }
@@ -162,9 +184,8 @@
   }
 }
 
-.example__text-2 {
+.example__text-expenses {
   text-align: center;
-  margin-bottom: 34px;
 
   @include textomizer(regular, 14px, 20px, uppercase);
 
@@ -185,7 +206,7 @@
   }
 }
 
-.example__text-2-span {
+.example__span-expenses {
   @include tablet {
     display: block;
     margin-right: 3px;

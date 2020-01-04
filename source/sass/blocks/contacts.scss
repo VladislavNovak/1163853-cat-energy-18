@@ -2,11 +2,15 @@
   display: flex;
   justify-content: space-between;
   padding-top: 13px;
-  padding-bottom: 11px;
+  padding-bottom: 10px;
+  padding-left: $side-indent-mobile;
+  padding-right: $side-indent-mobile;
 
   @include tablet {
     padding-top: 45px;
     padding-bottom: 43px;
+    padding-left: $side-indent-tablet;
+    padding-right: $side-indent-tablet;
   }
 
   @include desktop {
