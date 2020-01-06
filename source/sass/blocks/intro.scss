@@ -34,6 +34,10 @@
   background-position: center;
   background-size: cover;
 
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../../img/index-background-mobile@2x.jpg");
+  }
+
   @include tablet {
     display: none;
   }
@@ -49,6 +53,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/index-background-desktop@2x.jpg");
+    }
   }
 }
 
