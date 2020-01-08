@@ -20,6 +20,7 @@
   margin-bottom: 10px;
   padding-left: $side-indent-mobile;
   padding-right: $side-indent-mobile;
+
   @include textomizer(regular, 36px, 60px);
 
   @include tablet {
@@ -65,7 +66,7 @@
   @include desktop {
     background: $color-gray-bright;
     padding-top: 65px;
-    padding-bottom:46px;
+    padding-bottom: 46px;
     padding-left: $side-indent-mobile;
     padding-right: 9%;
     max-width: 39.9%;
