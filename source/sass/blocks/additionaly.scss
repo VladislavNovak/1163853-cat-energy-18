@@ -5,17 +5,17 @@
   padding-right: $side-indent-mobile;
 
   @include tablet {
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 5px;
-    padding-left: $side-indent-tablet;
-    padding-right: $side-indent-tablet;
     padding-bottom: 76px;
   }
 
   @include desktop {
+    max-width: 1440px;
+    margin: 0 auto;
     padding-top: 15px;
     padding-bottom: 86px;
-    padding-left: $side-indent-desktop;
-    padding-right: $side-indent-desktop;
   }
 }
 
@@ -23,25 +23,67 @@
   margin-top: 0;
   margin-bottom: 34px;
   text-align: left;
+  overflow: hidden;
 
   @include textomizer(regular, 24px, 24px);
 
   @include tablet {
     margin-bottom: 80px;
-    padding-left: 37px;
+    padding-left: 67px;
+    padding-right: 30px;
     font-size: 36px;
     line-height: 36px;
   }
 
   @include desktop {
-    padding-left: 0;
+    width: 100%;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
+.additionaly__title::before,
+.additionaly__title::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 3px;
+  background-color: $color-green-bright;
+  position: relative;
+  border: solid $color-white;
+  border-width: 0 22px;
+
+  @include tablet {
+    height: 4px;
+    border-width: 0 36px;
+  }
+}
+
+.additionaly__title::before {
+  margin-left: -100%;
+}
+
+.additionaly__title::after {
+  margin-right: -100%;
+}
+
+
 .additionaly__main {
+  @include tablet {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
   @include desktop {
     display: flex;
     justify-content: space-between;
+    max-width: $max-screen-width;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -174,21 +216,36 @@
   background-position: center;
   background-size: cover;
 
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../../img/gift-photo-mobile@2x.jpg");
+  }
+
   @include tablet {
     display: flex;
     justify-content: space-between;
     padding-left: 91px;
     padding-right: 67px;
     padding-bottom: 33px;
+    background-image: url("../../img/gift-photo-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   @include desktop {
     width: 20%;
+    min-width: 162px;
     display: block;
-    padding-top: 63px;
+    padding-top: 64px;
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 27px;
+    background-image: url("../../img/gift-photo-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/gift-photo-desktop@2x.jpg");
+    }
   }
 }
 

@@ -1,5 +1,5 @@
 .socials {
-  padding-top: 37px;
+  padding-top: 38px;
   padding-bottom: 15px;
   background-color: $color-gray-bright;
 
@@ -9,6 +9,13 @@
     align-items: center;
     padding-top: 46px;
     padding-bottom: 50px;
+  }
+
+  @include desktop {
+    max-width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 52px;
   }
 }
 

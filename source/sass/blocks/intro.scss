@@ -1,48 +1,69 @@
 .intro {
   text-align: center;
   padding-top: 0.5px;
+  padding-right: $side-indent-mobile;
+  padding-left: $side-indent-mobile;
 
   @include tablet {
     position: relative;
+    padding-top: 0;
+    padding-right: $side-indent-tablet;
+    padding-left: $side-indent-tablet;
   }
 
   @include desktop {
     position: static;
-    min-height: 580px;
+    min-height: 553px;
+    max-width: $max-screen-width;
+    margin: 0 auto;
+    padding-right: $side-indent-desktop;
+    padding-left: $side-indent-desktop;
+  }
+}
+
+.intro::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  min-height: 305px;
+  z-index: -1;
+  background-image: url("../../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../../img/index-background-mobile@2x.jpg");
   }
 
-  &::before {
-    content: "";
+  @include tablet {
+    display: none;
+  }
+
+  @include desktop {
     display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    min-height: 305px;
-    z-index: -1;
-    background-image: url("../../img/index-background-mobile@1x.jpg");
+    top: 0;
+    left: 49.8%;
+    width: calc(50% + 1.5px);
+    max-width: 721.5px;
+    height: 696px;
+    background-image: url("../../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
-    @include tablet {
-      display: none;
-    }
-
-    @include desktop {
-      display: block;
-      top: 0;
-      right: 0;
-      left: auto;
-      width: calc(50% + 1.5px);
-      height: 696px;
-      background-size: cover;
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/index-background-desktop@2x.jpg");
     }
   }
 }
 
+
 .intro__title {
   @include textomizer(regular, 36px, 36px, none, $color-white);
-  margin-top: 27.5px;
+  margin-top: 27px;
   margin-bottom: 25px;
 
   @include tablet {
@@ -83,7 +104,7 @@
 
   @include desktop {
     margin-left: $side-intro-indent-desktop;
-    margin-bottom: 53px;
+    margin-bottom: 54px;
   }
 }
 
@@ -114,7 +135,6 @@
   margin-top: -1px;
   padding-top: 10px;
   padding-bottom: 12px;
-  margin-bottom: 5px;
   background-color: $color-green-bright;
 
   @include tablet {

@@ -1,20 +1,19 @@
+@mixin mobile-only {
+  @media (max-width: $breakpoint-mobile-only) {
+    @content;
+  }
+}
+
 @mixin tablet {
-  // min-width: 768
-  @media (min-width: $breakpoint-tablet) {
+  @media (min-width: $breakpoint-tablet) { // min-width: 768
     @content;
   }
 }
 
 @mixin desktop {
-  // min-width: 1220
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: $breakpoint-desktop) { // min-width: 1220
     @content;
   }
-}
-
-@mixin flexible() {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 @mixin list-reset-to-null {

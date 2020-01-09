@@ -16,10 +16,10 @@
           <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
           <img class="logotype__img" src="./img/logo-mobile.svg" width="191" height="39" alt="Логотип компании Cat Energy">
         </picture>
-        <button class="logotype__button" type="button"><span class="visually-hidden">Открыть навигацию</span></button>
+        <button class="logotype__button logotype__button--cross logotype__button--burger" type="button"><span class="visually-hidden">Открыть навигацию</span></button>
       </div>
 
-      <nav class="navigation">
+      <nav class="navigation navigation--closed navigation--opened">
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link navigation__link--font-white navigation__link--active" aria-label="Находимся на текущей странице">Главная</a>
@@ -37,19 +37,19 @@
 
     <main class="index">
 
-      <section class="intro container">
+      <section class="intro">
         <h1 class="visually-hidden">Cat Energy - лучший корм!</h1>
         <h2 class="intro__title">Функциональ&shy;ное питание для котов</h2>
         <p class="intro__text">Занялся собой? Займись котом!</p>
         <picture class="intro__picture">
-          <source media="(min-width: 1220px)" srcset="img/index-can-desktop@1x.png">
-          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
-          <img class="intro__img" src="./img/index-can-mobile@1x.png" width="280" height="271" alt="Баночка с вкусной курицей">
+          <source media="(min-width: 1220px)" srcset="./img/index-can-desktop@1x.png 1x, ./img/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="./img/index-can-tablet@1x.jpg 1x, ./img/index-can-tablet@2x.jpg 2x">
+          <img class="intro__img" src="./img/index-can-mobile@1x.png" srcset="./img/index-can-mobile@2x.png 2x" width="280" height="271" alt="Баночка с вкусной курицей">
         </picture>
         <a class="intro__btn btn" href="#" aria-label="Можно перейти к подбору программы">Подобрать программу</a>
       </section>
 
-      <section class="strategy container">
+      <section class="strategy">
         <h2 class="visually-hidden">Выбираем стратегию:</h2>
         <ul class="strategy__list">
           <li class="strategy__item">
@@ -74,7 +74,7 @@
             <p class="strategy__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="strategy__link" href="#" title="Перейти в каталог Slim">Каталог SLIM</a>
           </li>
-          <li class="strategy__item">
+          <li class="strategy__item strategy__item--next">
             <div class="strategy__icon strategy__icon--modified">
               <svg class="strategy__icon-cat-pro" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67" height="28" viewBox="0 0 134 56" aria-label="Иконка: перейдём к каталогу cat pro">
                 <path
@@ -106,81 +106,93 @@
         </ul>
       </section>
 
-      <section class="advantage container">
+      <section class="advantage">
         <h2 class="advantage__title stylized__title">Как это работает</h2>
         <ul class="advantage__list">
           <li class="advantage__item">
             <div class="advantage__icon-wrapper">
-              <img class="advantage__icon-leaf" src="./img/advantage-leaf@1x.png" width="50" height="50" alt="Изображение листочка">
+              <img class="advantage__icon-leaf" src="./img/advantage-leaf@1x.png" srcset="./img/advantage-leaf@2x.png 2x" width="50" height="50" alt="Изображение листочка">
             </div>
             <p class="advantage__text">Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
 
           <li class="advantage__item advantage__item--even">
             <div class="advantage__icon-wrapper">
-              <img class="advantage__icon-powder" src="./img/advantage-powder@1x.png" width="50" height="50" alt="Изображение порошка в кипящей воды">
+              <img class="advantage__icon-powder" src="./img/advantage-powder@1x.png" srcset="./img/advantage-powder@2x.png 2x" width="50" height="50" alt="Изображение порошка в кипящей воды">
             </div>
             <p class="advantage__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
           </li>
 
           <li class="advantage__item">
             <div class="advantage__icon-wrapper">
-              <img class="advantage__icon-dining" src="./img/advantage-dining@1x.png" width="50" height="50" alt="Изображение столовых принадлежностей">
+              <img class="advantage__icon-dining" src="./img/advantage-dining@1x.png" srcset="./img/advantage-dining@2x.png 2x" width="50" height="50" alt="Изображение столовых принадлежностей">
             </div>
             <p class="advantage__text">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
 
           <li class="advantage__item advantage__item--even advantage__item--for-desktop">
             <div class="advantage__icon-wrapper">
-              <img class="advantage__icon-clock" src="./img/advantage-clock@1x.png" width="50" height="50" alt="Изображение часов">
+              <img class="advantage__icon-clock" src="./img/advantage-clock@1x.png" srcset="./img/advantage-clock@2x.png" width="50" height="50" alt="Изображение часов">
             </div>
             <p class="advantage__text">Уже через месяц наслаждайтесь изменениями к лучшему <span class="advantage__span-wrap">вашего питомца!</span></p>
           </li>
         </ul>
       </section>
 
-      <section class="example">
-
-        <div class="example__top container">
-          <h2 class="example__title stylized__title">Живой пример</h2>
+    <section class="example">
+      <h2 class="example__title">Живой пример</h2>
+      <div class="example__content">
+        <div class="example__top">
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-
           <strong class="visually-hidden">Реальные результаты:</strong>
           <ul class="example__list">
-            <li class="example__item">
+            <li class="example__item example__item--first">
               <p class="example__item-text">5 кг</p>
             </li>
-            <li class="example__item">
+            <li class="example__item example__item--second">
               <p class="example__item-text">60 дней</p>
             </li>
           </ul>
-          <p class="example__text-2">Затраты на питание: <span class="example__text-2-span">15 000 руб</span></p>
+          <p class="example__text-expenses">Затраты на питание: <span class="example__span-expenses">15 000 руб</span></p>
         </div>
-
         <div class="slider">
-          <div class="slider__picture">
-            <picture>
-              <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png">
-              <img class="slider__img" src="./img/before-mobile@1x.png" width="320" height="240" alt="Фото кота Бориса до">
-            </picture>
-          </div>
-          <div class="slider__device">
-            <button class="slider__button">Было</button>
-            <div class="slider__toggle">
-              <span class="slider__led"></span>
-              <span class="slider__led"></span>
+          <div class="slider__wrapper">
+            <div class="slider__pictures">
+                <div class="slider__picture slider__picture--before">
+                    <picture>
+                      <source media="(min-width: 1300px)" srcset="./img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                      <img class="slider__img slider__img--before" src="./img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="photo before" width="320" height="240">
+                    </picture>
+                  </div>
+                  <div class="slider__picture slider__picture--after slider__picture--disabled">
+                    <picture>
+                      <source media="(min-width: 1300px)" srcset="./img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                      <img class="slider__img slider__img--after" src="./img/after-mobile@1x.png" srcset="./img/after-mobile@2x.png 2x" alt="photo after" width="320" height="240">
+                    </picture>
+                  </div>
             </div>
-            <button class="slider__button">Стало</button>
+
+            <div class="slider__toggle">
+                <button class="slider__button slider__button--before">Было</button>
+                <input id="slider" class="slider__range range" type="range" min="0" max="100" value="50"/>
+                <input type="checkbox" class="slider__checkbox visually-hidden" id='slider-checkbox'>
+                <label class="slider__checkbox-label" for="slider-checkbox">Переключение слайдера</label>
+                <button class="slider__button slider__button--after">Стало</button>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+
+    </section>
     </main>
 
     <footer class="footer">
 
       <section class="cooperation">
         <h2 class="visually-hidden">Свяжитесь с нами:</h2>
-        <div class="contacts container">
+        <div class="contacts">
           <p class="contacts__invite">Приглашаем <span class="contacts__span-break">к сотрудничеству</span> дилеров!</p>
           <p class="contacts__adress">ул. Большая <span class="contacts__span-break">Конюшенная, д. 19/8 </span><span class="contacts__span-break contacts__span-block">Санкт-Петербург</span></p>
         </div>
@@ -188,8 +200,6 @@
           <h3 class="visually-hidden">Найти на карте нас очень легко:</h3>
           <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1656.531898444459!2d30.32131895840098!3d59.93855939555751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fb661d55f%3A0xd0cc7f055debe430!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575105566771!5m2!1sru!2sru"
           width="320" height="362" style="border:0;" allowfullscreen=""></iframe>
-          <!-- <img class="contacts__map" src="./img/bg-map-mobile@1x.png" width="320" height="362" alt="Карта: доходный дом Мельцера"> -->
-          <!-- <img class="contacts__pin" src="./img/map-pin.png" width="124" height="106" alt="Карта: доходный дом Мельцера" > -->
         </div>
       </section>
 
@@ -259,5 +269,6 @@
 
     </footer>
 
+    <script src="./js/external.js" defer></script>
   </body>
 </html>

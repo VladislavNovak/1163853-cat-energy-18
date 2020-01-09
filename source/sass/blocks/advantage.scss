@@ -1,15 +1,23 @@
 .advantage {
   padding-top: 10px;
   padding-bottom: 22px;
+  padding-right: $side-indent-mobile;
+  padding-left: $side-indent-mobile;
 
   @include tablet {
     padding-top: 12px;
     padding-bottom: 30px;
+    padding-right: $side-indent-tablet;
+    padding-left: $side-indent-tablet;
     border-bottom: 1px solid $color-gray-half-light;
   }
 
   @include desktop {
     padding-top: 40px;
+    max-width: $max-screen-width;
+    margin: 0 auto;
+    padding-right: $side-indent-desktop;
+    padding-left: $side-indent-desktop;
     border-bottom: none;
   }
 }
@@ -64,7 +72,7 @@
   }
 
   @include desktop {
-    width: 20%;
+    width: 20.09%;
     padding-right: 0;
   }
 }
@@ -166,7 +174,7 @@
 
 .advantage__span-wrap {
   // Переносит часть текста на другую строку в соответствии с pperfect
-  @media (width: 768px) {
+  @media (width: 768px), (width: 1440px) {
     &::before {
       content: "";
       display: block;

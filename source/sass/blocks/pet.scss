@@ -1,5 +1,6 @@
 .pet {
-  @include flexible();
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   border-bottom: 2px solid #ededed;
 
