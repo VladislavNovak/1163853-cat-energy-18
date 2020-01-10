@@ -5,15 +5,22 @@
   padding-right: $side-indent-mobile;
   padding-top: 13px;
   padding-bottom: 9px;
-  // border-bottom: 1px solid $color-gray-light;
 
   @include tablet {
     padding: 0;
-    // border-bottom: none;
   }
 }
 
 .logotype__img {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
   @include tablet {
     width: 174px;
     height: 59px;
@@ -27,8 +34,6 @@
 
 .logotype__button {
   @include mobile-only {
-    // width: 19px;
-    // height: 19px;
     width: 25px;
     height: 25px;
     margin-bottom: 5px;
@@ -48,12 +53,12 @@
 
 .logotype__button--cross {
   @include mobile-only {
-    background-image: url("../../img/icon-close.svg");
+    background-image: url("../img/icon-close.svg");
   }
 }
 
 .logotype__button--burger {
   @include mobile-only {
-    background-image: url("../../img/icon-mobile-menu.svg");
+    background-image: url("../img/icon-mobile-menu.svg");
   }
 }
