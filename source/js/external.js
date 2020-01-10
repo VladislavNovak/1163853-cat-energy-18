@@ -30,8 +30,13 @@ function executeMain() {
     const checkbox = sliderWrap.querySelector(".slider__checkbox");
 
     function _setImageWidth(event) {
-      imgBefore.style.width = 100 - event.currentTarget.value + "%";
-      imgAfter.style.width = event.currentTarget.value + "%";
+      if (document.body.clientWidth <= 1220) {
+        imgBefore.style.width = 100 - event.currentTarget.value + "%";
+        imgAfter.style.width = event.currentTarget.value + "%";
+      } else {
+        imgBefore.style.width = 100 + 9 - event.currentTarget.value + "%";
+        imgAfter.style.width = event.currentTarget.value + "%";
+      }
     }
 
     function setImageClassHidden(event) {
