@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy - лучший корм</title>
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Pixel Glass -->
+<!--     <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* Mobile layout by default */
+        background-image: url( "img/320.png" );
+      }
+      /* Tablet */
+      @media ( min-width: 760px ) {
+        HTML {
+          /* Tablet layout */
+          background-image: url( "img/760.png" );
+        }
+      }
+      /* Desktop */
+      @media ( min-width: 960px ) {
+        HTML {
+          /* Desktop layout */
+          background-image: url( "img/960.png" );
+        }
+      }
+    </style>
+    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+    <script src="../node_modules/pixel-glass/script.js"></script> -->
+    <!-- // Pixel Glass -->
+
   </head>
   <body>
 
@@ -18,10 +46,15 @@
             <img class="logotype__img" src="./img/logo-mobile.svg" width="191" height="39" alt="Логотип компании Cat Energy">
           </picture>
         </a>
-        <button class="logotype__button logotype__button--cross logotype__button--burger" type="button"><span class="visually-hidden">Открыть навигацию</span></button>
+
+        <button class="logotype__button" type="button">
+          <span class="logotype__line logotype__line-first">Открыть навигацию</span>
+          <span class="logotype__line logotype__line-second"></span>
+          <span class="logotype__line logotype__line-third"></span>
+        </button>
       </div>
 
-      <nav class="navigation navigation--closed navigation--opened">
+      <nav class="navigation navigation--opened">
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link navigation__link--font-white navigation__link--active" aria-label="Находимся на текущей странице">Главная</a>
