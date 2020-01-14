@@ -1,12 +1,8 @@
 .additionaly {
   padding-top: 28px;
   padding-bottom: 34px;
-  padding-left: $side-indent-mobile;
-  padding-right: $side-indent-mobile;
 
   @include tablet {
-    padding-left: 0;
-    padding-right: 0;
     padding-top: 5px;
     padding-bottom: 76px;
   }
@@ -22,6 +18,8 @@
 .additionaly__title {
   margin-top: 0;
   margin-bottom: 34px;
+  padding-left: $side-indent-mobile;
+  padding-right: $side-indent-mobile;
   text-align: left;
   overflow: hidden;
 
@@ -47,31 +45,41 @@
 .additionaly__title::before,
 .additionaly__title::after {
   content: "";
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   width: 100%;
   height: 3px;
   background-color: $color-green-bright;
-  position: relative;
-  border: solid $color-white;
-  border-width: 0 22px;
 
   @include tablet {
     height: 4px;
-    border-width: 0 36px;
   }
 }
 
 .additionaly__title::before {
   margin-left: -100%;
+  right: 23px;
+
+  @include tablet {
+    right: 39px;
+  }
 }
 
 .additionaly__title::after {
   margin-right: -100%;
+  left: 23px;
+
+  @include tablet {
+    left: 36px;
+  }
 }
 
 
 .additionaly__main {
+  padding-left: $side-indent-mobile;
+  padding-right: $side-indent-mobile;
+
   @include tablet {
     padding-left: 30px;
     padding-right: 30px;
