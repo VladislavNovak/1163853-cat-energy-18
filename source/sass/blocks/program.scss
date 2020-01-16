@@ -4,12 +4,27 @@
   padding-right: $side-indent-mobile;
 
   @include textomizer(regular, 36px, 60px);
+
+  @include tablet {
+    margin-top: 30px;
+    margin-bottom: 55px;
+    padding-left: $side-indent-tablet;
+    padding-right: $side-indent-tablet;
+    font-size: 60px;
+  }
 }
 
 .program__text {
-  // margin-bottom: 17px;
   padding-left: $side-indent-mobile;
   padding-right: $side-indent-tablet;
 
   @include textomizer(regular, 14px, 18px, uppercase);
+
+  @include tablet {
+    padding-left: 70px;
+    padding-right: 320px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

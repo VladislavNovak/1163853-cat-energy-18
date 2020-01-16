@@ -4,6 +4,13 @@
   padding-right: $side-indent-mobile;
   padding-bottom: 9px;
   border-bottom: 1px solid $color-gray-catalog-border;
+
+  @include tablet {
+    padding-left: 71px;
+    padding-right: $side-form-tablet;
+    padding-bottom: 52px;
+    border-bottom: none;
+  }
 }
 
 .pet__label {
@@ -11,24 +18,45 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 14px;
+
+  @include tablet {
+    margin-bottom: 19px;
+  }
 }
 
 .pet__text {
   padding-bottom: 2px;
 
   @include textomizer(regular, 16px, 18px, uppercase);
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .pet__text--name {
   padding-right: 13px;
+
+  @include tablet {
+    padding-right: 16px;
+  }
 }
 
 .pet__text--weight {
   padding-right: 16px;
+
+  @include tablet {
+    padding-right: 19px;
+  }
 }
 
 .pet__text--old {
   padding-right: 14px;
+
+  @include tablet {
+    padding-right: 17px;
+  }
 }
 
 .pet__input {
@@ -39,4 +67,11 @@
   border: 1px solid $color-gray-half-light;
 
   @include textomizer(regular, 16px, 18px, uppercase);
+
+  @include tablet {
+    padding-top: 8px;
+    padding-left: 18px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

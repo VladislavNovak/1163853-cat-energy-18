@@ -3,12 +3,24 @@
   padding-left: $side-indent-mobile;
   padding-right: $side-indent-mobile;
   padding-bottom: 7px;
+
+  @include tablet {
+    padding-top: 46px;
+    padding-left: 69px;
+    padding-right: 65.5px;
+  }
 }
 
 .owner__title {
   margin-bottom: 33px;
 
   @include textomizer(regular, 24px, 24px);
+
+  @include tablet {
+    margin-bottom: 75px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .owner__label {
@@ -19,6 +31,12 @@
   margin-bottom: 13px;
 
   @include textomizer(regular, 16px, 18px, uppercase);
+
+  @include tablet {
+    margin-bottom: 18px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .owner__input {
@@ -30,6 +48,14 @@
   border: 1px solid $color-gray-half-light;
 
   @include textomizer(regular, 16px, 18px, uppercase);
+
+  @include tablet {
+    padding-top: 9px;
+    padding-bottom: 12px;
+    padding-left: 19px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .owner__link {
@@ -49,9 +75,19 @@
 .owner__text-email {
   padding-bottom: 1px;
   padding-right: 11px;
+
+  @include tablet {
+    padding-bottom: 2px;
+    padding-left: 1px;
+    padding-right: 20px;
+  }
 }
 
 .owner__text-phone {
   padding-bottom: 2px;
   padding-right: 9px;
+
+  @include tablet {
+    padding-right: 15px;
+  }
 }
