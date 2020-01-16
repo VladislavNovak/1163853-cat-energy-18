@@ -28,38 +28,41 @@ function imageComparison() {
   const buttonAfter = document.querySelector(".slider__button--after");
   const checkbox = document.querySelector(".slider__checkbox");
 
-  function _setImageWidth(event) {
-    if (document.body.clientWidth <= 1220) {
-      imgBefore.style.width = 100 - event.currentTarget.value + "%";
-      imgAfter.style.width = event.currentTarget.value + "%";
-    } else {
-      imgBefore.style.width = 100 + 9 - event.currentTarget.value + "%";
-      imgAfter.style.width = event.currentTarget.value + "%";
+  // если хотя бы этот элемент существует (один из перечисленных выше), то выполнить функцию:
+  if(sliderWrap) {
+    function _setImageWidth(event) {
+      if (document.body.clientWidth <= 1220) {
+        imgBefore.style.width = 100 - event.currentTarget.value + "%";
+        imgAfter.style.width = event.currentTarget.value + "%";
+      } else {
+        imgBefore.style.width = 100 + 9 - event.currentTarget.value + "%";
+        imgAfter.style.width = event.currentTarget.value + "%";
+      }
     }
-  }
 
-  function setImageClassHidden(event) {
-    if (event.currentTarget === buttonBefore || !event.currentTarget.checked) {
-      imgAfter.classList.add("slider__picture--disabled");
-      imgBefore.classList.remove("slider__picture--disabled");
-      imgAfter.style.width = 0 + "%";
-      imgBefore.style.width = 100 + "%";
-      checkbox.checked = false;
+    function setImageClassHidden(event) {
+      if (event.currentTarget === buttonBefore || !event.currentTarget.checked) {
+        imgAfter.classList.add("slider__picture--disabled");
+        imgBefore.classList.remove("slider__picture--disabled");
+        imgAfter.style.width = 0 + "%";
+        imgBefore.style.width = 100 + "%";
+        checkbox.checked = false;
+      }
+      if (event.currentTarget === buttonAfter || event.currentTarget.checked) {
+        imgBefore.classList.add("slider__picture--disabled");
+        imgAfter.classList.remove("slider__picture--disabled");
+        imgBefore.style.width = 0 + "%";
+        imgAfter.style.width = 100 + "%";
+        checkbox.checked = true;
+      }
     }
-    if (event.currentTarget === buttonAfter || event.currentTarget.checked) {
-      imgBefore.classList.add("slider__picture--disabled");
-      imgAfter.classList.remove("slider__picture--disabled");
-      imgBefore.style.width = 0 + "%";
-      imgAfter.style.width = 100 + "%";
-      checkbox.checked = true;
-    }
-  }
 
-  range.addEventListener("input", _setImageWidth);
-  range.addEventListener("change", _setImageWidth);
-  checkbox.addEventListener("change", setImageClassHidden);
-  buttonBefore.addEventListener("click", setImageClassHidden);
-  buttonAfter.addEventListener("click", setImageClassHidden);
+    range.addEventListener("input", _setImageWidth);
+    range.addEventListener("change", _setImageWidth);
+    checkbox.addEventListener("change", setImageClassHidden);
+    buttonBefore.addEventListener("click", setImageClassHidden);
+    buttonAfter.addEventListener("click", setImageClassHidden);
+  }
 }
 
 function executeMain() {
