@@ -22,12 +22,12 @@ function executeMain() {
 
   function imageComparison() {
     const sliderWrap = document.querySelector(".slider__wrapper");
-    const imgBefore = sliderWrap.querySelector(".slider__picture--before");
-    const imgAfter = sliderWrap.querySelector(".slider__picture--after");
-    const range = sliderWrap.querySelector("#slider");
-    const buttonBefore = sliderWrap.querySelector(".slider__button--before");
-    const buttonAfter = sliderWrap.querySelector(".slider__button--after");
-    const checkbox = sliderWrap.querySelector(".slider__checkbox");
+    const imgBefore = document.querySelector(".slider__picture--before");
+    const imgAfter = document.querySelector(".slider__picture--after");
+    const range = document.querySelector("#slider");
+    const buttonBefore = document.querySelector(".slider__button--before");
+    const buttonAfter = document.querySelector(".slider__button--after");
+    const checkbox = document.querySelector(".slider__checkbox");
 
     function _setImageWidth(event) {
       if (document.body.clientWidth <= 1220) {
@@ -55,6 +55,7 @@ function executeMain() {
         checkbox.checked = true;
       }
     }
+
     range.addEventListener("input", _setImageWidth);
     range.addEventListener("change", _setImageWidth);
     checkbox.addEventListener("change", setImageClassHidden);

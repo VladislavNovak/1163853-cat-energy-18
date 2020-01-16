@@ -1,18 +1,57 @@
 .owner {
+  padding-top: 9px;
+  padding-left: $side-indent-mobile;
+  padding-right: $side-indent-mobile;
+  padding-bottom: 7px;
+}
+
+.owner__title {
+  margin-bottom: 33px;
+
+  @include textomizer(regular, 24px, 24px);
+}
+
+.owner__label {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  outline: 1px dashed red;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  margin-bottom: 13px;
 
-  &__title {
-    @include textomizer(regular, 24px, 24px);
-  }
+  @include textomizer(regular, 16px, 18px, uppercase);
+}
 
-  &__label {
-    @include textomizer(regular, 16px, 18px, uppercase);
-  }
+.owner__input {
+  flex: 1;
+  padding-top: 12px;
+  padding-bottom: 14px;
+  padding-left: 15px;
+  padding-right: 40px;
+  border: 1px solid $color-gray-half-light;
 
-  &__input {
-    @include textomizer(regular, 16px, 18px, uppercase);
-  }
+  @include textomizer(regular, 16px, 18px, uppercase);
+}
+
+.owner__link {
+  position: absolute;
+}
+
+.owner__link-email {
+  top: 13px;
+  right: 16px;
+}
+
+.owner__link-phone {
+  top: 13px;
+  right: 13px;
+}
+
+.owner__text-email {
+  padding-bottom: 1px;
+  padding-right: 11px;
+}
+
+.owner__text-phone {
+  padding-bottom: 2px;
+  padding-right: 9px;
 }

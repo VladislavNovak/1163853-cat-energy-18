@@ -1,0 +1,67 @@
+.supple {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 20px;
+  padding-left: $side-indent-mobile;
+  padding-right: $side-indent-mobile;
+  padding-bottom: 18px;
+}
+
+.supple__title {
+  margin-top: 0;
+  margin-bottom: 39px;
+
+  @include textomizer(regular, 24px);
+}
+
+.supple__item {
+  margin-bottom: 22px;
+}
+
+.supple__input {
+  display: none;
+}
+
+.supple__input + .supple__label {
+  position: relative;
+  margin-left: 35px;
+  padding-left: 11px;
+  width: 100%;
+  cursor: pointer;
+
+  @include textomizer(regular, 16px, 18px, uppercase);
+}
+
+.supple__input + .supple__label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: -1px;
+  width: 30px;
+  height: 30px;
+  display: block;
+  background: white;
+  border: 1px solid #cfcfcf;
+}
+
+.supple__input + .supple__label::after {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 5px;
+  width: 23px;
+  height: 23px;
+  display: block;
+  z-index: 1;
+  color: #68b738;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.supple__input:checked + .supple__label::after {
+  transform: scale(1);
+  opacity: 1;
+}

@@ -32,39 +32,6 @@
   }
 }
 
-// .logotype__button {
-//   @include mobile-only {
-//     width: 25px;
-//     height: 25px;
-//     margin-bottom: 5px;
-//     margin-left: auto;
-//     border: none;
-//     background-position: center 50%;
-//     background-repeat: no-repeat;
-//     background-color: transparent;
-//     background-size: 80% 80%;
-//     cursor: pointer;
-//   }
-
-//   @include tablet {
-//     display: none;
-//   }
-// }
-
-// .logotype__button--cross {
-//   @include mobile-only {
-//     background-image: url("../img/icon-close.svg");
-//   }
-// }
-
-// .logotype__button--burger {
-//   @include mobile-only {
-//     background-image: url("../img/icon-mobile-menu.svg");
-//   }
-// }
-
-//*************************************
-
 .logotype__button {
   @include mobile-only {
     width: 25px;
