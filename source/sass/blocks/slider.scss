@@ -6,7 +6,7 @@
   }
 
   @include desktop {
-    width: 780px;
+    width: 760px;
     background: linear-gradient(to right, #f2f2f2 367px, #eaeaea 367px);
   }
 }
@@ -42,45 +42,47 @@
     display: flex;
     justify-content: center;
   }
+
+  @include desktop {
+    margin-top: -187px;
+    min-height: 529px;
+  }
 }
 
 .slider__picture {
   text-align: center;
+
+  &--disabled {
+    display: none;
+  }
 
   @include tablet {
     width: 50%;
     overflow: hidden;
     position: relative;
     height: 100%;
+
+    &--before {
+      left: 0;
+      display: block;
+    }
+
+    &--after {
+      right: 0;
+      display: block;
+    }
   }
 
   @include desktop {
     margin-top: 0;
 
     &--before {
-      width: 52.5%;
+      width: 56%;
     }
 
     &--after {
-      width: 47.5%;
-    }
-  }
-
-  &--disabled {
-    display: none;
-  }
-
-  &--before {
-    @include tablet {
-      left: 0;
-      display: block;
-    }
-  }
-
-  &--after {
-    @include tablet {
-      right: 0;
-      display: block;
+      right: -1px;
+      width: 50%;
     }
   }
 }
@@ -114,7 +116,7 @@
     width: auto;
     margin-bottom: 35px;
     transform: none;
-    top: -21px;
+    top: -3px;
 
     &--before {
       left: 0;

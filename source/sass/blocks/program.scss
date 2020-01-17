@@ -1,0 +1,15 @@
+.program__title {
+  margin-top: 15px;
+  padding-left: $side-indent-mobile;
+  padding-right: $side-indent-mobile;
+
+  @include textomizer(regular, 36px, 60px);
+}
+
+.program__text {
+  // margin-bottom: 17px;
+  padding-left: $side-indent-mobile;
+  padding-right: $side-indent-tablet;
+
+  @include textomizer(regular, 14px, 18px, uppercase);
+}

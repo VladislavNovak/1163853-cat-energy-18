@@ -1,16 +1,26 @@
 .form {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  margin-bottom: 30px;
+}
 
-  &__submit {
-    @include textomizer(regular, 16px, 20px, uppercase);
-    border: none;
-    color: #ffffff;
-    background-color: #68b738;
-  }
+.form__submit {
+  display: block;
+  width: calc(100% - 40px);
+  margin-left: $side-indent-mobile;
+  margin-right: $side-indent-mobile;
+  margin-bottom: 21.5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 9px;
+  border: none;
+  background-color: $color-green-bright;
 
-  &__hint {
-    @include textomizer(arial, 14px, 16px);
-  }
+  @include textomizer(regular, 16px, 20px, uppercase, $color-white);
+}
+
+.form__hint {
+  margin-left: $side-indent-mobile;
+  margin-right: $side-indent-mobile;
+  text-align: center;
+
+  @include textomizer(arial, 14px, 16px);
 }

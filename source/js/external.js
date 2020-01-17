@@ -3,17 +3,17 @@ function executeMain() {
     var logotypeButton = document.querySelector(".logotype__button");
     var navigation = document.querySelector(".navigation");
 
-    logotypeButton.addEventListener("click", function() {
-      if(navigation.classList.contains("navigation--opened") && logotypeButton.classList.contains("logotype__button--burger")) {
+    logotypeButton.addEventListener("click", function(e) {
+      e.preventDefault();
+      // (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+      if (navigation.classList.contains("navigation--opened")) {
         navigation.classList.remove("navigation--opened");
         navigation.classList.add("navigation--closed");
-        logotypeButton.classList.remove("logotype__button--burger");
-        logotypeButton.classList.add("logotype__button--cross");
+        this.classList.add("is-active");
       } else {
         navigation.classList.add("navigation--opened");
         navigation.classList.remove("navigation--closed");
-        logotypeButton.classList.add("logotype__button--burger");
-        logotypeButton.classList.remove("logotype__button--cross");
+        this.classList.remove("is-active");
       }
     });
   }
@@ -22,16 +22,21 @@ function executeMain() {
 
   function imageComparison() {
     const sliderWrap = document.querySelector(".slider__wrapper");
-    const imgBefore = sliderWrap.querySelector(".slider__picture--before");
-    const imgAfter = sliderWrap.querySelector(".slider__picture--after");
-    const range = sliderWrap.querySelector("#slider");
-    const buttonBefore = sliderWrap.querySelector(".slider__button--before");
-    const buttonAfter = sliderWrap.querySelector(".slider__button--after");
-    const checkbox = sliderWrap.querySelector(".slider__checkbox");
+    const imgBefore = document.querySelector(".slider__picture--before");
+    const imgAfter = document.querySelector(".slider__picture--after");
+    const range = document.querySelector("#slider");
+    const buttonBefore = document.querySelector(".slider__button--before");
+    const buttonAfter = document.querySelector(".slider__button--after");
+    const checkbox = document.querySelector(".slider__checkbox");
 
     function _setImageWidth(event) {
-      imgBefore.style.width = 100 - event.currentTarget.value + "%";
-      imgAfter.style.width = event.currentTarget.value + "%";
+      if (document.body.clientWidth <= 1220) {
+        imgBefore.style.width = 100 - event.currentTarget.value + "%";
+        imgAfter.style.width = event.currentTarget.value + "%";
+      } else {
+        imgBefore.style.width = 100 + 9 - event.currentTarget.value + "%";
+        imgAfter.style.width = event.currentTarget.value + "%";
+      }
     }
 
     function setImageClassHidden(event) {
@@ -50,6 +55,7 @@ function executeMain() {
         checkbox.checked = true;
       }
     }
+
     range.addEventListener("input", _setImageWidth);
     range.addEventListener("change", _setImageWidth);
     checkbox.addEventListener("change", setImageClassHidden);

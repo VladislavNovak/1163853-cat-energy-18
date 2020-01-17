@@ -1,11 +1,28 @@
 .comments {
-  &__title {
-    @include textomizer(regular, 24px);
-  }
+  padding-top: 8px;
+  padding-left: $side-indent-mobile;
+  padding-right: $side-indent-mobile;
+  padding-bottom: 5px;
+}
 
-  &__textarea {
-    @include textomizer(regular, 16px, 18px, uppercase);
-    border: 2px solid #e6e6e6;
-    resize: none;
-  }
+.comments__title {
+  margin-top: 0;
+
+  @include textomizer(regular, 24px);
+}
+
+.comments__textarea {
+  width: 100%;
+  min-height: 150px;
+  margin-top: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  padding-right: 10px;
+  overflow: auto;
+  border: 1px solid $color-gray-half-light;
+  resize: none;
+  outline: none;
+
+  @include textomizer(regular, 16px, 18px, uppercase);
 }
