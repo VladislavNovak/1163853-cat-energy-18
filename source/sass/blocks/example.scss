@@ -4,7 +4,7 @@
   background-color: $color-gray-bright;
 
   @include tablet {
-    padding-top: 35px;
+    padding-top: 34.5px;
     padding-bottom: 0;
     background-color: transparent;
   }
@@ -24,14 +24,14 @@
   @include textomizer(regular, 36px, 60px);
 
   @include tablet {
-    margin-bottom: 50px;
+    margin-bottom: 50.5px;
     padding-left: $side-indent-tablet;
     padding-right: $side-indent-tablet;
     font-size: 60px;
   }
 
   @include desktop {
-    margin-bottom: 72px;
+    margin-bottom: 73px;
     max-width: $max-screen-width;
     margin-left: auto;
     margin-right: auto;

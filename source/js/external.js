@@ -1,34 +1,38 @@
-function executeMain() {
-  function revealMenu() {
-    var logotypeButton = document.querySelector(".logotype__button");
-    var navigation = document.querySelector(".navigation");
+function revealMenu() {
+  var logotypeButton = document.querySelector(".logotype__button");
+  var navigation = document.querySelector(".navigation");
 
-    logotypeButton.addEventListener("click", function(e) {
-      e.preventDefault();
-      // (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
-      if (navigation.classList.contains("navigation--opened")) {
-        navigation.classList.remove("navigation--opened");
-        navigation.classList.add("navigation--closed");
-        this.classList.add("is-active");
-      } else {
-        navigation.classList.add("navigation--opened");
-        navigation.classList.remove("navigation--closed");
-        this.classList.remove("is-active");
-      }
-    });
-  }
+  navigation.classList.remove("navigation--opened");
+  navigation.classList.add("navigation--closed");
+  logotypeButton.classList.remove("logotype__button--cross");
 
-  //*****************************
+  logotypeButton.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (navigation.classList.contains("navigation--opened")) {
+      navigation.classList.remove("navigation--opened");
+      navigation.classList.add("navigation--closed");
+      this.classList.remove("logotype__button--cross");
+    } else {
+      navigation.classList.add("navigation--opened");
+      navigation.classList.remove("navigation--closed");
+      this.classList.add("logotype__button--cross");
+    }
+  });
+}
 
-  function imageComparison() {
-    const sliderWrap = document.querySelector(".slider__wrapper");
-    const imgBefore = document.querySelector(".slider__picture--before");
-    const imgAfter = document.querySelector(".slider__picture--after");
-    const range = document.querySelector("#slider");
-    const buttonBefore = document.querySelector(".slider__button--before");
-    const buttonAfter = document.querySelector(".slider__button--after");
-    const checkbox = document.querySelector(".slider__checkbox");
+//*****************************
 
+function imageComparison() {
+  const sliderWrap = document.querySelector(".slider__wrapper");
+  const imgBefore = document.querySelector(".slider__picture--before");
+  const imgAfter = document.querySelector(".slider__picture--after");
+  const range = document.querySelector("#slider");
+  const buttonBefore = document.querySelector(".slider__button--before");
+  const buttonAfter = document.querySelector(".slider__button--after");
+  const checkbox = document.querySelector(".slider__checkbox");
+
+  // если хотя бы этот элемент существует (один из перечисленных выше), то выполнить функцию:
+  if(sliderWrap) {
     function _setImageWidth(event) {
       if (document.body.clientWidth <= 1220) {
         imgBefore.style.width = 100 - event.currentTarget.value + "%";
@@ -62,11 +66,12 @@ function executeMain() {
     buttonBefore.addEventListener("click", setImageClassHidden);
     buttonAfter.addEventListener("click", setImageClassHidden);
   }
+}
 
+function executeMain() {
   revealMenu();
   imageComparison();
 }
-
 
 // readyState показывает текущее состояние загрузки:
 if(document.readyState === "loading") {

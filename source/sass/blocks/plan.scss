@@ -1,18 +1,36 @@
 .plan {
-  list-style-type: none;
-  margin: 0;
   padding-top: 20px;
   padding-left: $side-indent-mobile;
   padding-right: $side-indent-mobile;
   padding-bottom: 7px;
   border-bottom: 1px solid $color-gray-catalog-border;
+
+  @include tablet {
+    margin-left: 71px;
+    margin-right: $side-form-tablet;
+    padding-bottom: 15px;
+    border: 1px solid $color-gray-catalog-border;
+  }
+
+  @include desktop {
+    width: 43.8%;
+    margin-left: 13.5px;
+    margin-top: 27px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+
+.plan__link {
+  @include list-reset-to-null;
 }
 
 .plan__item {
   margin-bottom: 15px;
 }
 
-.plan-usual-box {
+.plan__radio {
   display: none;
 }
 
@@ -26,6 +44,13 @@
   padding-bottom: 5px;
 
   @include textomizer(regular, 16px, 18px, uppercase);
+
+  @include tablet {
+    padding-left: 66px;
+    padding-top: 13px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .plan__label::before {
@@ -37,12 +62,29 @@
   top: -0.5px;
   border: 1px solid $color-gray-light;
   border-radius: 50%;
+
+  @include tablet {
+    width: 40px;
+    height: 40px;
+    left: 7px;
+    top: 4px;
+  }
 }
 
-.plan-usual-box:checked + .plan__label::before {
-  content: "\2022";
-  color: $color-green-bright;
-  font-size: 54px;
-  text-align: center;
-  line-height: 22px;
+.plan__radio:checked + .plan__label::after {
+  content: "";
+  background-color: $color-green-bright;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 9px;
+  left: 8.5px;
+
+  @include tablet {
+    width: 18px;
+    height: 18px;
+    top: 15px;
+    left: 18px;
+  }
 }

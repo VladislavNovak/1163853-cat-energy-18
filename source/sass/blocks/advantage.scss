@@ -111,6 +111,7 @@
 .advantage__icon-leaf {
   margin-top: 5px;
   margin-left: 4.5px;
+  margin-right: 5.5px;
 
   @include tablet {
     margin-top: 14px;
@@ -121,6 +122,7 @@
 .advantage__icon-powder {
   margin-top: 4px;
   margin-left: 4.5px;
+  margin-right: 5.5px;
 
   @include tablet {
     margin-top: 15.5px;
@@ -131,6 +133,7 @@
 .advantage__icon-dining {
   margin-top: 4.5px;
   margin-left: 4px;
+  margin-right: 6px;
 
   @include tablet {
     margin-top: 15.5px;
@@ -141,6 +144,7 @@
 .advantage__icon-clock {
   margin-top: 4.5px;
   margin-left: 5px;
+  margin-right: 6px;
 
   @include tablet {
     margin-top: 15.5px;
@@ -152,7 +156,7 @@
   min-width: 220px;
   margin: 0;
   padding-right: 5px;
-  padding-left: 25px;
+  padding-left: 20px;
   padding-top: 2px;
 
   @include textomizer(arial, 14px, 18px);

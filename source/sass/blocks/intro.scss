@@ -66,9 +66,9 @@
   margin-bottom: 25px;
 
   @include tablet {
-    margin-top: 29.5px;
-    margin-bottom: 41px;
-    margin-left: 87.5px;
+    margin-top: 29.8px;
+    margin-bottom: 41.5px;
+    margin-left: 87.2px;
     margin-right: 120px;
     text-align: left;
     font-size: 60px;
@@ -93,7 +93,7 @@
 
   @include tablet {
     margin-bottom: 12px;
-    margin-left: 87.5px;
+    margin-left: 88px;
     margin-right: 120px;
     text-align: left;
     font-size: 20px;
@@ -138,12 +138,13 @@
 
   @include tablet {
     position: absolute;
-    top: 260px;
+    top: 231px;
     left: 119px;
     width: 245px;
     padding-top: 15.5px;
     padding-bottom: 16px;
-    padding-right: 2px;
+    padding-left: 10px;
+    padding-right: 15px;
     text-align: center;
     font-size: 20px;
     line-height: 20px;

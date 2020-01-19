@@ -5,34 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy - лучший корм</title>
     <link rel="stylesheet" href="./css/style.css">
-
-    <!-- Pixel Glass -->
-<!--     <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position:  50% 0;
-        /* Mobile layout by default */
-        background-image: url( "img/320.png" );
-      }
-      /* Tablet */
-      @media ( min-width: 760px ) {
-        HTML {
-          /* Tablet layout */
-          background-image: url( "img/760.png" );
-        }
-      }
-      /* Desktop */
-      @media ( min-width: 960px ) {
-        HTML {
-          /* Desktop layout */
-          background-image: url( "img/960.png" );
-        }
-      }
-    </style>
-    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-    <script src="../node_modules/pixel-glass/script.js"></script> -->
-    <!-- // Pixel Glass -->
-
   </head>
   <body>
 
@@ -47,7 +19,7 @@
           </picture>
         </a>
 
-        <button class="logotype__button" type="button">
+        <button class="logotype__button logotype__button--cross" type="button">
           <span class="logotype__line logotype__line-first">Открыть навигацию</span>
           <span class="logotype__line logotype__line-second"></span>
           <span class="logotype__line logotype__line-third"></span>
@@ -216,7 +188,7 @@
         </div>
       </section>
 
-      <section class="socials container">
+      <section class="socials">
         <h2 class="visually-hidden">Социальные сети</h2>
 
         <div class="socials__logo-wrapper">
@@ -235,7 +207,7 @@
           <li class="socials__item">
             <a class="socials__link" href="https://instagram.com/" aria-label="Посетите instagram.com" title="Посетите instagram.com">
               Посетите Instagram
-              <svg class="socials__icon-insta"width="16" height="16" aria-label="Перейти на официальный сайт Instagram">
+              <svg class="socials__icon-insta" width="16" height="16" aria-label="Перейти на официальный сайт Instagram">
                 <use xlink:href="./img/svg/sprite.svg#socials__icon-insta"></use>
               </svg>
             </a>
@@ -252,8 +224,8 @@
 
         <div class="socials__academy">
           <a class="socials__academy-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Посетите htmlacademy.ru" title="Посетите htmlacademy.ru">
-            HTMLAcademy
-            <svg class="socials__academy-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="-11 0 60 60">
+            <span class="socials__span">HTMLAcademy</span>
+            <svg class="socials__academy-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 60 60">
               <use xlink:href="./img/svg/sprite.svg#socials__academy-icon"></use>
             </svg>
           </a>

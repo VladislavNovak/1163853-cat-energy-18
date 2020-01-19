@@ -1,15 +1,54 @@
+.program__content {
+  @include desktop {
+    max-width: $max-screen-width;
+    margin: 0 auto;
+  }
+}
+
 .program__title {
   margin-top: 15px;
   padding-left: $side-indent-mobile;
   padding-right: $side-indent-mobile;
+  border-top: 1px solid $color-gray-half-light;
 
   @include textomizer(regular, 36px, 60px);
+
+  @include tablet {
+    margin-top: 30px;
+    margin-bottom: 55px;
+    padding-left: 29px;
+    padding-right: $side-indent-tablet;
+    font-size: 60px;
+    border: none;
+  }
+
+  @include desktop {
+    max-width: $max-screen-width;
+    margin-top: 47.5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 39px;
+    padding-right: 39px;
+  }
 }
 
 .program__text {
-  // margin-bottom: 17px;
   padding-left: $side-indent-mobile;
   padding-right: $side-indent-tablet;
 
   @include textomizer(regular, 14px, 18px, uppercase);
+
+  @include tablet {
+    padding-left: 70px;
+    padding-right: 320px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @include desktop {
+    padding-left: 39px;
+    padding-right: 68%;
+    margin-bottom: 39px;
+  }
 }
