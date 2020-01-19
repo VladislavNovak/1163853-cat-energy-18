@@ -1,6 +1,4 @@
 .plan {
-  list-style-type: none;
-  margin: 0;
   padding-top: 20px;
   padding-left: $side-indent-mobile;
   padding-right: $side-indent-mobile;
@@ -13,13 +11,26 @@
     padding-bottom: 15px;
     border: 1px solid $color-gray-catalog-border;
   }
+
+  @include desktop {
+    width: 43.8%;
+    margin-left: 13.5px;
+    margin-top: 27px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+
+.plan__link {
+  @include list-reset-to-null;
 }
 
 .plan__item {
   margin-bottom: 15px;
 }
 
-.plan-usual-box {
+.plan__radio {
   display: none;
 }
 
@@ -60,15 +71,20 @@
   }
 }
 
-.plan-usual-box:checked + .plan__label::before {
-  content: "\2022";
-  color: $color-green-bright;
-  font-size: 54px;
-  text-align: center;
-  line-height: 22px;
+.plan__radio:checked + .plan__label::after {
+  content: "";
+  background-color: $color-green-bright;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 9px;
+  left: 8.5px;
 
   @include tablet {
-    font-size: 75px;
-    line-height: 29px;
+    width: 18px;
+    height: 18px;
+    top: 15px;
+    left: 18px;
   }
 }

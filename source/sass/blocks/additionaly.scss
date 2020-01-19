@@ -1,6 +1,6 @@
 .additionaly {
-  padding-top: 28px;
-  padding-bottom: 34px;
+  padding-top: 28.5px;
+  padding-bottom: 33px;
 
   @include tablet {
     padding-top: 5px;
@@ -18,7 +18,7 @@
 .additionaly__title {
   margin-top: 0;
   margin-bottom: 34px;
-  padding-left: $side-indent-mobile;
+  padding-left: 19.5px;
   padding-right: $side-indent-mobile;
   text-align: left;
   overflow: hidden;
@@ -75,7 +75,6 @@
   }
 }
 
-
 .additionaly__main {
   padding-left: $side-indent-mobile;
   padding-right: $side-indent-mobile;
@@ -97,7 +96,7 @@
 
 .additionaly__list {
   @include list-reset-to-null();
-  margin-bottom: 39px;
+  margin-bottom: 38px;
   border-bottom: 1px solid $color-gray-light;
 
   @include tablet {
@@ -218,7 +217,7 @@
 
 .additionaly__present {
   padding-top: 65px;
-  padding-bottom: 26px;
+  padding-bottom: 27px;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -257,7 +256,7 @@
 }
 
 .additionaly__present-icon {
-  margin-bottom: 41.5px;
+  margin-bottom: 42px;
   fill: $color-white;
 
   @include desktop {
@@ -266,7 +265,7 @@
 }
 
 .additionaly__present-text {
-  padding-left: 58px;
+  padding-left: 57px;
   padding-right: 58px;
 
   @include textomizer(arial, 16px, 20px, none, $color-white);

@@ -44,92 +44,106 @@
 
     <main class="program">
 
-      <h1 class="program__title">Подбор программы</h1>
-      <p class="program__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      <div class="program__content">
+        <h1 class="program__title">Подбор программы</h1>
+        <p class="program__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+      </div>
 
       <form class="form" action="https://echo.htmlacademy.ru" method="get">
 
-        <div class="pet">
-          <h2 class="visually-hidden">Сначала введите данные питомца</h2>
-          <label class="pet__label">
-            <span class="pet__text pet__text--name">Имя:*</span>
-            <input class="pet__input" type="text" name="pet-name" value="Барсик" aria-label="Укажите имя домашнего питомца" autocomplete="off">
-          </label>
-          <label class="pet__label">
-            <span class="pet__text pet__text--weight">Вес (кг):*</span>
-            <input class="pet__input" type="text" name="pet-weight" value="7" aria-label="Укажите вес домашнего питомца" autocomplete="off">
-          </label>
-          <label class="pet__label">
-            <span class="pet__text pet__text--old">Возраст (лет):</span>
-            <input class="pet__input" type="text" name="pet-age" value="7" aria-label="Укажите возраст домашнего питомца" autocomplete="off">
-          </label>
+        <div class="form__equalizer">
+          <div class="pet">
+            <h2 class="visually-hidden">Сначала введите данные питомца</h2>
+            <label class="pet__label">
+              <span class="pet__text pet__text--name">Имя:*</span>
+              <input class="pet__input" type="text" name="pet-name" value="Барсик" aria-label="Укажите имя домашнего питомца" autocomplete="off">
+            </label>
+            <label class="pet__label">
+              <span class="pet__text pet__text--weight">Вес (кг):*</span>
+              <input class="pet__input" type="text" name="pet-weight" value="7" aria-label="Укажите вес домашнего питомца" autocomplete="off">
+            </label>
+            <label class="pet__label">
+              <span class="pet__text pet__text--old">Возраст (лет):</span>
+              <input class="pet__input" type="text" name="pet-age" value="7" aria-label="Укажите возраст домашнего питомца" autocomplete="off">
+            </label>
+          </div>
+
+          <div class="plan">
+            <h2 class="visually-hidden">Выберите план действий</h2>
+            <ul class="plan__link">
+              <li class="plan__item">
+                <input class="plan__radio" type="radio" name="plan__radio" id="slenderize" value="slenderize" checked>
+                <label class="plan__label" for="slenderize">Похудение</label>
+              </li>
+              <li class="plan__item">
+                <input class="plan__radio" type="radio" name="plan__radio" id="fatten" value="fatten">
+                <label class="plan__label" for="fatten">Набор массы</label>
+              </li>
+              <li class="plan__item">
+                <input class="plan__radio" type="radio" name="plan__radio" id="need-advice" value="need-advice">
+                <label class="plan__label" for="need-advice">Не знаю (нужен Ваш совет)</label>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <ul class="plan">
-          <h2 class="visually-hidden">Выберите план действий</h2>
-          <li class="plan__item">
-            <input class="plan-usual-box" type="radio" name="plan__usual" id="slenderize" value="slenderize" checked>
-            <label class="plan__label" for="slenderize">Похудение</label>
-          </li>
-          <li class="plan__item">
-            <input class="plan-usual-box" type="radio" name="plan__usual" id="fatten" value="fatten">
-            <label class="plan__label" for="fatten">Набор массы</label>
-          </li>
-          <li class="plan__item">
-            <input class="plan-usual-box" type="radio" name="plan__usual" id="need-advice" value="need-advice">
-            <label class="plan__label" for="need-advice">Не знаю (нужен Ваш совет)</label>
-          </li>
-        </ul>
-
         <div class="owner">
-          <h2 class="owner__title form-title">Контактные данные (владельца кота)</h2>
-          <label class="owner__label">
-            <span class="owner__text owner__text-email">e-mail:*</span>
-            <input class="owner__input" type="text" name="owner-input" value="kuklachev@gmail.com" aria-label="Введите электронный адрес" autocomplete="off">
-            <a class="owner__link owner__link-email" href="#">
-              <svg class="owner-icon" width="17" height="13" aria-label="Иконка почтового ящика">
-                <use xlink:href="./img/svg/sprite.svg#owner-icon-email"></use>
-              </svg>
-            </a>
-          </label>
-          <label class="owner__label">
-            <span class="owner__text owner__text-phone">Телефон:*</span>
-            <input class="owner__input" type="text" name="owner-input" value="8 (960) 900-60-90" aria-label="Введите номер телефона" autocomplete="off">
-            <a class="owner__link owner__link-phone" href="#">
-              <svg class="owner-icon" width="20" height="20" aria-label="Иконка с телефоном">
-                <use xlink:href="./img/svg/sprite.svg#owner-icon-telephone"></use>
-              </svg>
-            </a>
-          </label>
+          <h2 class="owner__title form-title">Контактные данные <span class="owner__span-break">(владельца кота)</span></h2>
+          <div class="owner__equalizer">
+            <label class="owner__label">
+              <span class="owner__text owner__text-email">e-mail:*</span>
+              <input class="owner__input" type="email" name="email" value="kuklachev@gmail.com" aria-label="Введите электронный адрес" autocomplete="off">
+              <a class="owner__link owner__link-email" href="#">
+                <svg class="owner-icon" width="17" height="13" aria-label="Иконка почтового ящика">
+                  <use xlink:href="./img/svg/sprite.svg#owner-icon-email"></use>
+                </svg>
+              </a>
+            </label>
+            <label class="owner__label">
+              <span class="owner__text owner__text-phone">Телефон:*</span>
+              <input class="owner__input" type="tel" name="email" value="8 (960) 900-60-90" aria-label="Введите номер телефона" autocomplete="off">
+              <a class="owner__link owner__link-phone" href="#">
+                <svg class="owner-icon" width="20" height="20" aria-label="Иконка с телефоном">
+                  <use xlink:href="./img/svg/sprite.svg#owner-icon-telephone"></use>
+                </svg>
+              </a>
+            </label>
+          </div>
         </div>
 
         <div class="comments">
           <h2 class="comments__title form-title">Комментарий</h2>
-          <textarea class="comments__textarea" name="comments__text" cols="40" rows="5">Расскажите обо всех повадках кота</textarea>
+          <div class="comments__equalizer">
+            <textarea class="comments__textarea" name="comments__text" cols="40" rows="5">Расскажите обо всех повадках кота</textarea>
+          </div>
         </div>
 
-        <ul class="supple">
+        <div class="supple">
           <h2 class="supple__title form-title">Дополнительно</h2>
-          <li class="supple__item">
-            <input class="supple__input" type="checkbox" id="id-sweetener" name="sweetener" checked>
-            <label class="supple__label" for="id-sweetener">Сахарозаменитель</label>
-          </li>
-          <li class="supple__item">
-            <input class="supple__input" type="checkbox" id="id-water" name="water">
-            <label class="supple__label" for="id-water">Питьевая вода</label>
-          </li>
-          <li class="supple__item">
-            <input class="supple__input" type="checkbox" id="id-milk" name="milk">
-            <label class="supple__label" for="id-milk">Молоко</label>
-          </li>
-          <li class="supple__item">
-            <input class="supple__input" type="checkbox" id="id-vitamins" name="vitamins">
-            <label class="supple__label" for="id-vitamins">Витамины</label>
-          </li>
-        </ul>
+          <ul class="supple__list">
+            <li class="supple__item">
+              <input class="supple__input" type="checkbox" id="id-sweetener" name="sweetener" checked>
+              <label class="supple__label" for="id-sweetener">Сахарозаменитель</label>
+            </li>
+            <li class="supple__item">
+              <input class="supple__input" type="checkbox" id="id-water" name="water">
+              <label class="supple__label" for="id-water">Питьевая вода</label>
+            </li>
+            <li class="supple__item">
+              <input class="supple__input" type="checkbox" id="id-milk" name="milk">
+              <label class="supple__label" for="id-milk">Молоко</label>
+            </li>
+            <li class="supple__item">
+              <input class="supple__input" type="checkbox" id="id-vitamins" name="vitamins">
+              <label class="supple__label" for="id-vitamins">Витамины</label>
+            </li>
+          </ul>
+        </div>
 
-        <button class="form__submit btn">Отправить заявку</button>
-        <p class="form__hint">* — Обязательные поля</p>
+        <div class="form__equalizer-2">
+          <button class="form__submit btn">Отправить заявку</button>
+          <p class="form__hint">* — Обязательные поля</p>
+        </div>
       </form>
 
     </main>
@@ -149,7 +163,7 @@
         </div>
       </section>
 
-      <section class="socials container">
+      <section class="socials">
         <h2 class="visually-hidden">Социальные сети</h2>
 
         <div class="socials__logo-wrapper">
@@ -168,7 +182,7 @@
           <li class="socials__item">
             <a class="socials__link" href="https://instagram.com/" aria-label="Посетите instagram.com" title="Посетите instagram.com">
               Посетите Instagram
-              <svg class="socials__icon-insta"width="16" height="16" aria-label="Перейти на официальный сайт Instagram">
+              <svg class="socials__icon-insta" width="16" height="16" aria-label="Перейти на официальный сайт Instagram">
                 <use xlink:href="./img/svg/sprite.svg#socials__icon-insta"></use>
               </svg>
             </a>
@@ -185,8 +199,8 @@
 
         <div class="socials__academy">
           <a class="socials__academy-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Посетите htmlacademy.ru" title="Посетите htmlacademy.ru">
-            HTMLAcademy
-            <svg class="socials__academy-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="-11 0 60 60">
+            <span class="socials__span">HTMLAcademy</span>
+            <svg class="socials__academy-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 60 60">
               <use xlink:href="./img/svg/sprite.svg#socials__academy-icon"></use>
             </svg>
           </a>

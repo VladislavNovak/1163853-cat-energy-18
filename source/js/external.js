@@ -2,17 +2,20 @@ function revealMenu() {
   var logotypeButton = document.querySelector(".logotype__button");
   var navigation = document.querySelector(".navigation");
 
+  navigation.classList.remove("navigation--opened");
+  navigation.classList.add("navigation--closed");
+  logotypeButton.classList.remove("logotype__button--cross");
+
   logotypeButton.addEventListener("click", function(e) {
     e.preventDefault();
-    // (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
     if (navigation.classList.contains("navigation--opened")) {
       navigation.classList.remove("navigation--opened");
       navigation.classList.add("navigation--closed");
-      this.classList.add("is-active");
+      this.classList.remove("logotype__button--cross");
     } else {
       navigation.classList.add("navigation--opened");
       navigation.classList.remove("navigation--closed");
-      this.classList.remove("is-active");
+      this.classList.add("logotype__button--cross");
     }
   });
 }

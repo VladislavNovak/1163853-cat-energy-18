@@ -1,5 +1,30 @@
 .form {
   margin-bottom: 30px;
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
+
+  @include desktop {
+    margin-bottom: 62px;
+  }
+}
+
+.form__equalizer {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    max-width: $max-screen-width;
+    margin: 0 auto;
+  }
+}
+
+.form__equalizer-2 {
+  @include desktop {
+    display: flex;
+    max-width: $max-screen-width;
+    margin: 0 auto;
+  }
 }
 
 .form__submit {
@@ -15,6 +40,29 @@
   background-color: $color-green-bright;
 
   @include textomizer(regular, 16px, 20px, uppercase, $color-white);
+
+  @include tablet {
+    display: inline-block;
+    vertical-align: top;
+    width: 36.7%;
+    margin-left: 72px;
+    margin-right: $side-indent-mobile;
+    margin-bottom: 21.5px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 10px;
+    padding-right: 15px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include desktop {
+    margin-left: 40px;
+    margin-right: 0;
+    width: 43.7%;
+    padding-top: 15px;
+    padding-left: 20px;
+  }
 }
 
 .form__hint {
@@ -23,4 +71,17 @@
   text-align: center;
 
   @include textomizer(arial, 14px, 16px);
+
+  @include tablet {
+    display: inline-block;
+    vertical-align: top;
+    width: 27.7%;
+    font-size: 16px;
+  }
+
+  @include desktop {
+    width: 23.7%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

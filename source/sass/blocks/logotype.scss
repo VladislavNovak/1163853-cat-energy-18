@@ -63,16 +63,16 @@
   font-size: 0;
 }
 
-.logotype__button.is-active .logotype__line-first {
+.logotype__button.logotype__button--cross .logotype__line-first {
   width: 24px;
   transform: translateY(7px) rotate(45deg);
 }
 
-.logotype__button.is-active .logotype__line-second {
+.logotype__button.logotype__button--cross .logotype__line-second {
   opacity: 0;
 }
 
-.logotype__button.is-active .logotype__line-third {
+.logotype__button.logotype__button--cross .logotype__line-third {
   width: 24px;
   transform: translateY(-5px) rotate(-45deg);
 }

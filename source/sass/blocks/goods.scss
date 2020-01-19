@@ -18,9 +18,9 @@
 }
 
 .goods__title {
-  margin-top: 0;
-  padding-right: $side-indent-mobile;
-  padding-left: 0;
+  margin-top: 0.5px;
+  padding-left: 19px;
+  padding-right: 42px;
   text-align: center;
   margin-bottom: 28px;
 
@@ -79,7 +79,6 @@
 .goods__table {
   display: table;
   order: 2;
-  // width: 141px;
   width: 50%;
   margin-left: auto;
   margin-bottom: 22px;
@@ -255,8 +254,9 @@
 }
 
 .goods__more-title {
-  margin-top: 18.5px;
+  margin-top: 18px;
   margin-bottom: 9px;
+  padding-left: 1.5px;
 
   @include textomizer(regular, 16px, 20px, uppercase);
 
@@ -300,7 +300,7 @@
   display: block;
   min-height: 40px;
   width: 100%;
-  padding-top: 8.5px;
+  padding-top: 9px;
   padding-left: 2px;
   background-color: $color-gray-bright;
 

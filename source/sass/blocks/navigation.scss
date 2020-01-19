@@ -9,13 +9,13 @@
   }
 }
 
-.navigation--closed {
+.navigation--closed .navigation__list {
   @include mobile-only {
     display: none;
   }
 }
 
-.navigation--opened {
+.navigation--opened .navigation__list {
   @include mobile-only {
     display: block;
   }

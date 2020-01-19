@@ -11,6 +11,12 @@
     padding-bottom: 52px;
     border-bottom: none;
   }
+
+  @include desktop {
+    width: 52.1%;
+    padding-left: 41px;
+    padding-bottom: 0;
+  }
 }
 
 .pet__label {
@@ -69,7 +75,8 @@
   @include textomizer(regular, 16px, 18px, uppercase);
 
   @include tablet {
-    padding-top: 8px;
+    padding-top: 9px;
+    padding-bottom: 12px;
     padding-left: 18px;
     font-size: 20px;
     line-height: 20px;
