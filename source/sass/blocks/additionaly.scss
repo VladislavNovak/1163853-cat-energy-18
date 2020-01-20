@@ -3,21 +3,22 @@
   padding-bottom: 33px;
 
   @include tablet {
-    padding-top: 5px;
-    padding-bottom: 76px;
+    padding-top: 6px;
+    padding-bottom: 75px;
   }
 
   @include desktop {
     max-width: 1440px;
     margin: 0 auto;
-    padding-top: 15px;
+    padding-top: 13px;
     padding-bottom: 86px;
   }
 }
 
 .additionaly__title {
   margin-top: 0;
-  margin-bottom: 34px;
+  margin-bottom: 29px;
+  padding-bottom: 5px;
   padding-left: 19.5px;
   padding-right: $side-indent-mobile;
   text-align: left;
@@ -26,7 +27,7 @@
   @include textomizer(regular, 24px, 24px);
 
   @include tablet {
-    margin-bottom: 80px;
+    margin-bottom: 75px;
     padding-left: 67px;
     padding-right: 30px;
     font-size: 36px;
@@ -35,6 +36,7 @@
 
   @include desktop {
     width: 100%;
+    margin-bottom: 76px;
     padding-left: 7.5%;
     padding-right: 7.5%;
     margin-left: auto;
@@ -63,15 +65,18 @@
 
   @include tablet {
     right: 39px;
+    top: 1px;
   }
 }
 
 .additionaly__title::after {
   margin-right: -100%;
   left: 23px;
+  top: -1px;
 
   @include tablet {
     left: 36px;
+    top: 1px;
   }
 }
 
@@ -216,8 +221,8 @@
 }
 
 .additionaly__present {
-  padding-top: 65px;
-  padding-bottom: 27px;
+  padding-top: 65.5px;
+  padding-bottom: 26.5px;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -272,7 +277,7 @@
 
   @include tablet {
     text-align: left;
-    margin-top: 7px;
+    margin-top: 6px;
   }
 
   @include desktop {

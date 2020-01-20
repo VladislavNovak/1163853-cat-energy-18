@@ -27,7 +27,9 @@
   @include textomizer(regular, 36px, 60px);
 
   @include tablet {
-    margin-bottom: 20px;
+    text-align: left;
+    margin-bottom: 19px;
+    padding-left: 0;
     padding-right: 0;
     font-size: 60px;
   }
@@ -64,13 +66,14 @@
     margin-bottom: 59px;
     padding-top: 137.5px;
     padding-left: 36.5px;
-    padding-right: 36.5px;
+    padding-right: 38px;
     padding-bottom: 40px;
     background-color: $color-gray-bright;
   }
 
   @include desktop {
     width: 20.1%;
+    margin-bottom: 61px;
     padding-left: 37.5px;
     padding-right: 39.5px;
   }
@@ -200,14 +203,12 @@
   margin-left: 1px;
   margin-right: 1px;
   padding-top: 9px;
-  padding-left: 3px;
+  padding-bottom: 10px;
+  padding-left: 13px;
+  padding-right: 10px;
 
   @include textomizer(regular, 16px, 20px, uppercase, $color-white);
   background-color: $color-green-bright;
-
-  @include tablet {
-    padding-left: 0;
-  }
 }
 
 .goods__item-2 {
@@ -228,7 +229,7 @@
     padding-top: 27px;
     padding-left: 36.5px;
     padding-right: 36.5px;
-    padding-bottom: 40px;
+    padding-bottom: 39px;
     border: 1px solid $color-gray-half-light;
   }
 
@@ -269,7 +270,7 @@
   }
 
   @include desktop {
-    margin-top: 48px;
+    margin-top: 46px;
     margin-bottom: 24.5px;
     padding-left: 10px;
     padding-right: 10px;
@@ -287,12 +288,13 @@
     line-height: 18px;
     padding-left: 35px;
     padding-right: 35px;
-    margin-bottom: 85px;
+    margin-bottom: 86px;
   }
 
   @include desktop {
     padding-left: 0;
     padding-right: 0;
+    margin-bottom: 86px;
   }
 }
 
@@ -301,7 +303,9 @@
   min-height: 40px;
   width: 100%;
   padding-top: 9px;
-  padding-left: 2px;
+  padding-bottom: 10px;
+  padding-left: 13px;
+  padding-right: 10px;
   background-color: $color-gray-bright;
 
   @include textomizer(regular, 16px, 20px, uppercase);

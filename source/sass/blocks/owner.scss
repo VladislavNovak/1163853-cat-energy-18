@@ -1,5 +1,5 @@
 .owner {
-  padding-top: 9px;
+  padding-top: 8px;
   padding-bottom: 7px;
 
   @include tablet {
@@ -16,7 +16,7 @@
 
 .owner__title {
   margin-bottom: 28px;
-  padding-left: $side-indent-mobile;
+  padding-left: 19px;
   padding-right: $side-indent-mobile;
   padding-bottom: 5px;
   overflow: hidden;
@@ -24,10 +24,9 @@
   @include textomizer(regular, 24px, 24px);
 
   @include tablet {
-    margin-bottom: 75px;
+    margin-bottom: 70px;
     padding-left: 69px;
     padding-right: 65.5px;
-    padding-bottom: 0;
     font-size: 36px;
     line-height: 36px;
   }
@@ -35,9 +34,10 @@
   @include desktop {
     width: 100%;
     max-width: 1440px;
-    padding-top: 19px;
+    margin-bottom: 71px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 19px;
     padding-left: 109px;
     padding-right: 109px;
   }
@@ -66,16 +66,24 @@
     right: 39px;
     top: -1px;
   }
+
+  @include desktop {
+    top: 0;
+  }
 }
 
 .owner__title::after {
   margin-right: -100%;
-  left: 46px;
+  left: 47px;
   top: -25px;
 
   @include tablet {
     left: 42px;
     top: -1px;
+  }
+
+  @include desktop {
+    top: 0;
   }
 }
 
@@ -91,7 +99,7 @@
 }
 
 .owner__equalizer {
-  padding-left: $side-indent-mobile;
+  padding-left: 19px;
   padding-right: $side-indent-mobile;
 
   @include tablet {
@@ -177,12 +185,12 @@
 
 .owner__text-email {
   padding-bottom: 1px;
-  padding-right: 11px;
+  padding-right: 12px;
 
   @include tablet {
     padding-bottom: 2px;
-    padding-left: 1px;
-    padding-right: 20px;
+    padding-left: 2px;
+    padding-right: 19px;
   }
 
   @include desktop {
@@ -192,7 +200,7 @@
 
 .owner__text-phone {
   padding-bottom: 2px;
-  padding-right: 9px;
+  padding-right: 10px;
 
   @include tablet {
     padding-right: 15px;

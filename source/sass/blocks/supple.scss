@@ -1,31 +1,33 @@
 .supple {
-  padding-top: 20px;
-  padding-bottom: 18px;
+  padding-top: 19px;
+  padding-bottom: 16px;
 
   @include tablet {
+    padding-top: 20px;
     padding-bottom: 11.5px;
   }
 
   @include desktop {
-    padding-top: 25px;
+    padding-top: 26px;
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 19.5px;
+    padding-bottom: 20.5px;
   }
 }
 
 .supple__title {
   margin-top: 0;
-  margin-bottom: 39px;
-  padding-left: $side-indent-mobile;
+  margin-bottom: 34px;
+  padding-bottom: 5px;
+  padding-left: 19px;
   padding-right: $side-indent-mobile;
   overflow: hidden;
 
   @include textomizer(regular, 24px);
 
   @include tablet {
-    margin-bottom: 67px;
-    padding-left: 70px;
+    margin-bottom: 62px;
+    padding-left: 69px;
     padding-right: $side-form-tablet;
     font-size: 36px;
     line-height: 36px;
@@ -61,8 +63,8 @@
   right: 23px;
 
   @include tablet {
-    right: 40px;
-    top: -1px;
+    right: 39px;
+    // top: -1px;
   }
 }
 
@@ -72,8 +74,8 @@
   top: -1px;
 
   @include tablet {
-    left: 41px;
-    top: -1px;
+    left: 42px;
+    top: 0;
   }
 }
 
@@ -99,10 +101,10 @@
 }
 
 .supple__item {
-  margin-bottom: 22px;
+  margin-bottom: 22.5px;
 
   @include tablet {
-    margin-bottom: 49.5px;
+    margin-bottom: 49px;
     width: 45.5%;
   }
 

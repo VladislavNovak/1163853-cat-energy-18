@@ -7,21 +7,23 @@
   }
 
   @include desktop {
-    padding-top: 11px;
+    padding-top: 10px;
   }
 }
 
 .comments__title {
   margin-top: 0;
-  padding-left: $side-indent-mobile;
+  margin-bottom: 15px;
+  padding-left: 19px;
   padding-right: $side-indent-mobile;
+  padding-bottom: 5px;
   overflow: hidden;
 
   @include textomizer(regular, 24px);
 
   @include tablet {
-    margin-bottom: 61px;
-    padding-left: 70px;
+    margin-bottom: 56px;
+    padding-left: 69px;
     padding-right: $side-form-tablet;
     font-size: 36px;
     line-height: 36px;
@@ -30,7 +32,7 @@
   @include desktop {
     width: 100%;
     max-width: 1440px;
-    margin-bottom: 75px;
+    margin-bottom: 70px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 109px;
@@ -61,6 +63,10 @@
     right: 39px;
     top: -1px;
   }
+
+  @include desktop {
+    top: 0;
+  }
 }
 
 .comments__title::after {
@@ -69,8 +75,12 @@
   top: -1px;
 
   @include tablet {
-    left: 42px;
+    left: 41px;
     top: -1px;
+  }
+
+  @include desktop {
+    top: 0;
   }
 }
 
@@ -87,16 +97,17 @@
     max-width: $max-screen-width;
     margin: 0 auto;
     padding-left: 39px;
+    padding-right: 39px;
   }
 }
 
 .comments__textarea {
   width: 100%;
-  min-height: 150px;
+  min-height: 151px;
   margin-top: 14px;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 15px;
+  padding-left: 14px;
   padding-right: 10px;
   overflow: auto;
   border: 1px solid $color-gray-half-light;
