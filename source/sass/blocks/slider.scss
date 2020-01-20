@@ -7,7 +7,7 @@
 
   @include desktop {
     width: 760px;
-    background: linear-gradient(to right, #f2f2f2 367px, #eaeaea 367px);
+    background: transparent;
   }
 }
 
@@ -63,7 +63,7 @@
     height: 100%;
 
     &--before {
-      left: 0;
+      left: 1px;
       display: block;
     }
 
@@ -124,7 +124,10 @@
   }
 }
 
+//--------------slider----------------
+
 .slider__button {
+  width: 50px;
   border: none;
   background-color: rgba(255, 255, 255, 0);
   cursor: pointer;
@@ -135,27 +138,31 @@
 
   @include tablet {
     font-size: 20px;
-    padding-bottom: 6px;
-    padding-top: 5px;
-    padding-left: 0;
-    padding-right: 0;
+    padding-bottom: 5px;
+    padding-top: 6px;
+    padding-left: 3px;
+    padding-right: 3px;
     border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
   }
 }
 
 .slider__button--before {
   margin-right: 12px;
+  text-align: right;
 
   @include tablet {
-    margin-right: 6px;
+    width: 54px;
+    margin-right: 0;
   }
 }
 
 .slider__button--after {
   margin-left: 12px;
+  text-align: left;
 
   @include tablet {
-    margin-left: 6px;
+    width: 59px;
+    margin-left: 0;
   }
 }
 
@@ -164,48 +171,53 @@
   margin-right: 22px;
 
   @include tablet {
-    margin-left: 18px;
-    margin-right: 14px;
+    width: 428px;
+    margin-left: 21px;
+    margin-right: 19px;
   }
 
   @include desktop {
-    margin-left: 18px;
-    margin-right: 13px;
+    margin-left: 23px;
+    margin-right: 16px;
   }
 }
 
 .slider__toggle {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding-left: 5px;
+  width: 208px;
+  margin-left: auto;
+  margin-right: auto;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
 
   @include tablet {
+    width: auto;
     padding-left: 1px;
     margin-top: 21px;
     margin-bottom: 68px;
   }
 
   @include desktop {
-    margin-left: 39px;
-    margin-top: 22px;
+    margin-left: 74px;
+    margin-top: 21px;
   }
 }
 
 .slider__checkbox-label {
+  position: relative;
   cursor: pointer;
   text-indent: -9999px;
-  width: 85px;
+  width: 84px;
   height: 14px;
   border-radius: 6px;
   border: solid 1px #cdcdcd;
   background-color: rgb(255, 255, 255);
   display: block;
-  position: relative;
+
 
   @include tablet {
     display: none;

@@ -1,5 +1,5 @@
 .strategy {
-  padding-top: 21px;
+  padding-top: 11px;
   padding-bottom: 0;
   padding-right: $side-indent-mobile;
   padding-left: $side-indent-mobile;
@@ -39,8 +39,8 @@
   @include tablet {
     display: block;
     min-height: 372px;
-    padding-top: 71px;
-    padding-left: 52px;
+    padding-top: 70px;
+    padding-left: 51px;
   }
 
   @include desktop {
@@ -60,6 +60,7 @@
 
   @include desktop {
     margin-top: 0;
+    padding-right: 30px;
   }
 }
 
@@ -86,7 +87,7 @@
     height: 100px;
     margin-top: 0;
     margin-left: 0;
-    margin-right: 59px;
+    margin-right: 60px;
   }
 }
 

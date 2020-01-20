@@ -13,9 +13,10 @@
   }
 
   @include desktop {
-    padding-top: 40px;
     max-width: $max-screen-width;
     margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 0;
     padding-right: $side-indent-desktop;
     padding-left: $side-indent-desktop;
     border-bottom: none;
@@ -52,7 +53,7 @@
     flex-direction: column;
     width: 50%;
     min-height: 228px;
-    margin-top: 60px;
+    margin-top: 59px;
     margin-bottom: 29px;
     padding-right: 17%;
     counter-increment: list; // увеличивает значение заданного счётчика

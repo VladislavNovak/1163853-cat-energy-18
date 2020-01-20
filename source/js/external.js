@@ -38,7 +38,7 @@ function imageComparison() {
         imgBefore.style.width = 100 - event.currentTarget.value + "%";
         imgAfter.style.width = event.currentTarget.value + "%";
       } else {
-        imgBefore.style.width = 100 + 9 - event.currentTarget.value + "%";
+        imgBefore.style.width = 100 + 6 - event.currentTarget.value + "%";
         imgAfter.style.width = event.currentTarget.value + "%";
       }
     }
