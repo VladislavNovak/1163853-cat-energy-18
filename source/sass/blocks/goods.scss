@@ -149,7 +149,7 @@
   @include tablet {
     position: absolute;
     left: 0;
-    bottom: 301px;
+    // bottom: 301px;
     width: 100%;
     height: auto;
     text-align: center;
@@ -157,12 +157,20 @@
 }
 
 .goods__picture--small {
+  @include tablet {
+    top: -47px;
+  }
+
   @include desktop {
     top: -46px;
   }
 }
 
 .goods__picture--large {
+  @include tablet {
+    top: -82px;
+  }
+
   @include desktop {
     top: -83px;
   }

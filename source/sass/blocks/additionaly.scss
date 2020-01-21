@@ -20,7 +20,7 @@
   margin-bottom: 29px;
   padding-bottom: 5px;
   padding-left: 19.5px;
-  padding-right: $side-indent-mobile;
+  padding-right: 65px;
   text-align: left;
   overflow: hidden;
 
@@ -139,6 +139,7 @@
   }
 
   @include desktop {
+    flex-wrap: nowrap;
     padding-left: 0;
     padding-right: 0;
     padding-top: 14px;
@@ -164,6 +165,7 @@
   }
 
   @include desktop {
+    max-width: 29%;
     margin-top: 11px;
     margin-bottom: 11px;
   }
@@ -206,17 +208,20 @@
   min-height: 40px;
   text-align: center;
   padding-top: 10px;
-  padding-left: 3px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  padding-right: 15px;
 
   @include textomizer(regular, 16px, 20px, uppercase, $color-white);
   background-color: $color-green-bright;
 
   @include tablet {
-    padding-left: 0;
+    padding-left: 15px;
   }
 
   @include desktop {
     width: 27.5%;
+    padding-left: 17px;
   }
 }
 
@@ -276,6 +281,7 @@
   @include textomizer(arial, 16px, 20px, none, $color-white);
 
   @include tablet {
+    max-width: 280px;
     text-align: left;
     margin-top: 6px;
   }
