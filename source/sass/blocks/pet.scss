@@ -13,10 +13,11 @@
   }
 
   @include desktop {
-    width: 52.1%;
+    width: 51.1%;
     padding-top: 27px;
-    padding-left: 41px;
     padding-bottom: 0;
+    padding-left: 41px;
+    padding-right: 54px;
   }
 }
 

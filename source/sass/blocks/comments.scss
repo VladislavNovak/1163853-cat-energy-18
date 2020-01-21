@@ -117,6 +117,7 @@
   @include textomizer(regular, 16px, 18px, uppercase);
 
   @include tablet {
+    min-height: 174px;
     padding-left: 19px;
     padding-top: 10px;
     font-size: 20px;

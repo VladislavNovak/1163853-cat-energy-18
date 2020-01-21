@@ -17,7 +17,7 @@
 .owner__title {
   margin-bottom: 28px;
   padding-left: 19px;
-  padding-right: $side-indent-mobile;
+  padding-right: 110px;
   padding-bottom: 5px;
   overflow: hidden;
 
@@ -109,7 +109,7 @@
 
   @include desktop {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     max-width: $max-screen-width;
     margin: 0 auto;
     padding-left: 0;
@@ -133,9 +133,9 @@
   }
 
   @include desktop {
+    width: 47%;
     padding-left: 39px;
-    margin-right: 41px;
-    flex: 1;
+    margin-right: 38px;
   }
 }
 

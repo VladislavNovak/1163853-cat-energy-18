@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
-
+    <h1 class="visually-hidden">Cat Energy - возможность выбрать корм онлайн!</h1>
     <header class="header header--form-desktop">
 
       <div class="logotype">
@@ -27,6 +27,7 @@
       </div>
 
       <nav class="navigation navigation--opened">
+        <h2 class="visually-hidden">Навигация по страницам сайта</h2>
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link" href="./index.html" aria-label="Можно перейти главную страницу">Главная</a>
@@ -45,7 +46,7 @@
     <main class="program">
 
       <div class="program__content">
-        <h1 class="program__title">Подбор программы</h1>
+        <h2 class="program__title">Подбор программы</h2>
         <p class="program__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
       </div>
 
@@ -56,15 +57,15 @@
             <h2 class="visually-hidden">Сначала введите данные питомца</h2>
             <label class="pet__label">
               <span class="pet__text pet__text--name">Имя:*</span>
-              <input class="pet__input" type="text" name="pet-name" value="Барсик" aria-label="Укажите имя домашнего питомца" autocomplete="off">
+              <input class="pet__input" type="text" name="pet-name" value="Барсик" aria-label="Укажите имя домашнего питомца" autocomplete="off" required>
             </label>
             <label class="pet__label">
               <span class="pet__text pet__text--weight">Вес (кг):*</span>
-              <input class="pet__input" type="text" name="pet-weight" value="7" aria-label="Укажите вес домашнего питомца" autocomplete="off">
+              <input class="pet__input" type="number" name="pet-weight" value="7" aria-label="Укажите вес домашнего питомца" autocomplete="off" required>
             </label>
             <label class="pet__label">
               <span class="pet__text pet__text--old">Возраст (лет):</span>
-              <input class="pet__input" type="text" name="pet-age" value="7" aria-label="Укажите возраст домашнего питомца" autocomplete="off">
+              <input class="pet__input" type="number" name="pet-age" value="7" aria-label="Укажите возраст домашнего питомца" autocomplete="off">
             </label>
           </div>
 
@@ -92,7 +93,7 @@
           <div class="owner__equalizer">
             <label class="owner__label">
               <span class="owner__text owner__text-email">e-mail:*</span>
-              <input class="owner__input" type="email" name="email" value="kuklachev@gmail.com" aria-label="Введите электронный адрес" autocomplete="off">
+              <input class="owner__input" type="email" name="email" value="kuklachev@gmail.com" aria-label="Введите электронный адрес" autocomplete="off" required>
               <a class="owner__link owner__link-email" href="#">
                 <svg class="owner-icon" width="17" height="13" aria-label="Иконка почтового ящика">
                   <use xlink:href="./img/svg/sprite.svg#owner-icon-email"></use>
@@ -101,7 +102,7 @@
             </label>
             <label class="owner__label">
               <span class="owner__text owner__text-phone">Телефон:*</span>
-              <input class="owner__input" type="tel" name="email" value="8 (960) 900-60-90" aria-label="Введите номер телефона" autocomplete="off">
+              <input class="owner__input" type="tel" id="tel" name="tel" value="8 (960) 900-60-90" aria-label="Введите номер телефона" autocomplete="off" required>
               <a class="owner__link owner__link-phone" href="#">
                 <svg class="owner-icon" width="20" height="20" aria-label="Иконка с телефоном">
                   <use xlink:href="./img/svg/sprite.svg#owner-icon-telephone"></use>
@@ -114,7 +115,7 @@
         <div class="comments">
           <h2 class="comments__title form-title">Комментарий</h2>
           <div class="comments__equalizer">
-            <textarea class="comments__textarea" name="comments__text" cols="40" rows="5">Расскажите обо всех повадках кота</textarea>
+            <textarea class="comments__textarea" name="comments__text" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </div>
 
