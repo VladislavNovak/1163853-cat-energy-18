@@ -16,6 +16,7 @@
   &:hover,
   &:focus {
     opacity: 0.8;
+    transition-duration: 150ms;
   }
 
   &:active {

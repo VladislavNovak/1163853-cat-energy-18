@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
+
     <h1 class="visually-hidden">Cat Energy - лучший корм!</h1>
     <header class="header header--index-desktop">
 
@@ -56,7 +57,7 @@
           <source media="(min-width: 768px)" srcset="./img/index-can-tablet@1x.jpg 1x, ./img/index-can-tablet@2x.jpg 2x">
           <img class="intro__img" src="./img/index-can-mobile@1x.png" srcset="./img/index-can-mobile@2x.png 2x" width="280" height="271" alt="Баночка с вкусной курицей">
         </picture>
-        <a class="intro__btn" href="#" aria-label="Можно перейти к подбору программы">Подобрать программу</a>
+        <a class="intro__btn interaction__btn--green" href="#" aria-label="Можно перейти к подбору программы">Подобрать программу</a>
       </section>
 
       <section class="strategy">
@@ -164,7 +165,7 @@
               <div class="slider__toggle">
                   <button class="slider__button slider__button--before">Было</button>
                   <input id="slider" class="slider__range range" type="range" min="0" max="100" value="50"/>
-                  <input type="checkbox" class="slider__checkbox visually-hidden" id='slider-checkbox'>
+                  <input type="checkbox" class="slider__checkbox" id='slider-checkbox'>
                   <label class="slider__checkbox-label" for="slider-checkbox">Переключение слайдера</label>
                   <button class="slider__button slider__button--after">Стало</button>
               </div>
@@ -193,7 +194,9 @@
         <h2 class="visually-hidden">Социальные сети</h2>
 
         <div class="socials__logo-wrapper">
-          <img class="socials__logo" src="./img/logo-footer.svg" width="128" height="25" alt="Логотип компании Cat Energy">
+          <a href="#" class="socials__logo-link">
+            <img class="socials__logo" src="./img/logo-footer.svg" width="128" height="25" alt="Логотип компании Cat Energy">
+          </a>
         </div>
 
         <ul class="socials__list">
@@ -226,7 +229,7 @@
         <div class="socials__academy">
           <a class="socials__academy-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Посетите htmlacademy.ru" title="Посетите htmlacademy.ru">
             <span class="socials__span">HTMLAcademy</span>
-            <svg class="socials__academy-icon" xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 60 60">
+            <svg class="socials__academy-icon" width="39" height="39">
               <use xlink:href="./img/svg/sprite.svg#socials__academy-icon"></use>
             </svg>
           </a>

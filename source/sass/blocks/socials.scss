@@ -11,16 +11,16 @@
     align-items: center;
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 46px;
-    padding-bottom: 56px;
+    padding-top: 36px;
+    padding-bottom: 47px;
   }
 
   @include desktop {
     max-width: 1440px;
-    padding-left: 110px;
+    padding-left: 109px;
     padding-right: 110px;
-    padding-top: 49px;
-    padding-bottom: 55px;
+    padding-top: 40px;
+    padding-bottom: 48px;
   }
 }
 
@@ -37,39 +37,43 @@
   }
 }
 
+.socials__logo-link:active {
+  opacity: 0.4;
+  transition-duration: 150ms;
+}
+
 .socials__list {
-  @include list-reset-to-null();
+  list-style-type: none;
+  margin: 0;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-  padding-left: 0;
-  padding-top: 21px;
-  padding-bottom: 19px;
+  justify-content: space-between;
+  padding-left: 69px;
+  padding-right: 69px;
+  padding-top: 16px;
+  padding-bottom: 14px;
   border-bottom: 1px solid $color-gray-darker;
 
   @include tablet {
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 0;
-    padding-bottom: 0;
+    width: 28.2%;
+    margin-left: 27px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-bottom: none;
+  }
+
+  @include desktop {
+    width: 16.4%;
   }
 }
 
 .socials__link {
   display: block;
-  width: 22px;
-  height: 22px;
+  width: 32px;
+  height: 32px;
   font-size: 0;
-  margin-left: 17px;
-  margin-right: 17px;
+  padding: 4px;
   text-decoration: none;
-
-  @include tablet {
-    margin-left: 28px;
-    margin-right: 4px;
-  }
 }
 
 .socials__icon-vk {
@@ -87,7 +91,7 @@
   width: 16px;
   height: 16px;
   margin-top: 3px;
-  margin-left: 3px;
+  margin-left: 4px;
 
   @include tablet {
     width: 23px;
@@ -101,7 +105,7 @@
   width: 10px;
   height: 19px;
   margin-top: 1px;
-  margin-left: 3px;
+  margin-left: 5px;
 
   @include tablet {
     width: 14px;
@@ -110,6 +114,23 @@
     margin-left: 2px;
   }
 }
+
+.socials__icon-vk:hover,
+.socials__icon-vk:focus,
+.socials__icon-insta:hover,
+.socials__icon-insta:focus,
+.socials__icon-fb:hover,
+.socials__icon-fb:focus {
+  fill: $color-green-bright;
+  transition-duration: 150ms;
+}
+
+.socials__icon-vk:active,
+.socials__icon-insta:active,
+.socials__icon-fb:active, {
+  opacity: 0.3;
+}
+
 
 .socials__academy {
   padding-top: 19px;
@@ -121,7 +142,7 @@
   }
 
   @include desktop {
-    padding-top: 5px;
+    padding-top: 10px;
   }
 }
 
@@ -153,4 +174,14 @@
   @include tablet {
     margin-left: 5px;
   }
+}
+
+.socials__academy-link:focus .socials__academy-icon,
+.socials__academy-link:hover .socials__academy-icon {
+  fill: $color-green-bright;
+  transition-duration: 150ms;
+}
+
+.socials__academy-link:active {
+  opacity: 0.3;
 }

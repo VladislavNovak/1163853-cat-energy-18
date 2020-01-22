@@ -42,8 +42,8 @@
 .navigation__item {
   padding-left: $side-indent-mobile;
   padding-right: $side-indent-mobile;
-  padding-top: 22.5px;
-  padding-bottom: 22px;
+  padding-top: 18.5px;
+  padding-bottom: 18.5px;
   border-top: 1px solid $color-gray-light;
 
   @include tablet {
@@ -63,10 +63,12 @@
 .navigation__link {
   display: inline-block;
   vertical-align: middle;
+  padding: 4px;
 
   @include textomizer(medium, 20px, 20px, uppercase);
 
   @include tablet {
+    padding: 0;
     font-weight: 400;
     font-size: 18px;
     line-height: 24.86px;
@@ -80,14 +82,14 @@
 .navigation__item a[href] {
   &:hover,
   &:focus {
-    color: $color-gray-hover;
+    opacity: 0.6;
+    transition-duration: 150ms;
   }
 
   &:active {
-    color: $color-gray-down;
+    opacity: 0.4;
   }
 }
-
 
 .navigation__link--active {
   @include tablet {

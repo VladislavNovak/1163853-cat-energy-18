@@ -1,0 +1,9 @@
+.interaction__btn--green:hover,
+.interaction__btn--green:focus {
+  background-color: $color-green-hvr;
+  transition-duration: 150ms;
+}
+
+.interaction__btn--green:active {
+  color: $color-green-down;
+}

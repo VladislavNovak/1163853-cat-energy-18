@@ -207,6 +207,10 @@
   }
 }
 
+.slider__checkbox {
+  display: none;
+}
+
 .slider__checkbox-label {
   position: relative;
   cursor: pointer;
@@ -240,7 +244,6 @@
 .slider__checkbox:checked + .slider__checkbox-label::after {
   right: 6px;
   left: initial;
-  // transform: translateX(-100%);
 }
 
 .slider__checkbox-label:active::after {
