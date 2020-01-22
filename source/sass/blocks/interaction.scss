@@ -7,3 +7,78 @@
 .interaction__btn--green:active {
   color: $color-green-down;
 }
+//-------------------------------
+.interaction__btn--gray:hover,
+.interaction__btn--gray:focus {
+  background-color: #ebebeb;
+  transition-duration: 150ms;
+}
+
+.interaction__btn--gray:active {
+  color: rgba(68, 68, 68, 0.4);
+}
+//-------------------------------
+.interaction__textfield {
+  outline: none;
+  border: 1.5px solid $color-gray-half-light;
+}
+
+.interaction__textfield:hover,
+.interaction__textfield:focus {
+  border: 1.5px solid $color-gray-light;
+  transition-duration: 150ms;
+}
+
+.interaction__textfield:active {
+  border: 1.5px solid #444444;
+}
+
+.interaction__textfield:invalid {
+  border: 1.5px solid #ff8282;
+}
+//-----------------------------------
+.interaction__textfield--extend {
+  outline: none;
+  border: 1.5px solid $color-gray-half-light;
+}
+
+.interaction__textfield--extend:hover,
+.interaction__textfield--extend:focus {
+  border: 1.5px solid $color-gray-light;
+  transition-duration: 150ms;
+}
+
+.interaction__textfield--extend:active {
+  border: 1.5px solid #444444;
+}
+
+.interaction__textfield--extend:invalid {
+  border: 1.5px solid #ff8282;
+}
+
+.interaction__textfield--extend:active ~ .owner__link .owner-icon {
+  fill: $color-green-bright;
+}
+
+.interaction__textfield--extend:invalid ~ .owner__link .owner-icon {
+  fill: #ff8282;
+}
+//----------------------
+.interaction__radio-checkbox:focus,
+.interaction__radio-checkbox:hover, {
+  opacity: 0.8;
+}
+
+.interaction__radio-checkbox:active {
+  opacity: 0.4;
+}
+//----------------------------
+.interaction__btn--black:focus,
+.interaction__btn--black:hover {
+  outline: none;
+  border-bottom: 1px solid #989898;
+}
+
+.interaction__btn--black:active {
+  border-bottom: none;
+}

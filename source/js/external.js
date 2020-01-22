@@ -2,19 +2,27 @@ function revealMenu() {
   var logotypeButton = document.querySelector(".logotype__button");
   var navigation = document.querySelector(".navigation");
 
-  navigation.classList.remove("navigation--opened");
-  navigation.classList.add("navigation--closed");
+  // если JS загрузился, то...
+  // ...сворачиваем сектор .navigation
+  navigation.classList.remove("navigation--revealed");
+  navigation.classList.add("navigation--collapsed");
+
+  // ...высвечиваем кнопку .logotype__button, потому что
+  // класс .logotype__button--without-js скрывал кнопку, когда JS не загрузился
+  logotypeButton.classList.remove("logotype__button--without-js");
+  // ...и удаляем с кнопки .logotype__button значок крестика
   logotypeButton.classList.remove("logotype__button--cross");
 
+  // открываем/закрываем .navigation, меняя одновременно значок креста на бургер
   logotypeButton.addEventListener("click", function(e) {
     e.preventDefault();
-    if (navigation.classList.contains("navigation--opened")) {
-      navigation.classList.remove("navigation--opened");
-      navigation.classList.add("navigation--closed");
+    if (navigation.classList.contains("navigation--revealed")) {
+      navigation.classList.remove("navigation--revealed");
+      navigation.classList.add("navigation--collapsed");
       this.classList.remove("logotype__button--cross");
     } else {
-      navigation.classList.add("navigation--opened");
-      navigation.classList.remove("navigation--closed");
+      navigation.classList.add("navigation--revealed");
+      navigation.classList.remove("navigation--collapsed");
       this.classList.add("logotype__button--cross");
     }
   });

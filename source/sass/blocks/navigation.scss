@@ -8,13 +8,13 @@
   }
 }
 
-.navigation--closed .navigation__list {
+.navigation--collapsed .navigation__list {
   @include mobile-only {
     display: none;
   }
 }
 
-.navigation--opened .navigation__list {
+.navigation--revealed .navigation__list {
   @include mobile-only {
     display: block;
   }

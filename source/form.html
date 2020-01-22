@@ -57,15 +57,15 @@
             <h2 class="visually-hidden">Сначала введите данные питомца</h2>
             <label class="pet__label">
               <span class="pet__text pet__text--name">Имя:*</span>
-              <input class="pet__input" type="text" name="pet-name" value="Барсик" aria-label="Укажите имя домашнего питомца" autocomplete="off" required>
+              <input class="pet__input interaction__textfield" type="text" name="pet-name" value="Барсик" aria-label="Укажите имя домашнего питомца" autocomplete="off" required>
             </label>
             <label class="pet__label">
               <span class="pet__text pet__text--weight">Вес (кг):*</span>
-              <input class="pet__input" type="number" name="pet-weight" value="7" aria-label="Укажите вес домашнего питомца" autocomplete="off" required>
+              <input class="pet__input interaction__textfield" type="number" name="pet-weight" value="7" aria-label="Укажите вес домашнего питомца" autocomplete="off" required>
             </label>
             <label class="pet__label">
               <span class="pet__text pet__text--old">Возраст (лет):</span>
-              <input class="pet__input" type="number" name="pet-age" value="7" aria-label="Укажите возраст домашнего питомца" autocomplete="off">
+              <input class="pet__input interaction__textfield" type="number" name="pet-age" value="7" aria-label="Укажите возраст домашнего питомца" autocomplete="off">
             </label>
           </div>
 
@@ -74,15 +74,15 @@
             <ul class="plan__link">
               <li class="plan__item">
                 <input class="plan__radio" type="radio" name="plan__radio" id="slenderize" value="slenderize" checked>
-                <label class="plan__label" for="slenderize">Похудение</label>
+                <label class="plan__label interaction__radio-checkbox" for="slenderize">Похудение</label>
               </li>
               <li class="plan__item">
                 <input class="plan__radio" type="radio" name="plan__radio" id="fatten" value="fatten">
-                <label class="plan__label" for="fatten">Набор массы</label>
+                <label class="plan__label interaction__radio-checkbox" for="fatten">Набор массы</label>
               </li>
               <li class="plan__item">
                 <input class="plan__radio" type="radio" name="plan__radio" id="need-advice" value="need-advice">
-                <label class="plan__label" for="need-advice">Не знаю (нужен Ваш совет)</label>
+                <label class="plan__label interaction__radio-checkbox" for="need-advice">Не знаю (нужен Ваш совет)</label>
               </li>
             </ul>
           </div>
@@ -93,7 +93,7 @@
           <div class="owner__equalizer">
             <label class="owner__label">
               <span class="owner__text owner__text-email">e-mail:*</span>
-              <input class="owner__input" type="email" name="email" value="kuklachev@gmail.com" aria-label="Введите электронный адрес" autocomplete="off" required>
+              <input class="owner__input interaction__textfield--extend" type="email" name="email" value="kuklachev@gmail.com" aria-label="Введите электронный адрес" autocomplete="off" required>
               <a class="owner__link owner__link-email" href="#">
                 <svg class="owner-icon" width="17" height="13" aria-label="Иконка почтового ящика">
                   <use xlink:href="./img/svg/sprite.svg#owner-icon-email"></use>
@@ -102,7 +102,7 @@
             </label>
             <label class="owner__label">
               <span class="owner__text owner__text-phone">Телефон:*</span>
-              <input class="owner__input" type="tel" id="tel" name="tel" value="8 (960) 900-60-90" aria-label="Введите номер телефона" autocomplete="off" required>
+              <input class="owner__input interaction__textfield--extend" type="tel" id="tel" name="tel" value="8 (960) 900-60-90" aria-label="Введите номер телефона" autocomplete="off" required>
               <a class="owner__link owner__link-phone" href="#">
                 <svg class="owner-icon" width="20" height="20" aria-label="Иконка с телефоном">
                   <use xlink:href="./img/svg/sprite.svg#owner-icon-telephone"></use>
@@ -124,19 +124,19 @@
           <ul class="supple__list">
             <li class="supple__item">
               <input class="supple__input" type="checkbox" id="id-sweetener" name="sweetener" checked>
-              <label class="supple__label" for="id-sweetener">Сахарозаменитель</label>
+              <label class="supple__label interaction__radio-checkbox" for="id-sweetener">Сахарозаменитель</label>
             </li>
             <li class="supple__item">
               <input class="supple__input" type="checkbox" id="id-water" name="water">
-              <label class="supple__label" for="id-water">Питьевая вода</label>
+              <label class="supple__label interaction__radio-checkbox" for="id-water">Питьевая вода</label>
             </li>
             <li class="supple__item">
               <input class="supple__input" type="checkbox" id="id-milk" name="milk">
-              <label class="supple__label" for="id-milk">Молоко</label>
+              <label class="supple__label interaction__radio-checkbox" for="id-milk">Молоко</label>
             </li>
             <li class="supple__item">
               <input class="supple__input" type="checkbox" id="id-vitamins" name="vitamins">
-              <label class="supple__label" for="id-vitamins">Витамины</label>
+              <label class="supple__label interaction__radio-checkbox" for="id-vitamins">Витамины</label>
             </li>
           </ul>
         </div>
@@ -200,7 +200,7 @@
           </li>
         </ul>
 
-        <div class="socials__academy">
+        <div class="socials__academy socials__academy--extend-for-form">
           <a class="socials__academy-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Посетите htmlacademy.ru" title="Посетите htmlacademy.ru">
             <span class="socials__span">HTMLAcademy</span>
             <svg class="socials__academy-icon" width="39" height="39">

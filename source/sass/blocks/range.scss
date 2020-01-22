@@ -57,14 +57,26 @@ $track-radius: 3px;
     margin-top: ((-$track-border-width * 2 + $track-height) / 2) - ($thumb-height / 2);
   }
 
+  //----------------------------------
+
   &:focus::-webkit-slider-thumb,
   &:hover::-webkit-slider-thumb {
-    border-color: red;
+    box-shadow:
+      0 0 0 1px rgba(0, 0, 0, 0.15),
+      0 2px 5px 1px rgba(0, 0, 0, 0.15),
+      0 3px 5px 1px rgba(0, 0, 0, 0.15),
+      0 4px 5px 1px rgba(0, 0, 0, 0.15);
   }
 
   &:active::-webkit-slider-thumb {
-    border-color: blue;
+    box-shadow:
+      0 0 0 2px $thumb-color,
+      0 2px 5px 1px rgba(0, 0, 0, 0.15),
+      0 3px 5px 1px rgba(0, 0, 0, 0.15),
+      0 4px 5px 1px rgba(0, 0, 0, 0.15);
   }
+
+  //--------------------------------
 
   &::-moz-range-track {
     @include track();

@@ -1,7 +1,7 @@
 .socials {
   padding-left: 19.5px;
   padding-right: 20px;
-  padding-top: 38.5px;
+  padding-top: 38px;
   padding-bottom: 19px;
   background-color: $color-gray-bright;
 
@@ -143,6 +143,30 @@
 
   @include desktop {
     padding-top: 10px;
+  }
+}
+
+.socials__academy--extend-for-catalog {
+  padding-bottom: 7px;
+
+  @include tablet {
+    padding-top: 13px;
+  }
+
+  @include desktop {
+    padding-top: 16px;
+  }
+}
+
+.socials__academy--extend-for-form {
+  padding-bottom: 2px;
+
+  @include tablet {
+    padding-top: 10px;
+  }
+
+  @include desktop {
+    padding-top: 12px;
   }
 }
 

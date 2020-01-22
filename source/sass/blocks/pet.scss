@@ -69,16 +69,16 @@
 
 .pet__input {
   flex: 1;
-  padding-top: 11.5px;
-  padding-bottom: 13.5px;
+  padding-top: 11px;
+  padding-bottom: 13px;
   padding-left: 15px;
   border: 1px solid $color-gray-half-light;
 
   @include textomizer(regular, 16px, 18px, uppercase);
 
   @include tablet {
-    padding-top: 9px;
-    padding-bottom: 12px;
+    padding-top: 8.5px;
+    padding-bottom: 11.5px;
     padding-left: 18px;
     font-size: 20px;
     line-height: 20px;

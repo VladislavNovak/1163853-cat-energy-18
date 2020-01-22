@@ -51,6 +51,12 @@
   }
 }
 
+.logotype__button--without-js {
+  @include mobile-only {
+    display: none;
+  }
+}
+
 .logotype__line {
   width: 21px;
   height: 2.2px;
