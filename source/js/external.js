@@ -31,13 +31,13 @@ function revealMenu() {
 //*****************************
 
 function imageComparison() {
-  const sliderWrap = document.querySelector(".slider__wrapper");
-  const imgBefore = document.querySelector(".slider__picture--before");
-  const imgAfter = document.querySelector(".slider__picture--after");
-  const range = document.querySelector("#slider");
-  const buttonBefore = document.querySelector(".slider__button--before");
-  const buttonAfter = document.querySelector(".slider__button--after");
-  const checkbox = document.querySelector(".slider__checkbox");
+  var sliderWrap = document.querySelector(".slider__wrapper");
+  var imgBefore = document.querySelector(".slider__picture--before");
+  var imgAfter = document.querySelector(".slider__picture--after");
+  var range = document.querySelector("#slider");
+  var buttonBefore = document.querySelector(".slider__button--before");
+  var buttonAfter = document.querySelector(".slider__button--after");
+  var checkbox = document.querySelector(".slider__checkbox");
 
   // если хотя бы этот элемент существует (один из перечисленных выше), то выполнить функцию:
   if(sliderWrap) {

@@ -228,13 +228,18 @@
 .additionaly__present {
   padding-top: 65.5px;
   padding-bottom: 26.5px;
+  background-color: #69ac40;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   @media (min-resolution: $retina-dppx) {
+    background-color: #69ac40;
     background-image: url("../img/gift-photo-mobile@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   @include tablet {
@@ -243,9 +248,11 @@
     padding-left: 91px;
     padding-right: 67px;
     padding-bottom: 33px;
+    background-color: #69ac40;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dppx) {
+      background-color: #69ac40;
       background-image: url("../img/gift-photo-tablet@2x.jpg");
     }
   }
@@ -257,9 +264,11 @@
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 27px;
+    background-color: #69ac40;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
     @media (min-resolution: $retina-dppx) {
+      background-color: #69ac40;
       background-image: url("../img/gift-photo-desktop@2x.jpg");
     }
   }

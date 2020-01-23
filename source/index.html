@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy - лучший корм</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/style-min.css">
+    <link rel="preload" href="./fonts/oswaldmedium.woff" as="font">
+    <link rel="preload" href="./fonts/oswaldregular.woff" as="font">
+    <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="./fonts/oswaldregular.woff2" as="font">
   </head>
   <body>
 
@@ -20,6 +25,8 @@
           </picture>
         </a>
 
+        <!-- logotype__button--cross: меняет внешний вид с бургера на крест -->
+        <!-- logotype__button--without-js: внешний вид при выключенном JS -->
         <button class="logotype__button logotype__button--cross logotype__button--without-js" type="button">
           <span class="logotype__line logotype__line-first">Открыть навигацию</span>
           <span class="logotype__line logotype__line-second"></span>
@@ -27,6 +34,7 @@
         </button>
       </div>
 
+      <!-- navigation--revealed: раскрытая навигация -->
       <nav class="navigation navigation--revealed">
         <h2 class="visually-hidden">Навигация по страницам сайта</h2>
         <ul class="navigation__list">
@@ -238,6 +246,7 @@
 
     </footer>
 
-    <script src="./js/external.js" defer></script>
+    <!-- <script src="./js/external.js" defer></script> -->
+    <script src="./js/external-min.js"></script>
   </body>
 </html>

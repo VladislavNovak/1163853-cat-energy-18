@@ -4,14 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy - подбор программы</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/style-min.css">
+    <link rel="preload" href="./fonts/oswaldmedium.woff" as="font">
+    <link rel="preload" href="./fonts/oswaldregular.woff" as="font">
+    <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="./fonts/oswaldregular.woff2" as="font">
   </head>
   <body>
     <h1 class="visually-hidden">Cat Energy - возможность выбрать корм онлайн!</h1>
     <header class="header header--form-desktop">
 
       <div class="logotype">
-        <a href="#" class="logotype__link">
+        <a href="index.html" class="logotype__link">
           <picture>
             <source media="(min-width: 1220px)" srcset="./img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
@@ -19,14 +24,17 @@
           </picture>
         </a>
 
-        <button class="logotype__button" type="button">
+        <!-- logotype__button--cross: меняет внешний вид с бургера на крест -->
+        <!-- logotype__button--without-js: внешний вид при выключенном JS -->
+        <button class="logotype__button logotype__button--cross logotype__button--without-js" type="button">
           <span class="logotype__line logotype__line-first">Открыть навигацию</span>
           <span class="logotype__line logotype__line-second"></span>
           <span class="logotype__line logotype__line-third"></span>
         </button>
       </div>
 
-      <nav class="navigation navigation--opened">
+      <!-- navigation--revealed: раскрытая навигация -->
+      <nav class="navigation navigation--revealed">
         <h2 class="visually-hidden">Навигация по страницам сайта</h2>
         <ul class="navigation__list">
           <li class="navigation__item">
@@ -212,7 +220,7 @@
 
     </footer>
 
-    <script src="./js/external.js" defer></script>
-
+    <!-- <script src="./js/external.js" defer></script> -->
+    <script src="./js/external-min.js"></script>
   </body>
 </html>
