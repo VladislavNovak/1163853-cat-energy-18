@@ -1,11 +1,11 @@
 .intro {
+  position: relative;
   text-align: center;
   padding-top: 0.5px;
   padding-right: $side-indent-mobile;
   padding-left: $side-indent-mobile;
 
   @include tablet {
-    position: relative;
     padding-top: 0;
     padding-right: $side-indent-tablet;
     padding-left: $side-indent-tablet;
@@ -27,14 +27,16 @@
   position: absolute;
   left: 0;
   right: 0;
-  min-height: 305px;
+  height: 63.5%;
   z-index: -1;
+  background-color: #69ac40;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   @media (min-resolution: $retina-dppx) {
+    background-color: #69ac40;
     background-image: url("../img/index-background-mobile@2x.jpg");
   }
 
@@ -49,12 +51,14 @@
     width: calc(50% + 1.5px);
     max-width: 721.5px;
     height: 696px;
+    background-color: #69ac40;
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
     @media (min-resolution: $retina-dppx) {
+      background-color: #69ac40;
       background-image: url("../img/index-background-desktop@2x.jpg");
     }
   }
@@ -66,9 +70,9 @@
   margin-bottom: 25px;
 
   @include tablet {
-    margin-top: 29.5px;
-    margin-bottom: 41px;
-    margin-left: 87.5px;
+    margin-top: 29.8px;
+    margin-bottom: 41.5px;
+    margin-left: 87.2px;
     margin-right: 120px;
     text-align: left;
     font-size: 60px;
@@ -78,22 +82,24 @@
 
   @include desktop {
     margin-top: 26px;
-    margin-bottom: 39px;
-    margin-left: $side-intro-indent-desktop;
+    margin-bottom: 40.5px;
+    margin-left: 80px;
     margin-right: 54%;
     white-space: normal;
   }
 }
 
 .intro__text {
-  @include textomizer(regular, 14px, 14px, uppercase, $color-white);
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-right: 1px;
+  padding-bottom: 10px;
+
+  @include textomizer(regular, 14px, 14px, uppercase, $color-white);
 
   @include tablet {
-    margin-bottom: 12px;
-    margin-left: 87.5px;
+    margin-bottom: 3px;
+    margin-left: 88px;
     margin-right: 120px;
     text-align: left;
     font-size: 20px;
@@ -103,7 +109,8 @@
 
   @include desktop {
     margin-left: $side-intro-indent-desktop;
-    margin-bottom: 54px;
+    margin-right: 57%;
+    margin-bottom: 44px;
   }
 }
 
@@ -113,7 +120,6 @@
   @include tablet {
     width: 709px;
     height: 605px;
-    margin-top: 8px;
     background-size: cover;
   }
 
@@ -132,18 +138,22 @@
   display: block;
   min-height: 40px;
   margin-top: -1px;
+  margin-bottom: 10px;
   padding-top: 10px;
   padding-bottom: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: $color-green-bright;
 
   @include tablet {
     position: absolute;
-    top: 260px;
+    top: 230px;
     left: 119px;
     width: 245px;
     padding-top: 15.5px;
     padding-bottom: 16px;
-    padding-right: 2px;
+    padding-left: 10px;
+    padding-right: 15px;
     text-align: center;
     font-size: 20px;
     line-height: 20px;
@@ -152,5 +162,6 @@
   @include desktop {
     position: static;
     margin-left: $side-intro-indent-desktop;
+    padding-left: 15px;
   }
 }

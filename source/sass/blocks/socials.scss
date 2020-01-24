@@ -1,99 +1,211 @@
 .socials {
+  padding-left: 19.5px;
+  padding-right: 20px;
   padding-top: 38px;
-  padding-bottom: 15px;
+  padding-bottom: 19px;
   background-color: $color-gray-bright;
 
   @include tablet {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 46px;
-    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 36px;
+    padding-bottom: 47px;
   }
 
   @include desktop {
     max-width: 1440px;
-    padding-left: 110px;
+    padding-left: 109px;
     padding-right: 110px;
-    padding-top: 52px;
+    padding-top: 40px;
+    padding-bottom: 48px;
   }
 }
 
 .socials__logo-wrapper {
-  padding-bottom: 27px;
+  padding-bottom: 26.5px;
   text-align: center;
   border-bottom: 1px solid $color-gray-darker;
 
   @include tablet {
-    padding: 0;
+    padding-bottom: 0;
+    padding-top: 11px;
+    padding-left: 1px;
     border-bottom: none;
   }
 }
 
+.socials__logo-link:active {
+  opacity: 0.4;
+  transition-duration: 150ms;
+}
+
 .socials__list {
+  list-style-type: none;
+  margin: 0;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-
-  @include list-reset-to-null();
-  padding-left: 0;
-  padding-top: 21px;
-  padding-bottom: 19px;
-  border-bottom: 0.5px solid $color-gray-darker;
+  justify-content: space-between;
+  padding-left: 69px;
+  padding-right: 69px;
+  padding-top: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid $color-gray-darker;
 
   @include tablet {
-    padding: 0;
+    width: 28.2%;
+    margin-left: 27px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-bottom: none;
+  }
+
+  @include desktop {
+    width: 16.4%;
   }
 }
 
 .socials__link {
   display: block;
-  width: 22px;
-  height: 22px;
+  width: 32px;
+  height: 32px;
   font-size: 0;
-  margin-left: 17px;
-  margin-right: 17px;
+  padding: 4px;
   text-decoration: none;
 }
 
 .socials__icon-vk {
+  width: 22px;
+  height: 12px;
   margin-top: 5px;
+
+  @include tablet {
+    width: 30px;
+    height: 16px;
+  }
 }
 
 .socials__icon-insta {
+  width: 16px;
+  height: 16px;
   margin-top: 3px;
-  margin-left: 3px;
+  margin-left: 4px;
+
+  @include tablet {
+    width: 23px;
+    height: 23px;
+    margin-top: 1px;
+    margin-left: 4px;
+  }
 }
 
 .socials__icon-fb {
+  width: 10px;
+  height: 19px;
   margin-top: 1px;
-  margin-left: 3px;
+  margin-left: 5px;
+
+  @include tablet {
+    width: 14px;
+    height: 28px;
+    margin-top: -2px;
+    margin-left: 2px;
+  }
 }
 
+.socials__icon-vk:hover,
+.socials__icon-vk:focus,
+.socials__icon-insta:hover,
+.socials__icon-insta:focus,
+.socials__icon-fb:hover,
+.socials__icon-fb:focus {
+  fill: $color-green-bright;
+  transition-duration: 150ms;
+}
+
+.socials__icon-vk:active,
+.socials__icon-insta:active,
+.socials__icon-fb:active, {
+  opacity: 0.3;
+}
+
+
 .socials__academy {
-  padding-top: 13px;
+  padding-top: 19px;
   letter-spacing: 0.3px;
   text-align: center;
 
   @include tablet {
-    padding: 0;
+    padding-top: 4px;
+  }
+
+  @include desktop {
+    padding-top: 10px;
+  }
+}
+
+.socials__academy--extend-for-catalog {
+  padding-bottom: 7px;
+
+  @include tablet {
+    padding-top: 13px;
+  }
+
+  @include desktop {
+    padding-top: 16px;
+  }
+}
+
+.socials__academy--extend-for-form {
+  padding-bottom: 2px;
+
+  @include tablet {
+    padding-top: 10px;
+  }
+
+  @include desktop {
+    padding-top: 12px;
   }
 }
 
 .socials__academy-link {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-decoration: none;
+
+  @include tablet {
+    width: 163px;
+  }
+}
+
+.socials__span {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
   @include textomizer(arial, 16px, 16px);
 }
 
 .socials__academy-icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: 40.5px;
-  height: 51px;
-  margin-left: 120px;
+  text-align: left;
+  width: 39px;
+  height: 39px;
+  margin-right: 0.5px;
+  margin-top: 0.5px;
 
   @include tablet {
     margin-left: 5px;
   }
+}
+
+.socials__academy-link:focus .socials__academy-icon,
+.socials__academy-link:hover .socials__academy-icon {
+  fill: $color-green-bright;
+  transition-duration: 150ms;
+}
+
+.socials__academy-link:active {
+  opacity: 0.3;
 }

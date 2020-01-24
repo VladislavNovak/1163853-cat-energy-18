@@ -1,15 +1,63 @@
+.program {
+  padding-top: 10px;
+  border-top: 1px solid $color-gray-half-light;
+
+  @include tablet {
+    border: none;
+  }
+}
+
+.program__content {
+  @include desktop {
+    max-width: $max-screen-width;
+    margin: 0 auto;
+  }
+}
+
 .program__title {
-  margin-top: 15px;
+  margin-top: 4.5px;
+  margin-bottom: 24px;
   padding-left: $side-indent-mobile;
   padding-right: $side-indent-mobile;
 
   @include textomizer(regular, 36px, 60px);
+
+  @include tablet {
+    margin-top: 20px;
+    margin-bottom: 55px;
+    padding-left: 29px;
+    padding-right: $side-indent-tablet;
+    font-size: 60px;
+  }
+
+  @include desktop {
+    max-width: $max-screen-width;
+    margin-top: 38.5px;
+    margin-bottom: 53px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 39.5px;
+    padding-right: 39px;
+  }
 }
 
 .program__text {
-  // margin-bottom: 17px;
   padding-left: $side-indent-mobile;
   padding-right: $side-indent-tablet;
 
   @include textomizer(regular, 14px, 18px, uppercase);
+
+  @include tablet {
+    padding-left: 70px;
+    padding-right: 320px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @include desktop {
+    padding-left: 40px;
+    padding-right: 68%;
+    margin-bottom: 39px;
+  }
 }

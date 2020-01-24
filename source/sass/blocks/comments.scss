@@ -1,23 +1,113 @@
 .comments {
   padding-top: 8px;
-  padding-left: $side-indent-mobile;
-  padding-right: $side-indent-mobile;
   padding-bottom: 5px;
+
+  @include tablet {
+    padding-bottom: 41.5px;
+  }
+
+  @include desktop {
+    padding-top: 10px;
+  }
 }
 
 .comments__title {
   margin-top: 0;
+  margin-bottom: 15px;
+  padding-left: 19px;
+  padding-right: $side-indent-mobile;
+  padding-bottom: 5px;
+  overflow: hidden;
 
   @include textomizer(regular, 24px);
+
+  @include tablet {
+    margin-bottom: 56px;
+    padding-left: 69px;
+    padding-right: $side-form-tablet;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @include desktop {
+    width: 100%;
+    max-width: 1440px;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 109px;
+    padding-right: 109px;
+  }
+}
+
+.comments__title::before,
+.comments__title::after {
+  content: "";
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 3px;
+  background-color: $color-green-bright;
+
+  @include tablet {
+    height: 4px;
+  }
+}
+
+.comments__title::before {
+  margin-left: -100%;
+  right: 23px;
+
+  @include tablet {
+    right: 39px;
+    top: -1px;
+  }
+
+  @include desktop {
+    top: 0;
+  }
+}
+
+.comments__title::after {
+  margin-right: -100%;
+  left: 22px;
+  top: -1px;
+
+  @include tablet {
+    left: 41px;
+    top: -1px;
+  }
+
+  @include desktop {
+    top: 0;
+  }
+}
+
+.comments__equalizer {
+  padding-left: $side-indent-mobile;
+  padding-right: $side-indent-mobile;
+
+  @include tablet {
+    padding-left: 69px;
+    padding-right: 66.5px;
+  }
+
+  @include desktop {
+    max-width: $max-screen-width;
+    margin: 0 auto;
+    padding-left: 39px;
+    padding-right: 39px;
+  }
 }
 
 .comments__textarea {
   width: 100%;
-  min-height: 150px;
+  min-height: 151px;
   margin-top: 14px;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 15px;
+  padding-left: 14px;
   padding-right: 10px;
   overflow: auto;
   border: 1px solid $color-gray-half-light;
@@ -25,4 +115,17 @@
   outline: none;
 
   @include textomizer(regular, 16px, 18px, uppercase);
+
+  @include tablet {
+    min-height: 174px;
+    padding-left: 19px;
+    padding-top: 10px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @include desktop {
+    display: block;
+    max-width: 1220px;
+  }
 }

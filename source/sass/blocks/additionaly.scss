@@ -1,32 +1,33 @@
 .additionaly {
-  padding-top: 28px;
-  padding-bottom: 34px;
+  padding-top: 28.5px;
+  padding-bottom: 33px;
 
   @include tablet {
-    padding-top: 5px;
-    padding-bottom: 76px;
+    padding-top: 6px;
+    padding-bottom: 75px;
   }
 
   @include desktop {
     max-width: 1440px;
     margin: 0 auto;
-    padding-top: 15px;
+    padding-top: 13px;
     padding-bottom: 86px;
   }
 }
 
 .additionaly__title {
   margin-top: 0;
-  margin-bottom: 34px;
-  padding-left: $side-indent-mobile;
-  padding-right: $side-indent-mobile;
+  margin-bottom: 29px;
+  padding-bottom: 5px;
+  padding-left: 19.5px;
+  padding-right: 65px;
   text-align: left;
   overflow: hidden;
 
   @include textomizer(regular, 24px, 24px);
 
   @include tablet {
-    margin-bottom: 80px;
+    margin-bottom: 75px;
     padding-left: 67px;
     padding-right: 30px;
     font-size: 36px;
@@ -35,6 +36,7 @@
 
   @include desktop {
     width: 100%;
+    margin-bottom: 76px;
     padding-left: 7.5%;
     padding-right: 7.5%;
     margin-left: auto;
@@ -63,18 +65,20 @@
 
   @include tablet {
     right: 39px;
+    top: 1px;
   }
 }
 
 .additionaly__title::after {
   margin-right: -100%;
   left: 23px;
+  top: -1px;
 
   @include tablet {
     left: 36px;
+    top: 1px;
   }
 }
-
 
 .additionaly__main {
   padding-left: $side-indent-mobile;
@@ -97,7 +101,7 @@
 
 .additionaly__list {
   @include list-reset-to-null();
-  margin-bottom: 39px;
+  margin-bottom: 38px;
   border-bottom: 1px solid $color-gray-light;
 
   @include tablet {
@@ -135,6 +139,7 @@
   }
 
   @include desktop {
+    flex-wrap: nowrap;
     padding-left: 0;
     padding-right: 0;
     padding-top: 14px;
@@ -160,6 +165,7 @@
   }
 
   @include desktop {
+    max-width: 29%;
     margin-top: 11px;
     margin-bottom: 11px;
   }
@@ -202,30 +208,38 @@
   min-height: 40px;
   text-align: center;
   padding-top: 10px;
-  padding-left: 3px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  padding-right: 15px;
 
   @include textomizer(regular, 16px, 20px, uppercase, $color-white);
   background-color: $color-green-bright;
 
   @include tablet {
-    padding-left: 0;
+    padding-left: 15px;
   }
 
   @include desktop {
     width: 27.5%;
+    padding-left: 17px;
   }
 }
 
 .additionaly__present {
-  padding-top: 65px;
-  padding-bottom: 26px;
+  padding-top: 65.5px;
+  padding-bottom: 26.5px;
+  background-color: #69ac40;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   @media (min-resolution: $retina-dppx) {
+    background-color: #69ac40;
     background-image: url("../img/gift-photo-mobile@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   @include tablet {
@@ -234,9 +248,11 @@
     padding-left: 91px;
     padding-right: 67px;
     padding-bottom: 33px;
+    background-color: #69ac40;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dppx) {
+      background-color: #69ac40;
       background-image: url("../img/gift-photo-tablet@2x.jpg");
     }
   }
@@ -248,16 +264,18 @@
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 27px;
+    background-color: #69ac40;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
     @media (min-resolution: $retina-dppx) {
+      background-color: #69ac40;
       background-image: url("../img/gift-photo-desktop@2x.jpg");
     }
   }
 }
 
 .additionaly__present-icon {
-  margin-bottom: 41.5px;
+  margin-bottom: 42px;
   fill: $color-white;
 
   @include desktop {
@@ -266,14 +284,15 @@
 }
 
 .additionaly__present-text {
-  padding-left: 58px;
+  padding-left: 57px;
   padding-right: 58px;
 
   @include textomizer(arial, 16px, 20px, none, $color-white);
 
   @include tablet {
+    max-width: 280px;
     text-align: left;
-    margin-top: 7px;
+    margin-top: 6px;
   }
 
   @include desktop {

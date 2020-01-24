@@ -1,5 +1,5 @@
 .strategy {
-  padding-top: 21px;
+  padding-top: 11px;
   padding-bottom: 0;
   padding-right: $side-indent-mobile;
   padding-left: $side-indent-mobile;
@@ -39,8 +39,8 @@
   @include tablet {
     display: block;
     min-height: 372px;
-    padding-top: 71px;
-    padding-left: 52px;
+    padding-top: 70px;
+    padding-left: 51px;
   }
 
   @include desktop {
@@ -60,6 +60,7 @@
 
   @include desktop {
     margin-top: 0;
+    padding-right: 30px;
   }
 }
 
@@ -68,7 +69,7 @@
   height: 50px;
   margin-top: 1px;
   margin-left: 2px;
-  margin-right: 20px;
+  margin-right: 19px;
   background-color: $color-green-bright;
   border-radius: 50%;
 
@@ -86,7 +87,7 @@
     height: 100px;
     margin-top: 0;
     margin-left: 0;
-    margin-right: 59px;
+    margin-right: 60px;
   }
 }
 
@@ -108,7 +109,6 @@
     margin-left: 14.5px;
   }
 }
-
 
 .strategy__icon-cat-pro {
   margin-top: 10.5px;
@@ -132,11 +132,13 @@
 .strategy__icon--modified {
   @include tablet {
     margin-left: 52px;
+    margin-right: 40px;
   }
 
   @include desktop {
     margin-top: 2px;
     margin-left: 0;
+    margin-right: 60px;
   }
 }
 
@@ -168,7 +170,7 @@
   border-bottom: 1px solid $color-gray-darker;
 
   @include tablet {
-    margin-bottom: 33px;
+    margin-bottom: 30px;
     margin-left: 1px;
     font-size: 16px;
     line-height: 24px;
@@ -182,9 +184,12 @@
 }
 
 .strategy__link {
+  position: relative;
   display: block;
-  margin-top: 13px;
-  margin-bottom: 13px;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 
   @include textomizer(regular, 16px, 16px, uppercase);
 
@@ -194,20 +199,45 @@
     line-height: 20px;
   }
 
+  @include desktop {
+    margin-bottom: 8px;
+  }
+}
+
+.strategy__link::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 11px;
+  margin-left: 12px;
+  margin-bottom: 1px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+  background-image: url("../img/icon-right-arrow-long.svg");
+  background-repeat: no-repeat;
+
+  @include tablet {
+    margin-left: 23px;
+    margin-bottom: 3px;
+  }
+}
+
+.strategy__link:focus,
+.strategy__link:hover {
   &::after {
-    content: "";
-    display: inline-block;
-    width: 24px;
+    width: 33px;
     height: 11px;
-    margin-left: 12px;
-    margin-bottom: 1px;
-
-    background-image: url("../../img/icon-right-arrow-long.svg");
+    background-image: url("../../img/icon-right-arrow-verylong.svg");
     background-repeat: no-repeat;
+    transition-duration: 100ms;
+  }
+}
 
-    @include tablet {
-      margin-left: 23px;
-      margin-bottom: 3px;
-    }
+.strategy__link:active {
+  opacity: 0.4;
+
+  &::after {
+    opacity: 0.4;
   }
 }

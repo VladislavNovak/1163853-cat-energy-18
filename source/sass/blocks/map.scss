@@ -1,29 +1,55 @@
 .map {
   height: 362px;
-  background-image: url("../../img/bg-map-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: $color-gray-bright;
+  background-color: #fdf7ef;
+  background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 44.57%, center 100%;
+  background-size: 55px 53px, cover;
+
 
   @media (min-resolution: $retina-dppx) {
-    background-image: url("../../img/bg-map-mobile@2x.png");
+    height: 362px;
+    background-color: #fdf7ef;
+    background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile@2x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center 44.57%, center 100%;
+    background-size: 55px 53px, cover;
   }
 
   @include tablet {
     height: 400px;
-    background-image: url("../../img/bg-map-tablet@1x.png");
+    background-color: #fdf7ef;
+    background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet@1x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center 55%;
+    background-size: 113px 108px, cover;
+
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../../img/bg-map-tablet@2x.png");
+      height: 400px;
+      background-color: #fdf7ef;
+      background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet@2x.png");
+      background-repeat: no-repeat, no-repeat;
+      background-position: center, center 55%;
+      background-size: 113px 108px, cover;
     }
   }
 
   @include desktop {
-    background-image: url("../../img/bg-map-desktop@1x.png");
+    height: 400px;
+    width: 100%;
+    background-color: #fdf7ef;
+    background-image: url("../img/map-pin.png"), url("../img/bg-map-desktop@1x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-size: 113px 108px, cover;
+    background-position: 75.6% 50.5%, 80% 55%;
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../../img/bg-map-desktop@2x.png");
+      background-color: #fdf7ef;
+      background-image: url("../img/map-pin.png"), url("../img/bg-map-desktop@2x.png");
+      background-repeat: no-repeat, no-repeat;
+      background-position: 75.6% 50.5%, center 55%;
+      background-size: 113px 108px, cover;
     }
   }
 }

@@ -4,14 +4,19 @@
   background-color: $color-gray-bright;
 
   @include tablet {
-    padding-top: 35px;
+    padding-top: 35.5px;
     padding-bottom: 0;
     background-color: transparent;
   }
 
   @include desktop {
-    padding-top: 16px;
+    padding-top: 0;
     padding-bottom: 0;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(to left, #eaeaea 395px, #f2f2f2 395px);
+    overflow: hidden;
   }
 }
 
@@ -24,19 +29,28 @@
   @include textomizer(regular, 36px, 60px);
 
   @include tablet {
-    margin-bottom: 50px;
+    margin-bottom: 50.5px;
     padding-left: $side-indent-tablet;
     padding-right: $side-indent-tablet;
     font-size: 60px;
   }
 
   @include desktop {
-    margin-bottom: 72px;
     max-width: $max-screen-width;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
     padding-left: $side-indent-desktop;
     padding-right: 45%;
+    padding-top: 55px;
+    padding-bottom: 73px;
+  }
+}
+
+.example__substrate {
+  @include desktop {
+    background-color: $color-white;
   }
 }
 
@@ -47,7 +61,6 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    background-color: $color-gray-bright;
   }
 }
 
@@ -64,7 +77,6 @@
   }
 
   @include desktop {
-    background: $color-gray-bright;
     padding-top: 65px;
     padding-bottom: 46px;
     padding-left: 24px;
@@ -96,8 +108,9 @@
 .example__list {
   @include list-reset-to-null();
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
 
   @include tablet {
     display: inline-flex;
@@ -110,11 +123,13 @@
 }
 
 .example__item {
-  text-align: center;
+  position: relative;
   width: 124px;
+  margin-bottom: 15px;
+  text-align: center;
   border: 1px solid $color-gray-light;
   border-radius: 4px;
-  position: relative;
+
 
   @include tablet {
     width: 162px;

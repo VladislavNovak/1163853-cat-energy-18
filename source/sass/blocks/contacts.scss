@@ -1,10 +1,11 @@
 .contacts {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 13px;
   padding-bottom: 10px;
-  padding-left: $side-indent-mobile;
-  padding-right: $side-indent-mobile;
+  padding-left: 19.5px;
+  padding-right: 19.5px;
 
   @include tablet {
     padding-top: 45px;
@@ -17,7 +18,7 @@
     position: absolute;
     width: 570px;
     height: 201px;
-    top: 95px;
+    top: 94px;
     left: 7.6%;
     padding-left: 35px;
     padding-right: 24px;

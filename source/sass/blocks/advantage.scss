@@ -13,9 +13,10 @@
   }
 
   @include desktop {
-    padding-top: 40px;
     max-width: $max-screen-width;
     margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 0;
     padding-right: $side-indent-desktop;
     padding-left: $side-indent-desktop;
     border-bottom: none;
@@ -52,7 +53,7 @@
     flex-direction: column;
     width: 50%;
     min-height: 228px;
-    margin-top: 60px;
+    margin-top: 59px;
     margin-bottom: 29px;
     padding-right: 17%;
     counter-increment: list; // увеличивает значение заданного счётчика
@@ -111,6 +112,7 @@
 .advantage__icon-leaf {
   margin-top: 5px;
   margin-left: 4.5px;
+  margin-right: 5.5px;
 
   @include tablet {
     margin-top: 14px;
@@ -121,6 +123,7 @@
 .advantage__icon-powder {
   margin-top: 4px;
   margin-left: 4.5px;
+  margin-right: 5.5px;
 
   @include tablet {
     margin-top: 15.5px;
@@ -131,6 +134,7 @@
 .advantage__icon-dining {
   margin-top: 4.5px;
   margin-left: 4px;
+  margin-right: 6px;
 
   @include tablet {
     margin-top: 15.5px;
@@ -141,6 +145,7 @@
 .advantage__icon-clock {
   margin-top: 4.5px;
   margin-left: 5px;
+  margin-right: 6px;
 
   @include tablet {
     margin-top: 15.5px;
@@ -152,7 +157,7 @@
   min-width: 220px;
   margin: 0;
   padding-right: 5px;
-  padding-left: 25px;
+  padding-left: 20px;
   padding-top: 2px;
 
   @include textomizer(arial, 14px, 18px);
@@ -168,7 +173,7 @@
   @include desktop {
     padding-left: 0;
     padding-right: 0;
-    margin-top: 29px;
+    margin-top: 31px;
   }
 }
 

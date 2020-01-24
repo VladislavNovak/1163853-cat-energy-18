@@ -4,38 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy - лучший корм</title>
-    <link rel="stylesheet" href="./css/style.css">
-
-    <!-- Pixel Glass -->
-<!--     <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position:  50% 0;
-        /* Mobile layout by default */
-        background-image: url( "img/320.png" );
-      }
-      /* Tablet */
-      @media ( min-width: 760px ) {
-        HTML {
-          /* Tablet layout */
-          background-image: url( "img/760.png" );
-        }
-      }
-      /* Desktop */
-      @media ( min-width: 960px ) {
-        HTML {
-          /* Desktop layout */
-          background-image: url( "img/960.png" );
-        }
-      }
-    </style>
-    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-    <script src="../node_modules/pixel-glass/script.js"></script> -->
-    <!-- // Pixel Glass -->
-
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <link rel="stylesheet" href="./css/style-min.css">
+    <link rel="preload" href="./fonts/oswaldmedium.woff" as="font">
+    <link rel="preload" href="./fonts/oswaldregular.woff" as="font">
+    <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="./fonts/oswaldregular.woff2" as="font">
   </head>
   <body>
 
+    <h1 class="visually-hidden">Cat Energy - лучший корм!</h1>
     <header class="header header--index-desktop">
 
       <div class="logotype">
@@ -47,14 +25,18 @@
           </picture>
         </a>
 
-        <button class="logotype__button" type="button">
+        <!-- logotype__button--cross: меняет внешний вид с бургера на крест -->
+        <!-- logotype__button--without-js: внешний вид при выключенном JS -->
+        <button class="logotype__button logotype__button--cross logotype__button--without-js" type="button">
           <span class="logotype__line logotype__line-first">Открыть навигацию</span>
           <span class="logotype__line logotype__line-second"></span>
           <span class="logotype__line logotype__line-third"></span>
         </button>
       </div>
 
-      <nav class="navigation navigation--opened">
+      <!-- navigation--revealed: раскрытая навигация -->
+      <nav class="navigation navigation--revealed">
+        <h2 class="visually-hidden">Навигация по страницам сайта</h2>
         <ul class="navigation__list">
           <li class="navigation__item">
             <a class="navigation__link navigation__link--font-white navigation__link--active" aria-label="Находимся на текущей странице">Главная</a>
@@ -73,7 +55,6 @@
     <main class="index">
 
       <section class="intro">
-        <h1 class="visually-hidden">Cat Energy - лучший корм!</h1>
         <h2 class="intro__title">Функциональ&shy;ное питание для котов</h2>
         <p class="intro__text">Занялся собой? Займись котом!</p>
         <picture class="intro__picture">
@@ -84,7 +65,7 @@
           <source media="(min-width: 768px)" srcset="./img/index-can-tablet@1x.jpg 1x, ./img/index-can-tablet@2x.jpg 2x">
           <img class="intro__img" src="./img/index-can-mobile@1x.png" srcset="./img/index-can-mobile@2x.png 2x" width="280" height="271" alt="Баночка с вкусной курицей">
         </picture>
-        <a class="intro__btn btn" href="#" aria-label="Можно перейти к подбору программы">Подобрать программу</a>
+        <a class="intro__btn interaction__btn--green" href="#" aria-label="Можно перейти к подбору программы">Подобрать программу</a>
       </section>
 
       <section class="strategy">
@@ -146,59 +127,60 @@
         </ul>
       </section>
 
-    <section class="example">
-      <h2 class="example__title">Живой пример</h2>
-      <div class="example__content">
-        <div class="example__top">
-          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <strong class="visually-hidden">Реальные результаты:</strong>
-          <ul class="example__list">
-            <li class="example__item example__item--first">
-              <p class="example__item-text">5 кг</p>
-            </li>
-            <li class="example__item example__item--second">
-              <p class="example__item-text">60 дней</p>
-            </li>
-          </ul>
-          <p class="example__text-expenses">Затраты на питание: <span class="example__span-expenses">15 000 руб</span></p>
+      <section class="example">
+        <div class="example__substrate">
+          <h2 class="example__title">Живой пример</h2>
         </div>
-        <div class="slider">
-          <div class="slider__wrapper">
-            <div class="slider__pictures">
-                <div class="slider__picture slider__picture--before">
-                    <picture>
-                      <source type="image/webp" media="(min-width: 1300px)" srcset="./img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)" srcset="./img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-                      <source type="image/webp" srcset="./img/before-mobile@1x.webp 1x, ./img/before-mobile@2x.webp 2x">
-                      <source media="(min-width: 1300px)" srcset="./img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                      <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                      <img class="slider__img slider__img--before" src="./img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="photo before" width="320" height="240">
-                    </picture>
-                  </div>
-                  <div class="slider__picture slider__picture--after slider__picture--disabled">
-                    <picture>
-                      <source type="image/webp" media="(min-width: 1300px)" srcset="./img/after-desktop@1x.webp 1x, ./img/after-desktop@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)" srcset="./img/after-tablet@1x.webp 1x, ./img/after-tablet@2x.webp 2x">
-                      <source type="image/webp" srcset="./img/after-mobile@1x.webp 1x, ./img/after-mobile@2x.webp 2x">
-                      <source media="(min-width: 1300px)" srcset="./img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-                      <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                      <img class="slider__img slider__img--after" src="./img/after-mobile@1x.png" srcset="./img/after-mobile@2x.png 2x" alt="photo after" width="320" height="240">
-                    </picture>
-                  </div>
-            </div>
+        <div class="example__content">
+          <div class="example__top">
+            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <strong class="visually-hidden">Реальные результаты:</strong>
+            <ul class="example__list">
+              <li class="example__item example__item--first">
+                <p class="example__item-text">5 кг</p>
+              </li>
+              <li class="example__item example__item--second">
+                <p class="example__item-text">60 дней</p>
+              </li>
+            </ul>
+            <p class="example__text-expenses">Затраты на питание: <span class="example__span-expenses">15 000 руб</span></p>
+          </div>
+          <div class="slider">
+            <div class="slider__wrapper">
+              <div class="slider__pictures">
+                  <div class="slider__picture slider__picture--before">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1300px)" srcset="./img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="./img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="./img/before-mobile@1x.webp 1x, ./img/before-mobile@2x.webp 2x">
+                        <source media="(min-width: 1300px)" srcset="./img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                        <img class="slider__img slider__img--before" src="./img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="photo before" width="320" height="240">
+                      </picture>
+                    </div>
+                    <div class="slider__picture slider__picture--after slider__picture--disabled">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1300px)" srcset="./img/after-desktop@1x.webp 1x, ./img/after-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="./img/after-tablet@1x.webp 1x, ./img/after-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="./img/after-mobile@1x.webp 1x, ./img/after-mobile@2x.webp 2x">
+                        <source media="(min-width: 1300px)" srcset="./img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                        <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                        <img class="slider__img slider__img--after" src="./img/after-mobile@1x.png" srcset="./img/after-mobile@2x.png 2x" alt="photo after" width="320" height="240">
+                      </picture>
+                    </div>
+              </div>
 
-            <div class="slider__toggle">
-                <button class="slider__button slider__button--before">Было</button>
-                <input id="slider" class="slider__range range" type="range" min="0" max="100" value="50"/>
-                <input type="checkbox" class="slider__checkbox visually-hidden" id='slider-checkbox'>
-                <label class="slider__checkbox-label" for="slider-checkbox">Переключение слайдера</label>
-                <button class="slider__button slider__button--after">Стало</button>
+              <div class="slider__toggle">
+                  <button class="slider__button slider__button--before interaction__btn--black">Было</button>
+                  <input id="slider" class="slider__range range" type="range" min="0" max="100" value="50"/>
+                  <input type="checkbox" class="slider__checkbox" id='slider-checkbox'>
+                  <label class="slider__checkbox-label" for="slider-checkbox">Переключение слайдера</label>
+                  <button class="slider__button slider__button--after interaction__btn--black">Стало</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-    </section>
+      </section>
     </main>
 
     <footer class="footer">
@@ -216,11 +198,13 @@
         </div>
       </section>
 
-      <section class="socials container">
+      <section class="socials">
         <h2 class="visually-hidden">Социальные сети</h2>
 
         <div class="socials__logo-wrapper">
-          <img class="socials__logo" src="./img/logo-footer.svg" width="128" height="25" alt="Логотип компании Cat Energy">
+          <a href="#" class="socials__logo-link">
+            <img class="socials__logo" src="./img/logo-footer.svg" width="128" height="25" alt="Логотип компании Cat Energy">
+          </a>
         </div>
 
         <ul class="socials__list">
@@ -235,7 +219,7 @@
           <li class="socials__item">
             <a class="socials__link" href="https://instagram.com/" aria-label="Посетите instagram.com" title="Посетите instagram.com">
               Посетите Instagram
-              <svg class="socials__icon-insta"width="16" height="16" aria-label="Перейти на официальный сайт Instagram">
+              <svg class="socials__icon-insta" width="16" height="16" aria-label="Перейти на официальный сайт Instagram">
                 <use xlink:href="./img/svg/sprite.svg#socials__icon-insta"></use>
               </svg>
             </a>
@@ -252,8 +236,8 @@
 
         <div class="socials__academy">
           <a class="socials__academy-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Посетите htmlacademy.ru" title="Посетите htmlacademy.ru">
-            HTMLAcademy
-            <svg class="socials__academy-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="-11 0 60 60">
+            <span class="socials__span">HTMLAcademy</span>
+            <svg class="socials__academy-icon" width="39" height="39">
               <use xlink:href="./img/svg/sprite.svg#socials__academy-icon"></use>
             </svg>
           </a>
@@ -262,6 +246,7 @@
 
     </footer>
 
-    <script src="./js/external.js" defer></script>
+    <!-- <script src="./js/external.js" defer></script> -->
+    <script src="./js/external-min.js"></script>
   </body>
 </html>
