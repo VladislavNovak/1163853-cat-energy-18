@@ -58,6 +58,17 @@
 //     .pipe(gulp.dest("build"));
 // });
 
+// // оптимизируем картинки
+// gulp.task("images", function () {
+//   return gulp.src("build/img/*.{png,jpg,svg}")
+//     .pipe(imagemin([
+//       imagemin.optipng({optimizationLevel: 3}),
+//       imagemin.mozjpeg({progressive: true}),
+//       imagemin.svgo()
+//     ]))
+//     .pipe(gulp.dest("build/img"));
+// });
+
 // // создадим webp картинки
 // gulp.task("webp", function () {
 //   return gulp.src("build/img/*.{jpg,png}")
@@ -65,17 +76,6 @@
 //       quality: 90,
 //       method: 6
 //     }))
-//     .pipe(gulp.dest("build/img"));
-// });
-
-// // оптимизируем картинки
-// gulp.task("images", function () {
-//   return gulp.src("build/img/*.{png,jpg,svg}")
-//     .pipe(imagemin([
-//       imagemin.optipng({optimizationLevel: 3}),
-//       imagemin.jpegtran({progressive: true}),
-//       imagemin.svgo()
-//     ]))
 //     .pipe(gulp.dest("build/img"));
 // });
 
@@ -127,10 +127,10 @@
 // gulp.task("build", gulp.series(
 //     "clean",
 //     "sprite",
+//     "copy",
 //     "webp",
 //     "images",
 //     "css",
-//     "copy",
 //     "html",
 //     "js"
 //   )
@@ -191,17 +191,17 @@ gulp.task("sprite", function () {
 });
 
 gulp.task("images", function () {
-  return gulp.src("source/img/*.{png,jpg,svg}")
+  return gulp.src("build/img/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
+      imagemin.mozjpeg({progressive: true}),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("webp", function () {
-  return gulp.src("source/img/*.{png,jpg}")
+  return gulp.src("build/img/*.{png,jpg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
@@ -220,8 +220,7 @@ gulp.task("server", function () {
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/logo-*.svg",
-    "source/*.ico"
+    "source/img/**",
   ], {
     base: "source"
   })
@@ -250,21 +249,22 @@ gulp.task("minify-html", function () {
 });
 
 gulp.task("minify-js", function () {
-  return pipeline(
-    gulp.src("source/js/*.js"),
-    uglify(),
-    rename("script.min.js"),
-    gulp.dest("build/js")
-  );
+  return gulp.src("source/js/**/*.js")
+    .pipe(uglify())
+    .pipe(rename(function (path) {
+      path.basename += ".min";
+    }))
+    .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("build", gulp.series(
   "clean",
-  "images",
-  "webp",
-  "css",
   "sprite",
+  "css",
   "copy",
+  "minify-html",
   "minify-js",
-  "minify-html"));
+  "images",
+  "webp"
+  ));
 gulp.task("start", gulp.series("build", "server"));
