@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Каталог продукции Cat Energy</title>
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
-    <link rel="stylesheet" href="./css/style-min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <link rel="preload" href="./fonts/oswaldmedium.woff" as="font">
     <link rel="preload" href="./fonts/oswaldregular.woff" as="font">
     <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font">
     <link rel="preload" href="./fonts/oswaldregular.woff2" as="font">
   </head>
   <body>
+
+    <!-- sprite-path -->
+    <div class="visually-hidden">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <!-- sprite-path -->
+
     <h1 class="visually-hidden">Cat Energy - широкая вкусовая гамма!</h1>
     <header class="header header--catalog-desktop">
 
@@ -300,7 +307,7 @@
 
           <div class="additionaly__present">
             <svg class="additionaly__present-icon" width="55" height="60" aria-label="Символическое обозначение подарка">
-              <use xlink:href="./img/svg/sprite.svg#additionaly__present-icon"></use>
+              <use xlink:href="#icon-gift"></use>
             </svg>
             <p class="additionaly__present-text">Закажите все <span class="additionaly__present-span">и получите чехол для</span> кота в подарок!</p>
           </div>
@@ -338,7 +345,7 @@
             <a class="socials__link" href="https://vk.com/" aria-label="Посетите VKontakte.com" title="Посетите VKontakte.com">
               Посетите VKontakte
               <svg class="socials__icon-vk" width="22" height="12" aria-label="Перейти на официальный сайт VK">
-                <use xlink:href="./img/svg/sprite.svg#socials__icon-vk"></use>
+                <use xlink:href="#icon-vk"></use>
               </svg>
             </a>
           </li>
@@ -346,7 +353,7 @@
             <a class="socials__link" href="https://instagram.com/" aria-label="Посетите instagram.com" title="Посетите instagram.com">
               Посетите Instagram
               <svg class="socials__icon-insta" width="16" height="16" aria-label="Перейти на официальный сайт Instagram">
-                <use xlink:href="./img/svg/sprite.svg#socials__icon-insta"></use>
+                <use xlink:href="#icon-insta"></use>
               </svg>
             </a>
           </li>
@@ -354,7 +361,7 @@
             <a class="socials__link" href="https://facebook.com/" aria-label="Посетите facebook.com" title="Посетите facebook.com">
               Посетите Facebook
               <svg class="socials__icon-fb" width="10" height="19" aria-label="Перейти на официальный сайт Facebook">
-                <use xlink:href="./img/svg/sprite.svg#socials__icon-fb"></use>
+                <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
           </li>
@@ -364,7 +371,7 @@
           <a class="socials__academy-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Посетите htmlacademy.ru" title="Посетите htmlacademy.ru">
             <span class="socials__span">HTMLAcademy</span>
             <svg class="socials__academy-icon" width="39" height="39">
-              <use xlink:href="./img/svg/sprite.svg#socials__academy-icon"></use>
+              <use xlink:href="#icon-htmlacademy"></use>
             </svg>
           </a>
         </div>

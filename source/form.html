@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy - подбор программы</title>
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
-    <link rel="stylesheet" href="./css/style-min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <link rel="preload" href="./fonts/oswaldmedium.woff" as="font">
     <link rel="preload" href="./fonts/oswaldregular.woff" as="font">
     <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font">
     <link rel="preload" href="./fonts/oswaldregular.woff2" as="font">
   </head>
   <body>
+
+    <!-- sprite-path -->
+    <div class="visually-hidden">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <!-- sprite-path -->
+
     <h1 class="visually-hidden">Cat Energy - возможность выбрать корм онлайн!</h1>
     <header class="header header--form-desktop">
 
@@ -104,7 +111,7 @@
               <input class="owner__input interaction__textfield--extend" type="email" name="email" value="kuklachev@gmail.com" aria-label="Введите электронный адрес" autocomplete="off" required>
               <a class="owner__link owner__link-email" href="#">
                 <svg class="owner-icon" width="17" height="13" aria-label="Иконка почтового ящика">
-                  <use xlink:href="./img/svg/sprite.svg#owner-icon-email"></use>
+                  <use xlink:href="#icon-mail"></use>
                 </svg>
               </a>
             </label>
@@ -113,7 +120,7 @@
               <input class="owner__input interaction__textfield--extend" type="tel" id="tel" name="tel" value="8 (960) 900-60-90" aria-label="Введите номер телефона" autocomplete="off" required>
               <a class="owner__link owner__link-phone" href="#">
                 <svg class="owner-icon" width="20" height="20" aria-label="Иконка с телефоном">
-                  <use xlink:href="./img/svg/sprite.svg#owner-icon-telephone"></use>
+                  <use xlink:href="#icon-phone"></use>
                 </svg>
               </a>
             </label>
@@ -186,7 +193,7 @@
             <a class="socials__link" href="https://vk.com/" aria-label="Посетите VKontakte.com" title="Посетите VKontakte.com">
               Посетите VKontakte
               <svg class="socials__icon-vk" width="22" height="12" aria-label="Перейти на официальный сайт VK">
-                <use xlink:href="./img/svg/sprite.svg#socials__icon-vk"></use>
+                <use xlink:href="#icon-vk"></use>
               </svg>
             </a>
           </li>
@@ -194,7 +201,7 @@
             <a class="socials__link" href="https://instagram.com/" aria-label="Посетите instagram.com" title="Посетите instagram.com">
               Посетите Instagram
               <svg class="socials__icon-insta" width="16" height="16" aria-label="Перейти на официальный сайт Instagram">
-                <use xlink:href="./img/svg/sprite.svg#socials__icon-insta"></use>
+                <use xlink:href="#icon-insta"></use>
               </svg>
             </a>
           </li>
@@ -202,7 +209,7 @@
             <a class="socials__link" href="https://facebook.com/" aria-label="Посетите facebook.com" title="Посетите facebook.com">
               Посетите Facebook
               <svg class="socials__icon-fb" width="10" height="19" aria-label="Перейти на официальный сайт Facebook">
-                <use xlink:href="./img/svg/sprite.svg#socials__icon-fb"></use>
+                <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
           </li>
@@ -212,7 +219,7 @@
           <a class="socials__academy-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Посетите htmlacademy.ru" title="Посетите htmlacademy.ru">
             <span class="socials__span">HTMLAcademy</span>
             <svg class="socials__academy-icon" width="39" height="39">
-              <use xlink:href="./img/svg/sprite.svg#socials__academy-icon"></use>
+              <use xlink:href="#icon-htmlacademy"></use>
             </svg>
           </a>
         </div>
