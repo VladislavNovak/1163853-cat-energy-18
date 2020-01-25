@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cat Energy - лучший корм</title>
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
-    <link rel="stylesheet" href="./css/style-min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <link rel="preload" href="./fonts/oswaldmedium.woff" as="font">
     <link rel="preload" href="./fonts/oswaldregular.woff" as="font">
     <link rel="preload" href="./fonts/oswaldmedium.woff2" as="font">
     <link rel="preload" href="./fonts/oswaldregular.woff2" as="font">
   </head>
   <body>
+
+    <!-- sprite-path -->
+    <div class="visually-hidden">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <!-- sprite-path -->
 
     <h1 class="visually-hidden">Cat Energy - лучший корм!</h1>
     <header class="header header--index-desktop">
@@ -74,7 +80,7 @@
           <li class="strategy__item">
             <div class="strategy__icon">
               <svg class="strategy__icon-cat-slim" width="35" height="49" aria-label="Иконка: перейдём к каталогу cat slim">
-                <use xlink:href="./img/svg/sprite.svg#strategy__icon-cat-slim"></use>
+                <use xlink:href="#icon-cat-slim"></use>
               </svg>
             </div>
             <h3 class="strategy__title">Похудение</h3>
@@ -84,7 +90,7 @@
           <li class="strategy__item strategy__item--next">
             <div class="strategy__icon strategy__icon--modified">
               <svg class="strategy__icon-cat-pro" width="67" height="28" aria-label="Иконка: перейдём к каталогу cat pro">
-                <use xlink:href="./img/svg/sprite.svg#strategy__icon-cat-pro"></use>
+                <use xlink:href="#icon-cat-pro"></use>
               </svg>
             </div>
             <h3 class="strategy__title">Набор массы</h3>
@@ -212,7 +218,7 @@
             <a class="socials__link" href="https://vk.com/" aria-label="Посетите VKontakte.com" title="Посетите VKontakte.com">
               Посетите VKontakte
               <svg class="socials__icon-vk" width="22" height="12" aria-label="Перейти на официальный сайт VK">
-                <use xlink:href="./img/svg/sprite.svg#socials__icon-vk"></use>
+                <use xlink:href="#icon-vk"></use>
               </svg>
             </a>
           </li>
@@ -220,7 +226,7 @@
             <a class="socials__link" href="https://instagram.com/" aria-label="Посетите instagram.com" title="Посетите instagram.com">
               Посетите Instagram
               <svg class="socials__icon-insta" width="16" height="16" aria-label="Перейти на официальный сайт Instagram">
-                <use xlink:href="./img/svg/sprite.svg#socials__icon-insta"></use>
+                <use xlink:href="#icon-insta"></use>
               </svg>
             </a>
           </li>
@@ -228,7 +234,7 @@
             <a class="socials__link" href="https://facebook.com/" aria-label="Посетите facebook.com" title="Посетите facebook.com">
               Посетите Facebook
               <svg class="socials__icon-fb" width="10" height="19" aria-label="Перейти на официальный сайт Facebook">
-                <use xlink:href="./img/svg/sprite.svg#socials__icon-fb"></use>
+                <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
           </li>
@@ -238,7 +244,7 @@
           <a class="socials__academy-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Посетите htmlacademy.ru" title="Посетите htmlacademy.ru">
             <span class="socials__span">HTMLAcademy</span>
             <svg class="socials__academy-icon" width="39" height="39">
-              <use xlink:href="./img/svg/sprite.svg#socials__academy-icon"></use>
+              <use xlink:href="#icon-htmlacademy"></use>
             </svg>
           </a>
         </div>
@@ -247,6 +253,6 @@
     </footer>
 
     <!-- <script src="./js/external.js" defer></script> -->
-    <script src="./js/external-min.js"></script>
+    <script src="./js/external.min.js"></script>
   </body>
 </html>
