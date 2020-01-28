@@ -21,7 +21,6 @@
 
     <h1 class="visually-hidden">Cat Energy - лучший корм!</h1>
     <header class="header header--index-desktop">
-
       <div class="logotype">
         <a href="#" class="logotype__link">
           <picture>
@@ -30,7 +29,6 @@
             <img class="logotype__img" src="./img/logo-mobile.svg" width="191" height="39" alt="Логотип компании Cat Energy">
           </picture>
         </a>
-
         <!-- logotype__button--cross: меняет внешний вид с бургера на крест -->
         <!-- logotype__button--without-js: внешний вид при выключенном JS -->
         <button class="logotype__button logotype__button--cross logotype__button--without-js" type="button">
@@ -151,40 +149,42 @@
             </ul>
             <p class="example__text-expenses">Затраты на питание: <span class="example__span-expenses">15 000 руб</span></p>
           </div>
+
           <div class="slider">
             <div class="slider__wrapper">
               <div class="slider__pictures">
-                  <div class="slider__picture slider__picture--before">
-                      <picture>
-                        <source type="image/webp" media="(min-width: 1300px)" srcset="./img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-                        <source type="image/webp" media="(min-width: 768px)" srcset="./img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-                        <source type="image/webp" srcset="./img/before-mobile@1x.webp 1x, ./img/before-mobile@2x.webp 2x">
-                        <source media="(min-width: 1300px)" srcset="./img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                        <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                        <img class="slider__img slider__img--before" src="./img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="photo before" width="320" height="240">
-                      </picture>
-                    </div>
-                    <div class="slider__picture slider__picture--after slider__picture--disabled">
-                      <picture>
-                        <source type="image/webp" media="(min-width: 1300px)" srcset="./img/after-desktop@1x.webp 1x, ./img/after-desktop@2x.webp 2x">
-                        <source type="image/webp" media="(min-width: 768px)" srcset="./img/after-tablet@1x.webp 1x, ./img/after-tablet@2x.webp 2x">
-                        <source type="image/webp" srcset="./img/after-mobile@1x.webp 1x, ./img/after-mobile@2x.webp 2x">
-                        <source media="(min-width: 1300px)" srcset="./img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-                        <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                        <img class="slider__img slider__img--after" src="./img/after-mobile@1x.png" srcset="./img/after-mobile@2x.png 2x" alt="photo after" width="320" height="240">
-                      </picture>
-                    </div>
+                <div class="slider__picture slider__picture--before">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="./img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="./img/before-mobile@1x.webp 1x, ./img/before-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="./img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="./img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                    <img class="slider__img slider__img--before" src="./img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="photo before" width="320" height="240">
+                  </picture>
+                </div>
+                <div class="slider__picture slider__picture--after slider__picture--disabled">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1300px)" srcset="./img/after-desktop@1x.webp 1x, ./img/after-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="./img/after-tablet@1x.webp 1x, ./img/after-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="./img/after-mobile@1x.webp 1x, ./img/after-mobile@2x.webp 2x">
+                    <source media="(min-width: 1300px)" srcset="./img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="./img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                    <img class="slider__img slider__img--after" src="./img/after-mobile@1x.png" srcset="./img/after-mobile@2x.png 2x" alt="photo after" width="320" height="240">
+                  </picture>
+                </div>
               </div>
 
               <div class="slider__toggle">
-                  <button class="slider__button slider__button--before">Было</button>
-                  <input id="slider" class="slider__range range" type="range" min="0" max="100" value="50"/>
-                  <input type="checkbox" class="slider__checkbox" id='slider-checkbox'>
-                  <label class="slider__checkbox-label" for="slider-checkbox">Переключение слайдера</label>
-                  <button class="slider__button slider__button--after">Стало</button>
+                <button class="slider__button slider__button--before">Было</button>
+                <input id="slider" class="slider__range range" type="range" min="0" max="100" value="50"/>
+                <input type="checkbox" class="slider__checkbox" id='slider-checkbox'>
+                <label class="slider__checkbox-label" for="slider-checkbox">Переключение слайдера</label>
+                <button class="slider__button slider__button--after">Стало</button>
               </div>
             </div>
           </div>
+          
         </div>
       </section>
     </main>
@@ -193,14 +193,16 @@
 
       <section class="cooperation">
         <h2 class="visually-hidden">Свяжитесь с нами:</h2>
-        <div class="contacts">
-          <p class="contacts__invite">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-          <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <span class="contacts__span-block">Санкт-Петербург</span></p>
+        <div class="footer__wrapper-contact">
+          <div class="contacts">
+            <p class="contacts__invite">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+            <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <span class="contacts__span-block">Санкт-Петербург</span></p>
+          </div>
         </div>
         <div class="map">
           <h3 class="visually-hidden">Найти на карте нас очень легко:</h3>
           <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1656.531898444459!2d30.32131895840098!3d59.93855939555751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fb661d55f%3A0xd0cc7f055debe430!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575105566771!5m2!1sru!2sru"
-          width="320" height="362" style="border:0;" allowfullscreen=""></iframe>
+          width="320" height="100%" style="border:0;" allowfullscreen=""></iframe>
         </div>
       </section>
 
@@ -254,5 +256,6 @@
 
     <!-- <script src="./js/external.js" defer></script> -->
     <script src="./js/external.min.js"></script>
+    <script src="./js/picturefill.min.js"></script>
   </body>
 </html>

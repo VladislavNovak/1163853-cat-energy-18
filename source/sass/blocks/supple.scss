@@ -87,7 +87,7 @@
   @include tablet {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding-left: 70px;
     padding-right: $side-form-tablet;
   }
@@ -95,8 +95,8 @@
   @include desktop {
     max-width: $max-screen-width;
     margin: 0 auto;
-    padding-left: 39px;
-    padding-right: 39px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -111,7 +111,9 @@
   }
 
   @include desktop {
-    width: 15.48%;
+    max-width: 170px;
+    margin-left: 98px;
+    margin-right: 57px;
   }
 }
 
@@ -192,5 +194,9 @@
 }
 
 .supple__label:active {
+  opacity: 0.4;
+}
+
+.supple__input:disabled + .supple__label {
   opacity: 0.4;
 }

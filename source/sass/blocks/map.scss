@@ -36,13 +36,21 @@
   }
 
   @include desktop {
-    height: 400px;
+    height: 100%;
     width: 100%;
     background-color: #fdf7ef;
     background-image: url("../img/map-pin.png"), url("../img/bg-map-desktop@1x.png");
     background-repeat: no-repeat, no-repeat;
     background-size: 113px 108px, cover;
     background-position: 75.6% 50.5%, 80% 55%;
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
 
     @media (min-resolution: $retina-dppx) {
       background-color: #fdf7ef;
@@ -59,6 +67,6 @@
   width: 100%;
 
   @include tablet {
-    height: 400px;
+    //height: 400px;
   }
 }

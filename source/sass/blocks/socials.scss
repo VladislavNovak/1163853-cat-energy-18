@@ -48,6 +48,7 @@
   list-style-type: none;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   padding-left: 69px;
@@ -135,7 +136,7 @@
 
 
 .socials__academy {
-  padding-top: 19px;
+  padding-top: 18px;
   letter-spacing: 0.3px;
   text-align: center;
 
@@ -196,6 +197,7 @@
   height: 39px;
   margin-right: 0.5px;
   margin-top: 0.5px;
+  flex-shrink: 0;
 
   @include tablet {
     margin-left: 5px;

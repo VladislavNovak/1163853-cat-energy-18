@@ -101,3 +101,7 @@
 .plan__label:active {
   opacity: 0.4;
 }
+
+.plan__radio:disabled + .plan__label {
+  opacity: 0.4;
+}

@@ -8,21 +8,21 @@
   padding-right: 19.5px;
 
   @include tablet {
-    padding-top: 45px;
-    padding-bottom: 43px;
+    padding-top: 44px;
+    padding-bottom: 44px;
     padding-left: $side-indent-tablet;
     padding-right: $side-indent-tablet;
   }
 
   @include desktop {
-    position: absolute;
     width: 570px;
-    height: 201px;
-    top: 94px;
-    left: 7.6%;
+    min-height: 201px;
     padding-left: 35px;
     padding-right: 24px;
     background-color: $color-white;
+    margin-left: 7.6%;
+    margin-top: 13px;
+    margin-bottom: 20px;
   }
 }
 

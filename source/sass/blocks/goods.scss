@@ -3,17 +3,13 @@
   border-top: 1px solid $color-gray-half-light;
 
   @include tablet {
-    padding-top: 30px;
+    padding-top: 29px;
     border-top: none;
-    padding-left: $side-indent-tablet;
-    padding-right: $side-indent-tablet;
   }
 
   @include desktop {
     max-width: $max-screen-width;
     margin: 0 auto;
-    padding-left: 40px;
-    padding-right: 40px;
   }
 }
 
@@ -28,10 +24,15 @@
 
   @include tablet {
     text-align: left;
-    margin-bottom: 19px;
-    padding-left: 0;
-    padding-right: 0;
+    margin-bottom: 19.5px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-size: 60px;
+  }
+
+  @include desktop {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -43,7 +44,6 @@
     border-top: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     padding-top: 66px;
   }
 }
@@ -59,9 +59,9 @@
   @include tablet {
     flex-direction: column;
     position: relative;
-    width: 45.7%;
-    margin-left: 0;
-    margin-right: 0;
+    width: 42.2%;
+    margin-left: 30px;
+    margin-right: 29.5px;
     margin-top: 80px;
     margin-bottom: 60px;
     padding-top: 138px;
@@ -73,10 +73,12 @@
   }
 
   @include desktop {
-    width: 20.1%;
+    width: 19%;
+    margin-left: 39px;
+    margin-right: 39px;
     margin-bottom: 62px;
     padding-left: 37.5px;
-    padding-right: 39.5px;
+    padding-right: 41px;
   }
 }
 
@@ -92,6 +94,10 @@
     order: 1;
     width: 100%;
     margin-bottom: 33.5px;
+  }
+
+  @include desktop {
+    margin-bottom: 34px;
   }
 }
 
@@ -117,6 +123,11 @@
     padding-right: 15px;
     padding-left: 15px;
   }
+}
+
+.goods_caption-link {
+  text-decoration: none;
+  color: $color-black;
 }
 
 .goods__row {
@@ -243,9 +254,9 @@
   border-bottom: 1px solid $color-gray-catalog-border;
 
   @include tablet {
-    width: 45.7%;
-    margin-left: 0;
-    margin-right: 0;
+    width: 42.2%;
+    margin-left: 30px;
+    margin-right: 29.5px;
     margin-top: 80px;
     margin-bottom: 60px;
     padding-top: 27px;
@@ -256,7 +267,10 @@
   }
 
   @include desktop {
-    width: 20.1%;
+    width: 19%;
+    margin-left: 39px;
+    margin-right: 39px;
+    margin-bottom: 62px;
     padding-left: 37px;
     padding-right: 39px;
   }
@@ -287,7 +301,7 @@
     font-size: 20px;
     margin-top: 45px;
     margin-bottom: 26px;
-    padding-left: 35px;
+    padding-left: 37px;
     padding-right: 35px;
   }
 

@@ -1,5 +1,5 @@
 .example {
-  padding-top: 10px;
+  padding-top: 9px;
   padding-bottom: 33px;
   background-color: $color-gray-bright;
 
@@ -12,10 +12,10 @@
   @include desktop {
     padding-top: 0;
     padding-bottom: 0;
-    max-width: 1440px;
+
     margin-left: auto;
     margin-right: auto;
-    background: linear-gradient(to left, #eaeaea 395px, #f2f2f2 395px);
+    background: linear-gradient(to right,#f2f2f2 70%,#eaeaea 30%);
     overflow: hidden;
   }
 }
@@ -29,7 +29,7 @@
   @include textomizer(regular, 36px, 60px);
 
   @include tablet {
-    margin-bottom: 50.5px;
+    margin-bottom: 51px;
     padding-left: $side-indent-tablet;
     padding-right: $side-indent-tablet;
     font-size: 60px;
@@ -61,6 +61,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    max-width: 1440px;
   }
 }
 
@@ -77,7 +78,7 @@
   }
 
   @include desktop {
-    padding-top: 65px;
+    padding-top: 64px;
     padding-bottom: 46px;
     padding-left: 24px;
     padding-right: 9%;

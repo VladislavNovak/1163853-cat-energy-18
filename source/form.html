@@ -109,20 +109,20 @@
             <label class="owner__label">
               <span class="owner__text owner__text-email">e-mail:*</span>
               <input class="owner__input" type="email" name="email" placeholder="kuklachev@gmail.com" aria-label="Введите электронный адрес" autocomplete="off" required>
-              <div class="owner__icon-wrapper owner__icon-wrapper-email" href="#">
+              <span class="owner__icon-wrapper owner__icon-wrapper-email">
                 <svg class="owner-icon" width="17" height="13" aria-label="Иконка почтового ящика">
                   <use xlink:href="#icon-mail"></use>
                 </svg>
-              </div>
+              </span>
             </label>
             <label class="owner__label">
               <span class="owner__text owner__text-phone">Телефон:*</span>
               <input class="owner__input" type="tel" name="tel" placeholder="8 (960) 900-60-90" aria-label="Введите номер телефона" autocomplete="off" required>
-              <div class="owner__icon-wrapper owner__icon-wrapper-phone" href="#">
+              <span class="owner__icon-wrapper owner__icon-wrapper-phone">
                 <svg class="owner-icon" width="20" height="20" aria-label="Иконка с телефоном">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
-              </div>
+              </span>
             </label>
           </div>
         </div>
@@ -168,14 +168,16 @@
 
       <section class="cooperation cooperation--gray-background">
         <h2 class="visually-hidden">Свяжитесь с нами:</h2>
-        <div class="contacts">
-          <p class="contacts__invite">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-          <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <span class="contacts__span-block">Санкт-Петербург</span></p>
-        </div>
+        <div class="footer__wrapper-contact">
+          <div class="contacts">
+            <p class="contacts__invite">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+            <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <span class="contacts__span-block">Санкт-Петербург</span></p>
+          </div>
+        </div>  
         <div class="map">
           <h3 class="visually-hidden">Найти на карте нас очень легко:</h3>
           <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1656.531898444459!2d30.32131895840098!3d59.93855939555751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fb661d55f%3A0xd0cc7f055debe430!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575105566771!5m2!1sru!2sru"
-          width="320" height="362" style="border:0;" allowfullscreen=""></iframe>
+          width="320" height="100%" style="border:0;" allowfullscreen=""></iframe>
         </div>
       </section>
 
@@ -229,5 +231,6 @@
 
     <!-- <script src="./js/external.js" defer></script> -->
     <script src="./js/external.min.js"></script>
+    <script src="./js/picturefill.min.js"></script>
   </body>
 </html>

@@ -28,10 +28,12 @@ $track-radius: 3px;
   border-radius: $thumb-radius;
   background: $thumb-color;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .range {
   display: none;
+  background: transparent;
 
   @include tablet {
     display: block;
