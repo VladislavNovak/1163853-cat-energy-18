@@ -84,3 +84,26 @@
     line-height: 20px;
   }
 }
+
+.pet__input {
+  outline: none;
+  border: 1.5px solid $color-gray-half-light;
+}
+
+.pet__input::placeholder {
+  opacity: 1;
+}
+
+.pet__input:hover,
+.pet__input:focus {
+  border: 1.5px solid $color-gray-light;
+  transition-duration: 150ms;
+}
+
+.pet__input:active {
+  border: 1.5px solid #444444;
+}
+
+.pet__input:not(:placeholder-shown):invalid {
+  border: 1.5px solid #ff8282;
+}

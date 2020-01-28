@@ -1,9 +1,9 @@
 .supple {
   padding-top: 19px;
-  padding-bottom: 16px;
+  padding-bottom: 20px;
 
   @include tablet {
-    padding-top: 20px;
+    padding-top: 19px;
     padding-bottom: 11.5px;
   }
 
@@ -15,57 +15,9 @@
   }
 }
 
-//---------------------
-
-
-// .comments__title::before,
-// .comments__title::after {
-//   content: "";
-//   position: relative;
-//   display: inline-block;
-//   vertical-align: middle;
-//   width: 100%;
-//   height: 3px;
-//   background-color: $color-green-bright;
-
-//   @include tablet {
-//     height: 4px;
-//   }
-// }
-
-// .comments__title::before {
-//   margin-left: -100%;
-//   right: 23px;
-
-//   @include tablet {
-//     right: 39px;
-//     top: -1px;
-//   }
-
-//   @include desktop {
-//     top: 0;
-//   }
-// }
-
-// .comments__title::after {
-//   margin-right: -100%;
-//   left: 22px;
-//   top: -1px;
-
-//   @include tablet {
-//     left: 41px;
-//     top: -1px;
-//   }
-
-//   @include desktop {
-//     top: 0;
-//   }
-// }
-//---------------------
-
 .supple__title {
   margin-top: 0;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
   padding-bottom: 5px;
   padding-left: 19px;
   padding-right: $side-indent-mobile;
@@ -74,7 +26,7 @@
   @include textomizer(regular, 24px);
 
   @include tablet {
-    margin-bottom: 62px;
+    margin-bottom: 61px;
     padding-left: 69px;
     padding-right: $side-form-tablet;
     font-size: 36px;
@@ -149,11 +101,11 @@
 }
 
 .supple__item {
-  margin-bottom: 22.5px;
+  margin-bottom: 18.5px;
   margin-left: 46px;
 
   @include tablet {
-    margin-bottom: 49.5px;
+    margin-bottom: 48.5px;
     margin-left: 58px;
     width: 36.25%;
   }
@@ -232,4 +184,13 @@
 .supple__input:checked + .supple__label::after {
   transform: scale(1);
   opacity: 1;
+}
+
+.supple__label:focus,
+.supple__label:hover, {
+  opacity: 0.8;
+}
+
+.supple__label:active {
+  opacity: 0.4;
 }

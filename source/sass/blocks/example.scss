@@ -4,7 +4,7 @@
   background-color: $color-gray-bright;
 
   @include tablet {
-    padding-top: 35.5px;
+    padding-top: 35px;
     padding-bottom: 0;
     background-color: transparent;
   }
@@ -130,60 +130,55 @@
   border: 1px solid $color-gray-light;
   border-radius: 4px;
 
-
   @include tablet {
     width: 162px;
   }
+}
 
-  &::after {
-    display: block;
-    position: absolute;
-    width: 87px;
-    left: 17px;
-    bottom: -16px;
-    padding-left: 14px;
-    padding-right: 15px;
+.example__item::after {
+  display: block;
+  position: absolute;
+  width: 87px;
+  left: 17px;
+  bottom: -16px;
+  padding-left: 14px;
+  padding-right: 15px;
+  background-color: $color-gray-bright;
+
+  @include textomizer(arial, 12px, 12px, lowercase);
+
+  @include tablet {
+    background-color: $color-white;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  @include desktop {
     background-color: $color-gray-bright;
-
-    @include textomizer(arial, 12px, 12px, lowercase);
-
-    @include tablet {
-      background-color: $color-white;
-      font-size: 14px;
-      line-height: 14px;
-    }
-
-    @include desktop {
-      background-color: $color-gray-bright;
-    }
   }
 }
 
-.example__item--first {
-  &::after {
-    content: "Снижение веса";
+.example__item--first::after {
+  content: "Снижение веса";
 
-    @include tablet {
-      width: 114px;
-      left: 22px;
-      bottom: -5px;
-      padding-left: 5px;
-      padding-right: 4px;
-    }
+  @include tablet {
+    width: 114px;
+    left: 22px;
+    bottom: -5px;
+    padding-left: 5px;
+    padding-right: 4px;
   }
 }
 
-.example__item--second {
-  &::after {
-    content: "Затрачено времени";
+.example__item--second::after {
+  content: "Затрачено времени";
 
-    @include tablet {
-      width: 142px;
-      left: 9px;
-      bottom: -5px;
-      padding-left: 5px;
-      padding-right: 4px;
-    }
+  @include tablet {
+    width: 142px;
+    left: 9px;
+    bottom: -5px;
+    padding-left: 5px;
+    padding-right: 4px;
   }
 }
 

@@ -56,13 +56,14 @@
   border: 1.5px solid #ff8282;
 }
 
-.interaction__textfield--extend:active ~ .owner__link .owner-icon {
+.interaction__textfield--extend:active ~ .owner__icon-wrapper .owner-icon {
   fill: $color-green-bright;
 }
 
-.interaction__textfield--extend:invalid ~ .owner__link .owner-icon {
+.interaction__textfield--extend:invalid ~ .owner__icon-wrapper .owner-icon {
   fill: #ff8282;
 }
+
 //----------------------
 .interaction__radio-checkbox:focus,
 .interaction__radio-checkbox:hover, {

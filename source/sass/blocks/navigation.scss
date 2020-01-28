@@ -31,19 +31,19 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-right: 0;
-    margin-top: 19px;
+    margin-top: 17px;
   }
 
   @include desktop {
-    margin-top: 20px;
+    margin-top: 19px;
   }
 }
 
 .navigation__item {
   padding-left: $side-indent-mobile;
   padding-right: $side-indent-mobile;
-  padding-top: 18.5px;
-  padding-bottom: 18.5px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   border-top: 1px solid $color-gray-light;
 
   @include tablet {
@@ -79,31 +79,31 @@
   }
 }
 
-.navigation__item a[href] {
-  &:hover,
-  &:focus {
-    opacity: 0.6;
-    transition-duration: 150ms;
-  }
+.navigation__item a[href]:hover,
+.navigation__item a[href]:focus {
+  opacity: 0.6;
+  transition-duration: 150ms;
+}
 
-  &:active {
-    opacity: 0.4;
-  }
+.navigation__item a[href]:active {
+  opacity: 0.4;
 }
 
 .navigation__link--active {
   @include tablet {
     position: relative;
+  }
+}
 
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 2px;
-      position: absolute;
-      bottom: -10px;
-      background-color: $color-green-bright;
-    }
+.navigation__link--active::after {
+  @include tablet {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -9px;
+    background-color: $color-green-bright;
   }
 }
 
@@ -111,10 +111,10 @@
   @include desktop {
     color: $color-white;
   }
+}
 
-  &::after {
-    @include desktop {
-      background-color: $color-white;
-    }
+.navigation__link--font-white::after {
+  @include desktop {
+    background-color: $color-white;
   }
 }

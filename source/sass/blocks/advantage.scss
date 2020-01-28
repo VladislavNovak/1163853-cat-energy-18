@@ -6,7 +6,7 @@
 
   @include tablet {
     padding-top: 12px;
-    padding-bottom: 30px;
+    padding-bottom: 29px;
     padding-right: $side-indent-tablet;
     padding-left: $side-indent-tablet;
     border-bottom: 1px solid $color-gray-half-light;
@@ -27,9 +27,12 @@
   margin-top: 8px;
   margin-bottom: 27px;
 
+  @include textomizer(regular, 36px, 60px);
+
   @include tablet {
     margin-top: 33px;
     margin-bottom: 12px;
+    font-size: 60px;
   }
 }
 
@@ -54,27 +57,37 @@
     width: 50%;
     min-height: 228px;
     margin-top: 59px;
-    margin-bottom: 29px;
-    padding-right: 17%;
+    margin-bottom: 30px;
     counter-increment: list; // увеличивает значение заданного счётчика
     position: relative;
-
-    &::before {
-      content: counter(list); //выводим значение счётчика
-      position: absolute;
-      left: 115px;
-      top: -40px;
-      height: 230px;
-      width: 114px;
-      z-index: -1;
-
-      @include textomizer(regular, 281.07px, 281.07px, none, $color-gray-bright);
-    }
   }
 
   @include desktop {
     width: 20.09%;
+  }
+}
+
+.advantage__item--odd {
+  @include tablet {
+    padding-right: 17%;
+  }
+
+  @include desktop {
     padding-right: 0;
+  }
+}
+
+.advantage__item--odd::before {
+  @include tablet {
+    content: counter(list); //выводим значение счётчика
+    position: absolute;
+    left: 115px;
+    top: -40px;
+    height: 230px;
+    width: 114px;
+    z-index: -1;
+
+    @include textomizer(regular, 281.07px, 281.07px, none, $color-gray-bright);
   }
 }
 
@@ -82,19 +95,29 @@
   @include tablet {
     padding-left: 30px;
     padding-right: 10%;
-
-    &::before {
-      left: 140px;
-    }
   }
 
   @include desktop {
     padding-left: 0;
     padding-right: 0;
+  }
+}
 
-    &::before {
-      left: 110px;
-    }
+.advantage__item--even::before {
+  @include tablet {
+    content: counter(list); //выводим значение счётчика
+    position: absolute;
+    left: 140px;
+    top: -40px;
+    height: 230px;
+    width: 114px;
+    z-index: -1;
+
+    @include textomizer(regular, 281.07px, 281.07px, none, $color-gray-bright);
+  }
+
+  @include desktop {
+    left: 110px;
   }
 }
 

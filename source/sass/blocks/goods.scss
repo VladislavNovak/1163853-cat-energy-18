@@ -63,17 +63,18 @@
     margin-left: 0;
     margin-right: 0;
     margin-top: 80px;
-    margin-bottom: 59px;
-    padding-top: 137.5px;
+    margin-bottom: 60px;
+    padding-top: 138px;
     padding-left: 36.5px;
     padding-right: 38px;
-    padding-bottom: 40px;
+    padding-bottom: 40.5px;
     background-color: $color-gray-bright;
+    border-bottom: none;
   }
 
   @include desktop {
     width: 20.1%;
-    margin-bottom: 61px;
+    margin-bottom: 62px;
     padding-left: 37.5px;
     padding-right: 39.5px;
   }
@@ -85,25 +86,27 @@
   width: 50%;
   margin-left: auto;
   margin-bottom: 22px;
+  border-collapse: collapse;
 
   @include tablet {
     order: 1;
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 33.5px;
   }
 }
 
 .goods__table-caption {
   display: table-caption;
+  margin-top: 21px;
   margin-bottom: 13.5px;
-  padding-top: 4.5px;
   padding-right: 60px;
   text-align: left;
 
   @include textomizer(regular, 16px, 20px, uppercase);
 
   @include tablet {
-    margin-bottom: 19px;
+    margin-top: 25px;
+    margin-bottom: 18px;
     padding-right: 50px;
     padding-left: 50px;
     text-align: center;
@@ -123,6 +126,8 @@
 .goods__cell {
   display: table-cell;
   width: 50%;
+  padding: 0;
+  border-width: 0;
 
   @include textomizer(arial, 12px, 16px);
 
@@ -149,7 +154,6 @@
   @include tablet {
     position: absolute;
     left: 0;
-    // bottom: 301px;
     width: 100%;
     height: auto;
     text-align: center;
@@ -168,7 +172,7 @@
 
 .goods__picture--large {
   @include tablet {
-    top: -82px;
+    top: -83px;
   }
 
   @include desktop {
@@ -217,6 +221,16 @@
 
   @include textomizer(regular, 16px, 20px, uppercase, $color-white);
   background-color: $color-green-bright;
+}
+
+.goods__btn:hover,
+.goods__btn:focus {
+  background-color: $color-green-hvr;
+  transition-duration: 150ms;
+}
+
+.goods__btn:active {
+  color: $color-green-down;
 }
 
 .goods__item-2 {
@@ -278,9 +292,8 @@
   }
 
   @include desktop {
-    margin-top: 46px;
     margin-bottom: 24.5px;
-    padding-left: 10px;
+    padding-left: 13px;
     padding-right: 10px;
   }
 }
@@ -321,4 +334,14 @@
   @include tablet {
     padding-top: 10px;
   }
+}
+
+.goods__more-btn:hover,
+.goods__more-btn:focus {
+  background-color: #ebebeb;
+  transition-duration: 150ms;
+}
+
+.goods__more-btn:active {
+  color: rgba(68, 68, 68, 0.4);
 }

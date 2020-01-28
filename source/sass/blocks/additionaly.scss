@@ -3,7 +3,7 @@
   padding-bottom: 33px;
 
   @include tablet {
-    padding-top: 6px;
+    padding-top: 5px;
     padding-bottom: 75px;
   }
 
@@ -17,7 +17,7 @@
 
 .additionaly__title {
   margin-top: 0;
-  margin-bottom: 29px;
+  margin-bottom: 28px;
   padding-bottom: 5px;
   padding-left: 19.5px;
   padding-right: 65px;
@@ -65,7 +65,7 @@
 
   @include tablet {
     right: 39px;
-    top: 1px;
+
   }
 }
 
@@ -76,7 +76,6 @@
 
   @include tablet {
     left: 36px;
-    top: 1px;
   }
 }
 
@@ -101,11 +100,11 @@
 
 .additionaly__list {
   @include list-reset-to-null();
-  margin-bottom: 38px;
+  margin-bottom: 38.5px;
   border-bottom: 1px solid $color-gray-light;
 
   @include tablet {
-    margin-bottom: 70px;
+    margin-bottom: 69px;
     border-bottom: none;
     border-top: 1px solid $color-gray-darker;
   }
@@ -119,7 +118,7 @@
 }
 
 .additionaly__item {
-  padding-bottom: 18px;
+  padding-bottom: 17px;
   text-align: left;
   border-top: 1px solid $color-gray-light;
 
@@ -131,7 +130,7 @@
     padding-top: 26px;
     padding-left: 36.5px;
     padding-right: 36px;
-    padding-bottom: 26px;
+    padding-bottom: 27px;
     border-top: none;
     border-left: 1px solid $color-gray-darker;
     border-right: 1px solid $color-gray-darker;
@@ -151,7 +150,7 @@
 
 .additionaly__item-title {
   margin-left: 1px;
-  margin-top: 12px;
+  margin-top: 13px;
   margin-bottom: 10.5px;
 
   @include textomizer(regular, 16px, 16px, uppercase);
@@ -177,16 +176,16 @@
   @include tablet {
     max-width: 48%;
     margin-top: 3px;
-    margin-bottom: 23px;
+    margin-bottom: 22px;
     font-size: 16px;
     line-height: 20px;
   }
 
   @include desktop {
     width: 36.2%;
-    margin-top: 16px;
+    margin-top: 15px;
+    margin-bottom: 12px;
     margin-right: 37px;
-    margin-bottom: 11px;
     margin-left: auto;
     padding-left: 37px;
     text-align: left;
@@ -216,13 +215,23 @@
   background-color: $color-green-bright;
 
   @include tablet {
-    padding-left: 15px;
+    padding-left: 13px;
   }
 
   @include desktop {
     width: 27.5%;
     padding-left: 17px;
   }
+}
+
+.additionaly__btn:hover,
+.additionaly__btn:focus {
+  background-color: $color-green-hvr;
+  transition-duration: 150ms;
+}
+
+.additionaly__btn:active {
+  color: $color-green-down;
 }
 
 .additionaly__present {
@@ -263,7 +272,7 @@
     padding-top: 64px;
     padding-left: 40px;
     padding-right: 40px;
-    padding-bottom: 27px;
+    padding-bottom: 26px;
     background-color: #69ac40;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
@@ -284,12 +293,14 @@
 }
 
 .additionaly__present-text {
-  padding-left: 57px;
+  padding-left: 56px;
   padding-right: 58px;
 
   @include textomizer(arial, 16px, 20px, none, $color-white);
 
   @include tablet {
+    padding-left: 62px;
+    padding-right: 52px;
     max-width: 280px;
     text-align: left;
     margin-top: 6px;

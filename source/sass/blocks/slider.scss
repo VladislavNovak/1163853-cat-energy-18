@@ -52,10 +52,6 @@
 .slider__picture {
   text-align: center;
 
-  &--disabled {
-    display: none;
-  }
-
   @include tablet {
     width: 50%;
     overflow: hidden;
@@ -145,6 +141,17 @@
     border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
   }
 }
+
+.slider__button:focus,
+.slider__button:hover {
+  outline: none;
+  border-bottom: 1px solid #989898;
+}
+
+.slider__button:active {
+  border-bottom: none;
+}
+
 
 .slider__button--before {
   margin-right: 12px;

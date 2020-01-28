@@ -129,3 +129,8 @@
     max-width: 1220px;
   }
 }
+
+.comments__textarea:not(:placeholder-shown):invalid {
+  border: 1.5px solid #ff8282;
+}
+

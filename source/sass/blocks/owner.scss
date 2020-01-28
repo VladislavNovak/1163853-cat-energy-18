@@ -87,14 +87,12 @@
   }
 }
 
-.owner__span-break {
-  &::before {
-    content: "";
-    display: block;
+.owner__span-break::before {
+  content: "";
+  display: block;
 
-    @include tablet {
-      display: none;
-    }
+  @include tablet {
+    display: none;
   }
 }
 
@@ -145,7 +143,8 @@
   padding-bottom: 13.5px;
   padding-left: 15px;
   padding-right: 40px;
-  border: 1px solid $color-gray-half-light;
+  border: 1.5px solid $color-gray-half-light;
+  outline: none;
 
   @include textomizer(regular, 16px, 18px, uppercase);
 
@@ -159,11 +158,38 @@
   }
 }
 
-.owner__link {
-  position: absolute;
+.owner__input::placeholder {
+  opacity: 1;
 }
 
-.owner__link-email {
+.owner__input:hover,
+.owner__input:focus {
+  border: 1.5px solid $color-gray-light;
+  transition-duration: 150ms;
+}
+
+.owner__input:active {
+  border: 1.5px solid #444444;
+}
+
+.owner__input:not(:placeholder-shown):invalid {
+  border: 1.5px solid #ff8282;
+}
+
+.owner__input:active ~ .owner__icon-wrapper .owner-icon {
+  fill: $color-green-bright;
+}
+
+.owner__input:not(:placeholder-shown):invalid ~ .owner__icon-wrapper .owner-icon {
+  fill: #ff8282;
+}
+
+.owner__icon-wrapper {
+  position: absolute;
+  outline-color: 1px dashed red;
+}
+
+.owner__icon-wrapper-email {
   top: 13px;
   right: 16px;
 
@@ -173,7 +199,7 @@
   }
 }
 
-.owner__link-phone {
+.owner__icon-wrapper-phone {
   top: 13px;
   right: 13px;
 

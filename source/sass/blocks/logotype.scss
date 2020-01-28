@@ -13,16 +13,6 @@
 }
 
 .logotype__img {
-  &:hover,
-  &:focus {
-    opacity: 0.8;
-    transition-duration: 150ms;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
-
   @include tablet {
     width: 174px;
     height: 59px;
@@ -32,6 +22,16 @@
     width: 202px;
     height: 60px;
   }
+}
+
+.logotype__img:hover,
+.logotype__img:focus {
+  opacity: 0.8;
+  transition-duration: 150ms;
+}
+
+.logotype__img:active {
+  opacity: 0.5;
 }
 
 .logotype__button {
@@ -71,16 +71,16 @@
   font-size: 0;
 }
 
-.logotype__button.logotype__button--cross .logotype__line-first {
+.logotype__button--cross .logotype__line-first {
   width: 24px;
   transform: translateY(7px) rotate(45deg);
 }
 
-.logotype__button.logotype__button--cross .logotype__line-second {
+.logotype__button--cross .logotype__line-second {
   opacity: 0;
 }
 
-.logotype__button.logotype__button--cross .logotype__line-third {
+.logotype__button--cross .logotype__line-third {
   width: 24px;
   transform: translateY(-5px) rotate(-45deg);
 }

@@ -62,13 +62,6 @@
   }
 }
 
-.contacts__span-break {
-  &::before {
-    content: "";
-    display: block;
-  }
-}
-
 .contacts__span-block {
   @include tablet {
     display: block;

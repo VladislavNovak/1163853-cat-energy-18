@@ -47,7 +47,7 @@
     vertical-align: top;
     width: 36.7%;
     margin-left: 72px;
-    margin-right: $side-indent-mobile;
+    margin-right: 24px;
     margin-bottom: 21.5px;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -82,6 +82,7 @@
 
   @include desktop {
     width: 23.7%;
+    margin-top: 15px;
     padding-left: 10px;
     padding-right: 14px;
   }
