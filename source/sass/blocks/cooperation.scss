@@ -1,11 +1,11 @@
 .cooperation {
   @include desktop {
-  	position: relative;
+    position: relative;
 
-  	min-height: 400px;
-  	display: flex;
-  	align-items: center;
-  	justify-content: flex-start;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
 }
 

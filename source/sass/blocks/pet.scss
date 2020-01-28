@@ -72,7 +72,8 @@
   padding-top: 11px;
   padding-bottom: 13px;
   padding-left: 15px;
-  border: 1px solid $color-gray-half-light;
+  outline: none;
+  border: 1.5px solid $color-gray-half-light;
 
   @include textomizer(regular, 16px, 18px, uppercase);
 
@@ -83,11 +84,6 @@
     font-size: 20px;
     line-height: 20px;
   }
-}
-
-.pet__input {
-  outline: none;
-  border: 1.5px solid $color-gray-half-light;
 }
 
 .pet__input::placeholder {

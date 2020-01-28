@@ -64,7 +64,7 @@
 .additionaly__title::before {
   margin-left: -100%;
   right: 23px;
-  
+
   @include tablet {
     right: 39px;
   }
@@ -257,11 +257,9 @@
     padding-left: 91px;
     padding-right: 67px;
     padding-bottom: 33px;
-    background-color: #69ac40;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dppx) {
-      background-color: #69ac40;
       background-image: url("../img/gift-photo-tablet@2x.jpg");
     }
   }
@@ -273,11 +271,9 @@
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 25px;
-    background-color: #69ac40;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
     @media (min-resolution: $retina-dppx) {
-      background-color: #69ac40;
       background-image: url("../img/gift-photo-desktop@2x.jpg");
     }
   }

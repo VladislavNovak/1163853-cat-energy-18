@@ -1,13 +1,12 @@
-
-.footer{
+.footer {
   background: #f2f2f2;
 }
-.footer__wrapper-contact{
+
+.footer__wrapper-contact {
   @include desktop {
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
-
     z-index: 1;
     width: 100%;
   }

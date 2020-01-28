@@ -40,7 +40,7 @@ function imageComparison() {
   var checkbox = document.querySelector(".slider__checkbox");
 
   // если хотя бы этот элемент существует (один из перечисленных выше), то выполнить функцию:
-  if(sliderWrap) {
+  if (sliderWrap) {
     function _setImageWidth(event) {
       if (document.body.clientWidth <= 1220) {
         imgBefore.style.width = 100 - event.currentTarget.value + "%";
@@ -82,7 +82,7 @@ function executeMain() {
 }
 
 // readyState показывает текущее состояние загрузки:
-if(document.readyState === "loading") {
+if (document.readyState === "loading") {
   // если документ загружается, ждём события
   document.addEventListener("DOMContentLoaded", executeMain);
 } else {

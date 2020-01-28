@@ -225,11 +225,11 @@
 
 .strategy__link:focus::after,
 .strategy__link:hover::after {
-    width: 33px;
-    height: 11px;
-    background-image: url("../../img/icon-right-arrow-verylong.svg");
-    background-repeat: no-repeat;
-    transition-duration: 100ms;
+  width: 33px;
+  height: 11px;
+  background-image: url("../../img/icon-right-arrow-verylong.svg");
+  background-repeat: no-repeat;
+  transition-duration: 100ms;
 }
 
 .strategy__link:active {
