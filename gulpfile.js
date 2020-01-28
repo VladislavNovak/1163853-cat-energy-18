@@ -118,7 +118,7 @@ gulp.task("build", gulp.series(
   "copy",
   "minify-html",
   "minify-js",
-  // "images",
-  // "webp"
+  "images",
+  "webp"
   ));
 gulp.task("start", gulp.series("build", "server"));
